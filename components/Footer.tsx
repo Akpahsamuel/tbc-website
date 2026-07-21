@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { FOOTER_ORGANIZATION_LINKS, FOOTER_ENGAGE_LINKS } from "@/data/footerLinks";
 
 const linkStyle: React.CSSProperties = {
@@ -20,29 +21,13 @@ export default function Footer() {
     <footer style={{ background: "#14211F", color: "#fff", padding: "72px 40px 32px" }}>
       <div className="tbc-footer-grid" style={{ maxWidth: 1160, margin: "0 auto" }}>
         <div>
-          <div style={{ display: "flex", alignItems: "center", gap: 11, marginBottom: 18 }}>
-            <span
-              style={{
-                width: 28,
-                height: 28,
-                borderRadius: "50%",
-                border: "3px solid #24D155",
-                position: "relative",
-                display: "inline-block",
-              }}
-            >
-              <span
-                style={{
-                  position: "absolute",
-                  inset: 6,
-                  borderRadius: "50%",
-                  background: "#24D155",
-                }}
-              />
-            </span>
-            <span style={{ font: "800 17px/1 'Inter'", letterSpacing: ".02em", color: "#fff" }}>
-              TBC<span style={{ color: "#24D155" }}>·</span>GHANA
-            </span>
+          <div style={{ display: "flex", alignItems: "center", marginBottom: 18 }}>
+            <Image 
+              src="/images/tbc-ghana-logo-reverse-color.svg" 
+              alt="TBC Ghana Logo" 
+              width={140} 
+              height={38} 
+            />
           </div>
           <p style={{ font: "400 15px/1.6 'Inter'", color: "rgba(255,255,255,.62)", maxWidth: 280 }}>
             Building the Web3 Ecosystem of Ghana and Africa.

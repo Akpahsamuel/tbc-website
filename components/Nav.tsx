@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Countdown from "./Countdown";
@@ -52,31 +53,15 @@ export default function Nav() {
       >
         <Link
           href="/"
-          style={{ display: "flex", alignItems: "center", gap: 11, textDecoration: "none" }}
+          style={{ display: "flex", alignItems: "center", textDecoration: "none" }}
         >
-          <span
-            style={{
-              width: 28,
-              height: 28,
-              borderRadius: "50%",
-              border: "3px solid #24D155",
-              position: "relative",
-              display: "inline-block",
-              flex: "none",
-            }}
-          >
-            <span
-              style={{
-                position: "absolute",
-                inset: 6,
-                borderRadius: "50%",
-                background: "#24D155",
-              }}
-            />
-          </span>
-          <span style={{ font: "800 17px/1 'Inter'", letterSpacing: ".02em", color: "#fff" }}>
-            TBC<span style={{ color: "#24D155" }}>·</span>GHANA
-          </span>
+          <Image 
+            src="/images/tbc-ghana-logo-reverse-color.svg" 
+            alt="TBC Ghana Logo" 
+            width={120} 
+            height={32} 
+            priority
+          />
         </Link>
 
         <div className="tbc-nav-links">
