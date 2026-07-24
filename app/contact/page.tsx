@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div style={{ width: "100%", color: "#14211F" }}>
+    <div style={{ width: "100%", color: "var(--tbc-text)" }}>
       <section style={{ background: "#1B4D4A", padding: "96px 40px" }}>
         <div style={{ maxWidth: 1160, margin: "0 auto", animation: "tbcUp .6s both" }}>
           <div
@@ -63,8 +63,8 @@ export default function ContactPage() {
             >
               Email
             </div>
-            <a href="mailto:info@tbcafrica.org" style={{ font: "600 20px/1.3 'Inter'", color: "#14211F" }}>
-              info@tbcafrica.org
+            <a href="mailto:thebuilderscircleghana@gmail.com" style={{ font: "600 20px/1.3 'Inter'", color: "var(--tbc-text)" }}>
+              thebuilderscircleghana@gmail.com
             </a>
           </div>
           <div style={{ marginBottom: 36 }}>
@@ -79,11 +79,11 @@ export default function ContactPage() {
             >
               Office
             </div>
-            <p style={{ font: "500 18px/1.5 'Inter'", color: "#14211F" }}>
+            {/* <p style={{ font: "500 18px/1.5 'Inter'", color: "var(--tbc-text)" }}>
               14 Nii Owoo Street
               <br />
               Dzorwulu, Accra, Ghana
-            </p>
+            </p> */}
           </div>
           <div>
             <div
@@ -98,10 +98,10 @@ export default function ContactPage() {
               Social
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-              <a href="https://x.com/Builders_Circle" style={{ font: "500 16px/1.3 'Inter'", color: "#14211F" }}>
+              <a href="https://x.com/Builders_Circle" style={{ font: "500 16px/1.3 'Inter'", color: "var(--tbc-text)" }}>
                 X (Twitter) · @Builders_Circle
               </a>
-              <a href="#" style={{ font: "500 16px/1.3 'Inter'", color: "#14211F" }}>
+              <a href="#" style={{ font: "500 16px/1.3 'Inter'", color: "var(--tbc-text)" }}>
                 LinkedIn · The Builders Circle Ghana
               </a>
             </div>

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function GetInvolvedPage() {
   return (
-    <div style={{ width: "100%", color: "#14211F" }}>
+    <div style={{ width: "100%", color: "var(--tbc-text)" }}>
       <section style={{ background: "#1B4D4A", padding: "96px 40px" }}>
         <div style={{ maxWidth: 1160, margin: "0 auto", animation: "tbcUp .6s both" }}>
           <div
@@ -47,11 +47,11 @@ export default function GetInvolvedPage() {
           <div
             key={way.title}
             className="tbc-card"
-            style={{ background: "#fff", border: "1px solid rgba(20,33,31,.08)", borderRadius: 16, padding: 28 }}
+            style={{ background: "var(--tbc-surface)", border: "1px solid var(--tbc-border)", borderRadius: 16, padding: 28 }}
           >
             <div style={{ width: 32, height: 32, borderRadius: 9, background: way.color, marginBottom: 18 }} />
-            <h3 style={{ font: "700 18px/1.2 'Inter'", color: "#14211F", marginBottom: 8 }}>{way.title}</h3>
-            <p style={{ font: "400 14.5px/1.5 'Inter'", color: "#54615e" }}>{way.description}</p>
+            <h3 style={{ font: "700 18px/1.2 'Inter'", color: "var(--tbc-text)", marginBottom: 8 }}>{way.title}</h3>
+            <p style={{ font: "400 14.5px/1.5 'Inter'", color: "var(--tbc-text-muted)" }}>{way.description}</p>
           </div>
         ))}
       </section>

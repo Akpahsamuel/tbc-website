@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div style={{ width: "100%", color: "#14211F" }}>
+    <div style={{ width: "100%", color: "var(--tbc-text)" }}>
       {/* PAGE HERO */}
       <section style={{ background: "#1B4D4A", padding: "96px 40px" }}>
         <div style={{ maxWidth: 1160, margin: "0 auto", animation: "tbcUp .6s both" }}>
@@ -40,14 +40,14 @@ export default function AboutPage() {
 
       {/* STORY */}
       <section style={{ maxWidth: 900, margin: "0 auto", padding: "88px 40px 40px" }}>
-        <p style={{ font: "400 22px/1.65 'Inter'", color: "#3a453f", marginBottom: 28 }}>
+        <p style={{ font: "400 22px/1.65 'Inter'", color: "var(--tbc-text-secondary)", marginBottom: 28 }}>
           TBC Ghana was founded to solve a simple but persistent problem: Ghana&rsquo;s
           blockchain and Web3 community has energy, talent and momentum, but no single, trusted
           institution to sustain it. Communities go quiet after events. Builders lack a
           pipeline. International protocols don&rsquo;t know who to call when they want to enter
           the market.
         </p>
-        <p style={{ font: "400 22px/1.65 'Inter'", color: "#3a453f" }}>
+        <p style={{ font: "400 22px/1.65 'Inter'", color: "var(--tbc-text-secondary)" }}>
           The Builders Circle Ghana changes that. Built on years of grassroots work — meetups,
           university tours, speaking engagements and online community-building — TBC Ghana is
           now formalizing into a structured organization with one goal: to become the leading
@@ -62,7 +62,7 @@ export default function AboutPage() {
       >
         <div
           className="tbc-card"
-          style={{ background: "#fff", border: "1px solid rgba(20,33,31,.08)", borderRadius: 16, padding: 44 }}
+          style={{ background: "var(--tbc-surface)", border: "1px solid var(--tbc-border)", borderRadius: 16, padding: 44 }}
         >
           <div
             style={{
@@ -75,7 +75,7 @@ export default function AboutPage() {
           >
             Vision
           </div>
-          <p style={{ font: "500 21px/1.55 'Inter'", color: "#14211F" }}>
+          <p style={{ font: "500 21px/1.55 'Inter'", color: "var(--tbc-text)" }}>
             To build the leading Web3 ecosystem infrastructure in Ghana that drives blockchain
             education, community development, ecosystem collaboration, innovation, and market
             growth across Africa.
@@ -102,7 +102,7 @@ export default function AboutPage() {
       </section>
 
       {/* WHAT WE DO / PILLARS */}
-      <section style={{ background: "#fff", borderTop: "1px solid rgba(20,33,31,.08)", borderBottom: "1px solid rgba(20,33,31,.08)" }}>
+      <section style={{ background: "var(--tbc-surface)", borderTop: "1px solid var(--tbc-border)", borderBottom: "1px solid var(--tbc-border)" }}>
         <div style={{ maxWidth: 1160, margin: "0 auto", padding: "96px 40px" }}>
           <div
             style={{
@@ -115,10 +115,10 @@ export default function AboutPage() {
           >
             What We Do · Our Pillars
           </div>
-          <h2 style={{ font: "800 44px/1.1 'Inter'", letterSpacing: "-.02em", color: "#14211F", marginBottom: 16 }}>
+          <h2 style={{ font: "800 44px/1.1 'Inter'", letterSpacing: "-.02em", color: "var(--tbc-text)", marginBottom: 16 }}>
             Five pillars, one ecosystem.
           </h2>
-          <p style={{ font: "400 19px/1.6 'Inter'", color: "#54615e", maxWidth: 620, marginBottom: 48 }}>
+          <p style={{ font: "400 19px/1.6 'Inter'", color: "var(--tbc-text-muted)", maxWidth: 620, marginBottom: 48 }}>
             Everything TBC Ghana does maps to five pillars — each with concrete programs behind
             it.
           </p>
@@ -128,8 +128,8 @@ export default function AboutPage() {
                 key={pillar.number}
                 className={pillar.dark ? "tbc-card-dark" : "tbc-card"}
                 style={{
-                  background: pillar.dark ? "#14211F" : "#F5F6F4",
-                  border: pillar.dark ? undefined : "1px solid rgba(20,33,31,.06)",
+                  background: pillar.dark ? "#14211F" : "var(--tbc-bg)",
+                  border: pillar.dark ? undefined : "1px solid var(--tbc-border-soft)",
                   borderRadius: 18,
                   padding: 44,
                   display: "grid",
@@ -145,7 +145,7 @@ export default function AboutPage() {
                     style={{
                       font: "800 28px/1.15 'Inter'",
                       letterSpacing: "-.02em",
-                      color: pillar.dark ? "#fff" : "#14211F",
+                      color: pillar.dark ? "#fff" : "var(--tbc-text)",
                       marginBottom: 12,
                     }}
                   >
@@ -154,7 +154,7 @@ export default function AboutPage() {
                   <p
                     style={{
                       font: "400 16px/1.6 'Inter'",
-                      color: pillar.dark ? "rgba(255,255,255,.7)" : "#54615e",
+                      color: pillar.dark ? "rgba(255,255,255,.7)" : "var(--tbc-text-muted)",
                     }}
                   >
                     {pillar.description}
@@ -175,7 +175,7 @@ export default function AboutPage() {
                       <span
                         style={{
                           font: "500 17px/1.4 'Inter'",
-                          color: pillar.dark ? "#fff" : "#14211F",
+                          color: pillar.dark ? "#fff" : "var(--tbc-text)",
                         }}
                       >
                         {bullet}
@@ -202,7 +202,7 @@ export default function AboutPage() {
         >
           Milestones
         </div>
-        <h2 style={{ font: "800 44px/1.1 'Inter'", letterSpacing: "-.02em", color: "#14211F", marginBottom: 56 }}>
+        <h2 style={{ font: "800 44px/1.1 'Inter'", letterSpacing: "-.02em", color: "var(--tbc-text)", marginBottom: 56 }}>
           From grassroots to institution.
         </h2>
         <div className="tbc-grid-4">
@@ -214,7 +214,7 @@ export default function AboutPage() {
               <div style={{ font: "700 14px/1 'Inter'", color: milestone.textColor, marginBottom: 12 }}>
                 {milestone.title}
               </div>
-              <p style={{ font: "400 15px/1.55 'Inter'", color: "#54615e" }}>{milestone.description}</p>
+              <p style={{ font: "400 15px/1.55 'Inter'", color: "var(--tbc-text-muted)" }}>{milestone.description}</p>
             </div>
           ))}
         </div>

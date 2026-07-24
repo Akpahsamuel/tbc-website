@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function MediaPage() {
   return (
-    <div style={{ width: "100%", color: "#14211F" }}>
+    <div style={{ width: "100%", color: "var(--tbc-text)" }}>
       <section style={{ background: "#1B4D4A", padding: "96px 40px" }}>
         <div style={{ maxWidth: 1160, margin: "0 auto", animation: "tbcUp .6s both" }}>
           <div
@@ -47,8 +47,8 @@ export default function MediaPage() {
         <div
           className="tbc-card"
           style={{
-            background: "#fff",
-            border: "1px solid rgba(20,33,31,.08)",
+            background: "var(--tbc-surface)",
+            border: "1px solid var(--tbc-border)",
             borderRadius: 20,
             overflow: "hidden",
             display: "grid",
@@ -68,10 +68,10 @@ export default function MediaPage() {
             >
               Latest ecosystem report
             </span>
-            <h2 style={{ font: "800 32px/1.15 'Inter'", letterSpacing: "-.02em", color: "#14211F", marginBottom: 14 }}>
+            <h2 style={{ font: "800 32px/1.15 'Inter'", letterSpacing: "-.02em", color: "var(--tbc-text)", marginBottom: 14 }}>
               The State of Web3 in Ghana
             </h2>
-            <p style={{ font: "400 17px/1.6 'Inter'", color: "#54615e", marginBottom: 24 }}>
+            <p style={{ font: "400 17px/1.6 'Inter'", color: "var(--tbc-text-muted)", marginBottom: 24 }}>
               Adoption trends, developer ecosystem growth, and community insights — establishing
               TBC Ghana as an ecosystem intelligence source.
             </p>
@@ -90,8 +90,8 @@ export default function MediaPage() {
               key={post.title}
               className="tbc-card"
               style={{
-                background: "#fff",
-                border: "1px solid rgba(20,33,31,.08)",
+                background: "var(--tbc-surface)",
+                border: "1px solid var(--tbc-border)",
                 borderRadius: 16,
                 overflow: "hidden",
               }}
@@ -112,19 +112,19 @@ export default function MediaPage() {
                   >
                     {post.tag}
                   </span>
-                  <span style={{ font: "500 12.5px/1 'Inter'", color: "#9aa39c" }}>{post.date}</span>
+                  <span style={{ font: "500 12.5px/1 'Inter'", color: "var(--tbc-text-placeholder)" }}>{post.date}</span>
                 </div>
                 <h3
                   style={{
                     font: "700 19px/1.3 'Inter'",
                     letterSpacing: "-.01em",
-                    color: "#14211F",
+                    color: "var(--tbc-text)",
                     marginBottom: 10,
                   }}
                 >
                   {post.title}
                 </h3>
-                <p style={{ font: "400 14.5px/1.55 'Inter'", color: "#54615e" }}>{post.excerpt}</p>
+                <p style={{ font: "400 14.5px/1.55 'Inter'", color: "var(--tbc-text-muted)" }}>{post.excerpt}</p>
               </div>
             </div>
           ))}

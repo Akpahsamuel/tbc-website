@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function TeamPage() {
   return (
-    <div style={{ width: "100%", color: "#14211F" }}>
+    <div style={{ width: "100%", color: "var(--tbc-text)" }}>
       <section style={{ background: "#1B4D4A", padding: "96px 40px" }}>
         <div style={{ maxWidth: 1160, margin: "0 auto", animation: "tbcUp .6s both" }}>
           <div
@@ -49,15 +49,15 @@ export default function TeamPage() {
               key={member.name}
               className="tbc-card"
               style={{
-                background: "#fff",
-                border: "1px solid rgba(20,33,31,.08)",
+                background: "var(--tbc-surface)",
+                border: "1px solid var(--tbc-border)",
                 borderRadius: 16,
                 overflow: "hidden",
               }}
             >
               <ImagePlaceholder label="headshot" style={{ aspectRatio: "1/1" }} />
               <div style={{ padding: "20px 22px 24px" }}>
-                <div style={{ font: "700 18px/1.25 'Inter'", letterSpacing: "-.01em", color: "#14211F", marginBottom: 5 }}>
+                <div style={{ font: "700 18px/1.25 'Inter'", letterSpacing: "-.01em", color: "var(--tbc-text)", marginBottom: 5 }}>
                   {member.name}
                 </div>
                 <div style={{ font: "500 14px/1.4 'Inter'", color: "#1B4D4A" }}>{member.role}</div>
@@ -65,7 +65,7 @@ export default function TeamPage() {
             </div>
           ))}
         </div>
-        <p style={{ font: "400 14px/1.6 'Inter'", color: "#7b857f", marginTop: 28, maxWidth: 640 }}>
+        <p style={{ font: "400 14px/1.6 'Inter'", color: "var(--tbc-text-faint)", marginTop: 28, maxWidth: 640 }}>
           Headshots, short bios and preferred name spellings are being confirmed with each
           member ahead of launch.
         </p>

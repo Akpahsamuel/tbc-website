@@ -95,7 +95,7 @@ export default function Footer() {
         <div>
           <div style={headingStyle}>Contact</div>
           <a
-            href="mailto:info@tbcafrica.org"
+            href="mailto:thebuilderscircleghana@gmail.com"
             style={{
               font: "500 14.5px/1.5 'Inter'",
               color: "rgba(255,255,255,.72)",
@@ -104,13 +104,13 @@ export default function Footer() {
               marginBottom: 12,
             }}
           >
-            info@tbcafrica.org
+            thebuilderscircleghana@gmail.com
           </a>
-          <p style={{ font: "400 14.5px/1.6 'Inter'", color: "rgba(255,255,255,.5)" }}>
+          {/* <p style={{ font: "400 14.5px/1.6 'Inter'", color: "rgba(255,255,255,.5)" }}>
             14 Nii Owoo Street
             <br />
             Dzorwulu, Accra, Ghana
-          </p>
+          </p> */}
         </div>
       </div>
 
@@ -131,7 +131,10 @@ export default function Footer() {
           © 2026 The Builders Circle Ghana. All rights reserved.
         </span>
         <span style={{ font: "400 13px/1 'Inter'", color: "rgba(255,255,255,.42)" }}>
-          www.tbcafrica.org
+          www.tbcghana.org
+        </span>
+        <span style={{ font: "400 13px/1 'Inter'", color: "rgba(255,255,255,.42)" }}>
+          Developed By KayabaLabs
         </span>
       </div>
     </footer>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import { PILLARS } from "@/data/pillars";
 import { HOME_STATS } from "@/data/stats";
@@ -6,9 +7,24 @@ import { PARTNER_VALUE_PROPS } from "@/data/partners";
 
 export default function HomePage() {
   return (
-    <div style={{ width: "100%", color: "#14211F" }}>
+    <div style={{ width: "100%", color: "var(--tbc-text)" }}>
       {/* HERO */}
       <section style={{ position: "relative", background: "#1B4D4A", overflow: "hidden" }}>
+        <Image
+          src="/images/tbc_hero.jpg"
+          alt=""
+          fill
+          priority
+          style={{ objectFit: "cover", objectPosition: "center right" }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "linear-gradient(90deg, #1B4D4A 0%, #1B4D4A 38%, rgba(27,77,74,.72) 50%, rgba(27,77,74,0) 72%)",
+          }}
+        />
         <div
           style={{
             position: "absolute",
@@ -75,6 +91,7 @@ export default function HomePage() {
                 letterSpacing: "-.03em",
                 color: "#fff",
                 marginBottom: 28,
+                textWrap: "balance",
               }}
             >
               Building Ghana&rsquo;s <span style={{ color: "#24D155" }}>Web3 Future</span> Together.
@@ -123,7 +140,7 @@ export default function HomePage() {
       </section>
 
       {/* STAT BAND */}
-      <section style={{ background: "#fff", borderBottom: "1px solid rgba(20,33,31,.08)" }}>
+      <section style={{ background: "var(--tbc-surface)", borderBottom: "1px solid var(--tbc-border)" }}>
         <div style={{ maxWidth: 1160, margin: "0 auto", padding: "34px 40px", display: "flex", flexWrap: "wrap" }}>
           {HOME_STATS.map((stat, i) => (
             <div
@@ -131,14 +148,15 @@ export default function HomePage() {
               style={{
                 flex: 1,
                 minWidth: 180,
-                padding: i === 0 ? "0 32px 0 0" : "0 32px",
+                padding:
+                  i === 0 ? "0 32px 0 0" : i === HOME_STATS.length - 1 ? "0 0 0 32px" : "0 32px",
                 borderLeft: i === 0 ? undefined : "1px solid rgba(20,33,31,.1)",
               }}
             >
               <div style={{ font: "800 38px/1 'Inter'", letterSpacing: "-.02em", color: "#1B4D4A" }}>
                 {stat.value}
               </div>
-              <div style={{ font: "500 14px/1.4 'Inter'", color: "#54615e", marginTop: 8 }}>
+              <div style={{ font: "500 14px/1.4 'Inter'", color: "var(--tbc-text-muted)", marginTop: 8 }}>
                 {stat.label}
               </div>
             </div>
@@ -170,12 +188,12 @@ export default function HomePage() {
           >
             Who We Are
           </div>
-          <h2 style={{ font: "800 44px/1.1 'Inter'", letterSpacing: "-.02em", color: "#14211F" }}>
+          <h2 style={{ font: "800 44px/1.1 'Inter'", letterSpacing: "-.02em", color: "var(--tbc-text)" }}>
             A trusted gateway for Web3 growth in Ghana.
           </h2>
         </div>
         <div>
-          <p style={{ font: "400 20px/1.65 'Inter'", color: "#3a453f", marginBottom: 28 }}>
+          <p style={{ font: "400 20px/1.65 'Inter'", color: "var(--tbc-text-secondary)", marginBottom: 28 }}>
             TBC Ghana is a trusted gateway for blockchain and Web3 growth in Ghana and Africa —
             educating new users, supporting builders, and connecting global ecosystems with
             local communities.
@@ -187,7 +205,7 @@ export default function HomePage() {
       </section>
 
       {/* WHAT WE DO */}
-      <section style={{ background: "#fff", borderTop: "1px solid rgba(20,33,31,.08)", borderBottom: "1px solid rgba(20,33,31,.08)" }}>
+      <section style={{ background: "var(--tbc-surface)", borderTop: "1px solid var(--tbc-border)", borderBottom: "1px solid var(--tbc-border)" }}>
         <div style={{ maxWidth: 1160, margin: "0 auto", padding: "100px 40px" }}>
           <div
             style={{
@@ -211,7 +229,7 @@ export default function HomePage() {
               >
                 What We Do
               </div>
-              <h2 style={{ font: "800 44px/1.1 'Inter'", letterSpacing: "-.02em", color: "#14211F" }}>
+              <h2 style={{ font: "800 44px/1.1 'Inter'", letterSpacing: "-.02em", color: "var(--tbc-text)" }}>
                 Five pillars, one ecosystem.
               </h2>
             </div>
@@ -225,10 +243,10 @@ export default function HomePage() {
                 key={pillar.title}
                 className="tbc-card"
                 style={{
-                  background: "#F5F6F4",
+                  background: "var(--tbc-bg)",
                   borderRadius: 14,
                   padding: 28,
-                  border: "1px solid rgba(20,33,31,.06)",
+                  border: "1px solid var(--tbc-border-soft)",
                 }}
               >
                 <div
@@ -245,10 +263,10 @@ export default function HomePage() {
                 >
                   <pillar.Icon />
                 </div>
-                <div style={{ font: "700 20px/1.2 'Inter'", color: "#14211F", marginBottom: 10 }}>
+                <div style={{ font: "700 20px/1.2 'Inter'", color: "var(--tbc-text)", marginBottom: 10 }}>
                   {pillar.title}
                 </div>
-                <p style={{ font: "400 15px/1.55 'Inter'", color: "#54615e" }}>{pillar.description}</p>
+                <p style={{ font: "400 15px/1.55 'Inter'", color: "var(--tbc-text-muted)" }}>{pillar.description}</p>
               </div>
             ))}
             <div
@@ -317,7 +335,7 @@ export default function HomePage() {
       </section>
 
       {/* PARTNERS */}
-      <section style={{ background: "#fff", borderTop: "1px solid rgba(20,33,31,.08)", borderBottom: "1px solid rgba(20,33,31,.08)" }}>
+      {/* <section style={{ background: "var(--tbc-surface)", borderTop: "1px solid var(--tbc-border)", borderBottom: "1px solid var(--tbc-border)" }}>
         <div style={{ maxWidth: 1160, margin: "0 auto", padding: "100px 40px" }}>
           <div
             style={{
@@ -341,7 +359,7 @@ export default function HomePage() {
               >
                 Partners
               </div>
-              <h2 style={{ font: "800 44px/1.1 'Inter'", letterSpacing: "-.02em", color: "#14211F" }}>
+              <h2 style={{ font: "800 44px/1.1 'Inter'", letterSpacing: "-.02em", color: "var(--tbc-text)" }}>
                 Building the ecosystem together.
               </h2>
             </div>
@@ -355,10 +373,10 @@ export default function HomePage() {
                 key={partner.title}
                 className="tbc-card"
                 style={{
-                  background: "#F5F6F4",
+                  background: "var(--tbc-bg)",
                   borderRadius: 14,
                   padding: 28,
-                  border: "1px solid rgba(20,33,31,.06)",
+                  border: "1px solid var(--tbc-border-soft)",
                 }}
               >
                 <div
@@ -375,10 +393,10 @@ export default function HomePage() {
                 >
                   <partner.Icon />
                 </div>
-                <div style={{ font: "700 20px/1.2 'Inter'", color: "#14211F", marginBottom: 10 }}>
+                <div style={{ font: "700 20px/1.2 'Inter'", color: "var(--tbc-text)", marginBottom: 10 }}>
                   {partner.title}
                 </div>
-                <p style={{ font: "400 15px/1.55 'Inter'", color: "#54615e" }}>{partner.description}</p>
+                <p style={{ font: "400 15px/1.55 'Inter'", color: "var(--tbc-text-muted)" }}>{partner.description}</p>
               </div>
             ))}
           </div>
@@ -387,7 +405,7 @@ export default function HomePage() {
               font: "600 12px/1 'Inter'",
               letterSpacing: ".16em",
               textTransform: "uppercase",
-              color: "#7b857f",
+              color: "var(--tbc-text-faint)",
               marginBottom: 20,
             }}
           >
@@ -404,7 +422,7 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* UPCOMING */}
       <section style={{ maxWidth: 1160, margin: "0 auto", padding: "100px 40px" }}>
@@ -419,15 +437,15 @@ export default function HomePage() {
         >
           Upcoming
         </div>
-        <h2 style={{ font: "800 44px/1.1 'Inter'", letterSpacing: "-.02em", color: "#14211F", marginBottom: 48 }}>
+        <h2 style={{ font: "800 44px/1.1 'Inter'", letterSpacing: "-.02em", color: "var(--tbc-text)", marginBottom: 48 }}>
           What&rsquo;s coming up next.
         </h2>
         <div className="tbc-grid-2">
           <div
             className="tbc-card"
             style={{
-              background: "#fff",
-              border: "1px solid rgba(20,33,31,.08)",
+              background: "var(--tbc-surface)",
+              border: "1px solid var(--tbc-border)",
               borderRadius: 16,
               padding: 36,
               display: "flex",
@@ -450,8 +468,8 @@ export default function HomePage() {
                 Weekly · Online
               </span>
             </div>
-            <div style={{ font: "700 24px/1.2 'Inter'", color: "#14211F" }}>Weekly X Space</div>
-            <p style={{ font: "400 16px/1.55 'Inter'", color: "#54615e", flex: 1 }}>
+            <div style={{ font: "700 24px/1.2 'Inter'", color: "var(--tbc-text)" }}>Weekly X Space</div>
+            <p style={{ font: "400 16px/1.55 'Inter'", color: "var(--tbc-text-muted)", flex: 1 }}>
               Every Friday at 7:30 PM GMT — blockchain education, African Web3 stories, founder
               interviews and market insights.
             </p>

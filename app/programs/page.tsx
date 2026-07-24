@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ProgramsPage() {
   return (
-    <div style={{ width: "100%", color: "#14211F" }}>
+    <div style={{ width: "100%", color: "var(--tbc-text)" }}>
       <section style={{ background: "#1B4D4A", padding: "96px 40px" }}>
         <div style={{ maxWidth: 1160, margin: "0 auto", animation: "tbcUp .6s both" }}>
           <div
@@ -48,8 +48,8 @@ export default function ProgramsPage() {
             key={program.title}
             className={program.dark ? "tbc-card-dark" : "tbc-card"}
             style={{
-              background: program.dark ? "#14211F" : "#fff",
-              border: program.dark ? undefined : "1px solid rgba(20,33,31,.08)",
+              background: program.dark ? "#14211F" : "var(--tbc-surface)",
+              border: program.dark ? undefined : "1px solid var(--tbc-border)",
               borderRadius: 18,
               padding: 40,
             }}
@@ -72,7 +72,7 @@ export default function ProgramsPage() {
               style={{
                 font: "800 26px/1.15 'Inter'",
                 letterSpacing: "-.02em",
-                color: program.dark ? "#fff" : "#14211F",
+                color: program.dark ? "#fff" : "var(--tbc-text)",
                 marginBottom: 14,
               }}
             >
@@ -81,7 +81,7 @@ export default function ProgramsPage() {
             <p
               style={{
                 font: "400 17px/1.6 'Inter'",
-                color: program.dark ? "rgba(255,255,255,.72)" : "#54615e",
+                color: program.dark ? "rgba(255,255,255,.72)" : "var(--tbc-text-muted)",
                 marginBottom: 20,
               }}
             >
@@ -95,7 +95,7 @@ export default function ProgramsPage() {
                     style={{
                       font: "500 13px/1 'Inter'",
                       color: "#1B4D4A",
-                      background: "#F5F6F4",
+                      background: "var(--tbc-bg)",
                       padding: "8px 13px",
                       borderRadius: 100,
                     }}
@@ -132,8 +132,8 @@ export default function ProgramsPage() {
         <div
           style={{
             gridColumn: "span 2",
-            background: "#fff",
-            border: "1px solid rgba(20,33,31,.08)",
+            background: "var(--tbc-surface)",
+            border: "1px solid var(--tbc-border)",
             borderRadius: 18,
             padding: 40,
             display: "grid",
@@ -157,11 +157,11 @@ export default function ProgramsPage() {
             >
               <RESEARCH_PROGRAM.Icon size={22} />
             </div>
-            <h2 style={{ font: "800 26px/1.15 'Inter'", letterSpacing: "-.02em", color: "#14211F", marginBottom: 14 }}>
+            <h2 style={{ font: "800 26px/1.15 'Inter'", letterSpacing: "-.02em", color: "var(--tbc-text)", marginBottom: 14 }}>
               {RESEARCH_PROGRAM.title}
             </h2>
           </div>
-          <p style={{ font: "400 18px/1.65 'Inter'", color: "#54615e" }}>{RESEARCH_PROGRAM.description}</p>
+          <p style={{ font: "400 18px/1.65 'Inter'", color: "var(--tbc-text-muted)" }}>{RESEARCH_PROGRAM.description}</p>
         </div>
       </section>
     </div>

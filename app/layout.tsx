@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import { ThemeProvider } from "@/lib/theme";
+import { THEME_INIT_SCRIPT } from "@/lib/theme-constants";
 import "./globals.css";
 
 const inter = Inter({
@@ -30,16 +33,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={inter.variable} suppressHydrationWarning>
       <body
         style={{
           fontFamily: "var(--font-inter), system-ui, sans-serif",
-          color: "#14211F",
+          color: "var(--tbc-text)",
         }}
       >
-        <Nav />
-        {children}
-        <Footer />
+        <Script
+          id="tbc-theme-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }}
+        />
+        <ThemeProvider>
+          <Nav />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
