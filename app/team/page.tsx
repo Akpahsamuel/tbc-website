@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
+import TeamAvatar from "@/components/TeamAvatar";
 import { TEAM } from "@/data/team";
 
 export const metadata: Metadata = {
@@ -55,7 +55,7 @@ export default function TeamPage() {
                 overflow: "hidden",
               }}
             >
-              <ImagePlaceholder label="headshot" style={{ aspectRatio: "1/1" }} />
+              <TeamAvatar src={member.img} alt={member.name} style={{ aspectRatio: "1/1" }} />
               <div style={{ padding: "20px 22px 24px" }}>
                 <div style={{ font: "700 18px/1.25 'Inter'", letterSpacing: "-.01em", color: "var(--tbc-text)", marginBottom: 5 }}>
                   {member.name}
