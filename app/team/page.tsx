@@ -65,10 +65,10 @@ export default function TeamPage() {
             </div>
           ))}
         </div>
-        <p style={{ font: "400 14px/1.6 'Inter'", color: "var(--tbc-text-faint)", marginTop: 28, maxWidth: 640 }}>
+        {/* <p style={{ font: "400 14px/1.6 'Inter'", color: "var(--tbc-text-faint)", marginTop: 28, maxWidth: 640 }}>
           Headshots, short bios and preferred name spellings are being confirmed with each
           member ahead of launch.
-        </p>
+        </p> */}
       </section>
     </div>
   );

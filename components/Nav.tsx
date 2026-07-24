@@ -87,7 +87,7 @@ export default function Nav() {
               );
             })}
             <Link
-              href="/getinvolved"
+              href="https://chat.whatsapp.com/Jd9W4t16aYUH3UAONN0Ivm"
               style={{
                 background: "#24D155",
                 color: "#14211F",

@@ -109,7 +109,7 @@ export default function HomePage() {
             </p>
             <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
               <Link
-                href="/getinvolved"
+                href="https://chat.whatsapp.com/Jd9W4t16aYUH3UAONN0Ivm"
                 style={{
                   background: "#24D155",
                   color: "#14211F",
@@ -318,7 +318,7 @@ export default function HomePage() {
             </p>
           </div>
           <Link
-            href="/getinvolved"
+            href="https://chat.whatsapp.com/Jd9W4t16aYUH3UAONN0Ivm"
             style={{
               background: "#14211F",
               color: "#fff",
