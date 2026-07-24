@@ -2,7 +2,7 @@ export type TeamMember = { name: string; role: string, img: string };
 
 export const TEAM: TeamMember[] = [
   { name: "Kwame Stalwart", role: "Convener", img: "/images/TBC-Team/kwame.jpg" },
-  { name: "Yini", role: "Technical Team Lead", img: "/images/TBC-Team/yini.png" },
+  { name: "Yini", role: "Technical Lead", img: "/images/TBC-Team/yini.png" },
   { name: "Lion Prado", role: "Technical Team", img: "/images/TBC-Team/lion.jpg" },
   // { name: "Nii Obodai Ashare", role: "Design Lead", img: "/images/TBC-Team/nii.jpg" },
   { name: "Francisca Mailiana Zonky", role: "Secretary & Operations Lead", img: "/images/TBC-Team/meliana.PNG" },
