@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import { TEAM } from "@/data/team";
 
@@ -54,7 +55,19 @@ export default function TeamPage() {
                 overflow: "hidden",
               }}
             >
-              <ImagePlaceholder label="headshot" style={{ aspectRatio: "1/1" }} />
+              {member.image ? (
+                <div style={{ position: "relative", width: "100%", aspectRatio: "1/1" }}>
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    sizes="(max-width: 640px) 50vw, (max-width: 900px) 33vw, 25vw"
+                    style={{ objectFit: "cover", objectPosition: member.objectPosition || "center 20%" }}
+                  />
+                </div>
+              ) : (
+                <ImagePlaceholder label="headshot" style={{ aspectRatio: "1/1" }} />
+              )}
               <div style={{ padding: "20px 22px 24px" }}>
                 <div style={{ font: "700 18px/1.25 'Inter'", letterSpacing: "-.01em", color: "#14211F", marginBottom: 5 }}>
                   {member.name}
@@ -64,10 +77,6 @@ export default function TeamPage() {
             </div>
           ))}
         </div>
-        <p style={{ font: "400 14px/1.6 'Inter'", color: "#7b857f", marginTop: 28, maxWidth: 640 }}>
-          Headshots, short bios and preferred name spellings are being confirmed with each
-          member ahead of launch.
-        </p>
       </section>
     </div>
   );
