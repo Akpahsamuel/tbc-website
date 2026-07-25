@@ -12,8 +12,8 @@ export default function AboutPage() {
   return (
     <div style={{ width: "100%", color: "#14211F" }}>
       {/* PAGE HERO */}
-      <section style={{ background: "#1B4D4A", padding: "96px 40px" }}>
-        <div style={{ maxWidth: 1160, margin: "0 auto", animation: "tbcUp .6s both" }}>
+      <section style={{ background: "#1B4D4A" }}>
+        <div className="tbc-container tbc-hero-padding" style={{ animation: "tbcUp .6s both" }}>
           <div
             style={{
               font: "600 13px/1 'Inter'",
@@ -26,9 +26,8 @@ export default function AboutPage() {
             About TBC Ghana
           </div>
           <h1
+            className="tbc-hero-h1"
             style={{
-              font: "800 62px/1.05 'Inter'",
-              letterSpacing: "-.03em",
               color: "#fff",
               maxWidth: 900,
             }}
@@ -39,7 +38,7 @@ export default function AboutPage() {
       </section>
 
       {/* STORY */}
-      <section style={{ maxWidth: 900, margin: "0 auto", padding: "88px 40px 40px" }}>
+      <section className="tbc-container" style={{ maxWidth: 900, paddingTop: 64, paddingBottom: 40 }}>
         <p style={{ font: "400 22px/1.65 'Inter'", color: "#3a453f", marginBottom: 28 }}>
           TBC Ghana was founded to solve a simple but persistent problem: Ghana&rsquo;s
           blockchain and Web3 community has energy, talent and momentum, but no single, trusted
@@ -57,12 +56,12 @@ export default function AboutPage() {
 
       {/* VISION / MISSION */}
       <section
-        className="tbc-grid-2"
-        style={{ maxWidth: 1160, margin: "0 auto", padding: "64px 40px" }}
+        className="tbc-container tbc-grid-2"
+        style={{ paddingTop: 40, paddingBottom: 64 }}
       >
         <div
-          className="tbc-card"
-          style={{ background: "#fff", border: "1px solid rgba(20,33,31,.08)", borderRadius: 16, padding: 44 }}
+          className="tbc-card tbc-card-padding"
+          style={{ background: "#fff", border: "1px solid rgba(20,33,31,.08)", borderRadius: 16 }}
         >
           <div
             style={{
@@ -81,7 +80,7 @@ export default function AboutPage() {
             growth across Africa.
           </p>
         </div>
-        <div className="tbc-card-dark" style={{ background: "#14211F", borderRadius: 16, padding: 44 }}>
+        <div className="tbc-card-dark tbc-card-padding" style={{ background: "#14211F", borderRadius: 16 }}>
           <div
             style={{
               font: "600 12px/1 'Inter'",
@@ -103,7 +102,7 @@ export default function AboutPage() {
 
       {/* WHAT WE DO / PILLARS */}
       <section style={{ background: "#fff", borderTop: "1px solid rgba(20,33,31,.08)", borderBottom: "1px solid rgba(20,33,31,.08)" }}>
-        <div style={{ maxWidth: 1160, margin: "0 auto", padding: "96px 40px" }}>
+        <div className="tbc-container tbc-section-padding">
           <div
             style={{
               font: "600 13px/1 'Inter'",
@@ -115,7 +114,7 @@ export default function AboutPage() {
           >
             What We Do · Our Pillars
           </div>
-          <h2 style={{ font: "800 44px/1.1 'Inter'", letterSpacing: "-.02em", color: "#14211F", marginBottom: 16 }}>
+          <h2 className="tbc-section-h2" style={{ color: "#14211F", marginBottom: 16 }}>
             Five pillars, one ecosystem.
           </h2>
           <p style={{ font: "400 19px/1.6 'Inter'", color: "#54615e", maxWidth: 620, marginBottom: 48 }}>
@@ -126,15 +125,11 @@ export default function AboutPage() {
             {ABOUT_PILLARS.map((pillar) => (
               <div
                 key={pillar.number}
-                className={pillar.dark ? "tbc-card-dark" : "tbc-card"}
+                className={`tbc-card-padding tbc-split-grid-about ${pillar.dark ? "tbc-card-dark" : "tbc-card"}`}
                 style={{
                   background: pillar.dark ? "#14211F" : "#F5F6F4",
                   border: pillar.dark ? undefined : "1px solid rgba(20,33,31,.06)",
                   borderRadius: 18,
-                  padding: 44,
-                  display: "grid",
-                  gridTemplateColumns: ".7fr 1.3fr",
-                  gap: 44,
                 }}
               >
                 <div>
@@ -190,7 +185,7 @@ export default function AboutPage() {
       </section>
 
       {/* TIMELINE */}
-      <section style={{ maxWidth: 1160, margin: "0 auto", padding: "96px 40px" }}>
+      <section className="tbc-container tbc-section-padding">
         <div
           style={{
             font: "600 13px/1 'Inter'",
@@ -202,7 +197,7 @@ export default function AboutPage() {
         >
           Milestones
         </div>
-        <h2 style={{ font: "800 44px/1.1 'Inter'", letterSpacing: "-.02em", color: "#14211F", marginBottom: 56 }}>
+        <h2 className="tbc-section-h2" style={{ color: "#14211F", marginBottom: 56 }}>
           From grassroots to institution.
         </h2>
         <div className="tbc-grid-4">

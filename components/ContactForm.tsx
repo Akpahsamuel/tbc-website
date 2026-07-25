@@ -20,11 +20,11 @@ const labelTextStyle: React.CSSProperties = {
 export default function ContactForm() {
   return (
     <div
-      className="tbc-card"
-      style={{ background: "#fff", border: "1px solid rgba(20,33,31,.08)", borderRadius: 20, padding: 44 }}
+      className="tbc-card tbc-card-padding"
+      style={{ background: "#fff", border: "1px solid rgba(20,33,31,.08)", borderRadius: 20 }}
     >
       <form onSubmit={(e) => e.preventDefault()}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
+        <div className="tbc-form-grid">
           <label style={{ display: "block" }}>
             <span style={labelTextStyle}>Full Name</span>
             <input type="text" placeholder="Your name" style={inputStyle} />
@@ -33,11 +33,11 @@ export default function ContactForm() {
             <span style={labelTextStyle}>Email Address</span>
             <input type="email" placeholder="you@email.com" style={inputStyle} />
           </label>
-          <label style={{ display: "block", gridColumn: "span 2" }}>
+          <label className="tbc-form-span-2" style={{ display: "block", gridColumn: "span 2" }}>
             <span style={labelTextStyle}>Subject</span>
             <input type="text" placeholder="What's this about?" style={inputStyle} />
           </label>
-          <label style={{ display: "block", gridColumn: "span 2" }}>
+          <label className="tbc-form-span-2" style={{ display: "block", gridColumn: "span 2" }}>
             <span style={labelTextStyle}>Message</span>
             <textarea rows={5} placeholder="Tell us more…" style={{ ...inputStyle, resize: "vertical" }} />
           </label>

@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 export default function GetInvolvedPage() {
   return (
     <div style={{ width: "100%", color: "#14211F" }}>
-      <section style={{ background: "#1B4D4A", padding: "96px 40px" }}>
-        <div style={{ maxWidth: 1160, margin: "0 auto", animation: "tbcUp .6s both" }}>
+      <section style={{ background: "#1B4D4A" }}>
+        <div className="tbc-container tbc-hero-padding" style={{ animation: "tbcUp .6s both" }}>
           <div
             style={{
               font: "600 13px/1 'Inter'",
@@ -25,9 +25,8 @@ export default function GetInvolvedPage() {
             Get Involved
           </div>
           <h1
+            className="tbc-hero-h1"
             style={{
-              font: "800 62px/1.05 'Inter'",
-              letterSpacing: "-.03em",
               color: "#fff",
               maxWidth: 820,
               marginBottom: 24,
@@ -42,7 +41,7 @@ export default function GetInvolvedPage() {
         </div>
       </section>
 
-      <section className="tbc-grid-4" style={{ maxWidth: 1160, margin: "0 auto", padding: "80px 40px 40px" }}>
+      <section className="tbc-container tbc-grid-4" style={{ paddingTop: 64, paddingBottom: 40 }}>
         {GET_INVOLVED_WAYS.map((way) => (
           <div
             key={way.title}
@@ -56,7 +55,7 @@ export default function GetInvolvedPage() {
         ))}
       </section>
 
-      <section style={{ maxWidth: 760, margin: "0 auto", padding: "40px 40px 100px" }}>
+      <section className="tbc-container" style={{ maxWidth: 760, paddingTop: 40, paddingBottom: 80 }}>
         <GetInvolvedForm />
       </section>
     </div>

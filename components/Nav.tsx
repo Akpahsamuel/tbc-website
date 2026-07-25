@@ -13,19 +13,7 @@ export default function Nav() {
 
   return (
     <div style={{ position: "sticky", top: 0, zIndex: 100 }}>
-      <div
-        style={{
-          background: "#D03433",
-          color: "#fff",
-          padding: "10px 40px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: 12,
-          font: "600 13px/1 'Inter'",
-          textAlign: "center",
-        }}
-      >
+      <div className="tbc-banner">
         <span
           style={{
             width: 6,
@@ -41,16 +29,7 @@ export default function Nav() {
         <Countdown variant="banner" />
       </div>
 
-      <nav
-        style={{
-          background: "#14211F",
-          padding: "16px 40px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          borderBottom: "1px solid rgba(255,255,255,.07)",
-        }}
-      >
+      <nav className="tbc-nav">
         <Link
           href="/"
           style={{ display: "flex", alignItems: "center", textDecoration: "none" }}
@@ -127,7 +106,6 @@ export default function Nav() {
         style={{
           flexDirection: "column",
           background: "#14211F",
-          padding: "8px 40px 24px",
           gap: 4,
           borderBottom: "1px solid rgba(255,255,255,.07)",
         }}

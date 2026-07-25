@@ -27,8 +27,8 @@ const labelTextStyle: React.CSSProperties = {
 export default function GetInvolvedForm() {
   return (
     <div
-      className="tbc-card"
-      style={{ background: "#fff", border: "1px solid rgba(20,33,31,.08)", borderRadius: 20, padding: 48 }}
+      className="tbc-card tbc-card-padding"
+      style={{ background: "#fff", border: "1px solid rgba(20,33,31,.08)", borderRadius: 20 }}
     >
       <h2 style={{ font: "800 30px/1.15 'Inter'", letterSpacing: "-.02em", color: "#14211F", marginBottom: 8 }}>
         Join TBC Ghana
@@ -37,7 +37,7 @@ export default function GetInvolvedForm() {
         Tell us a little about you and where you&rsquo;d like to plug in.
       </p>
       <form onSubmit={(e) => e.preventDefault()}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20 }}>
+        <div className="tbc-form-grid">
           <label style={{ display: "block" }}>
             <span style={labelTextStyle}>Full Name</span>
             <input type="text" placeholder="Your name" style={inputStyle} />
@@ -58,7 +58,7 @@ export default function GetInvolvedForm() {
               ))}
             </select>
           </label>
-          <label style={{ display: "block", gridColumn: "span 2" }}>
+          <label className="tbc-form-span-2" style={{ display: "block", gridColumn: "span 2" }}>
             <span style={labelTextStyle}>How did you hear about TBC Ghana?</span>
             <input type="text" placeholder="X, a friend, an event…" style={inputStyle} />
           </label>

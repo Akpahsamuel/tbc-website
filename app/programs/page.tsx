@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 export default function ProgramsPage() {
   return (
     <div style={{ width: "100%", color: "#14211F" }}>
-      <section style={{ background: "#1B4D4A", padding: "96px 40px" }}>
-        <div style={{ maxWidth: 1160, margin: "0 auto", animation: "tbcUp .6s both" }}>
+      <section style={{ background: "#1B4D4A" }}>
+        <div className="tbc-container tbc-hero-padding" style={{ animation: "tbcUp .6s both" }}>
           <div
             style={{
               font: "600 13px/1 'Inter'",
@@ -25,9 +25,8 @@ export default function ProgramsPage() {
             Programs &amp; Initiatives
           </div>
           <h1
+            className="tbc-hero-h1"
             style={{
-              font: "800 62px/1.05 'Inter'",
-              letterSpacing: "-.03em",
               color: "#fff",
               maxWidth: 820,
               marginBottom: 24,
@@ -42,16 +41,15 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      <section className="tbc-grid-2" style={{ maxWidth: 1160, margin: "0 auto", padding: "80px 40px 96px" }}>
+      <section className="tbc-container tbc-grid-2" style={{ paddingTop: 64, paddingBottom: 80 }}>
         {PROGRAMS.map((program) => (
           <div
             key={program.title}
-            className={program.dark ? "tbc-card-dark" : "tbc-card"}
+            className={`tbc-card-padding ${program.dark ? "tbc-card-dark" : "tbc-card"}`}
             style={{
               background: program.dark ? "#14211F" : "#fff",
               border: program.dark ? undefined : "1px solid rgba(20,33,31,.08)",
               borderRadius: 18,
-              padding: 40,
             }}
           >
             <div
@@ -130,16 +128,11 @@ export default function ProgramsPage() {
         ))}
 
         <div
+          className="tbc-full-span tbc-card tbc-card-padding tbc-split-grid"
           style={{
-            gridColumn: "span 2",
             background: "#fff",
             border: "1px solid rgba(20,33,31,.08)",
             borderRadius: 18,
-            padding: 40,
-            display: "grid",
-            gridTemplateColumns: ".8fr 1.2fr",
-            gap: 40,
-            alignItems: "center",
           }}
         >
           <div>

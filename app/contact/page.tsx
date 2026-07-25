@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div style={{ width: "100%", color: "#14211F" }}>
-      <section style={{ background: "#1B4D4A", padding: "96px 40px" }}>
-        <div style={{ maxWidth: 1160, margin: "0 auto", animation: "tbcUp .6s both" }}>
+      <section style={{ background: "#1B4D4A" }}>
+        <div className="tbc-container tbc-hero-padding" style={{ animation: "tbcUp .6s both" }}>
           <div
             style={{
               font: "600 13px/1 'Inter'",
@@ -24,9 +24,8 @@ export default function ContactPage() {
             Contact
           </div>
           <h1
+            className="tbc-hero-h1"
             style={{
-              font: "800 62px/1.05 'Inter'",
-              letterSpacing: "-.03em",
               color: "#fff",
               maxWidth: 820,
               marginBottom: 24,
@@ -40,16 +39,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section
-        style={{
-          maxWidth: 1160,
-          margin: "0 auto",
-          padding: "80px 40px 100px",
-          display: "grid",
-          gridTemplateColumns: ".85fr 1.15fr",
-          gap: 56,
-        }}
-      >
+      <section className="tbc-container tbc-split-grid-contact" style={{ paddingTop: 64, paddingBottom: 80 }}>
         <div>
           <div style={{ marginBottom: 36 }}>
             <div

@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 export default function MediaPage() {
   return (
     <div style={{ width: "100%", color: "#14211F" }}>
-      <section style={{ background: "#1B4D4A", padding: "96px 40px" }}>
-        <div style={{ maxWidth: 1160, margin: "0 auto", animation: "tbcUp .6s both" }}>
+      <section style={{ background: "#1B4D4A" }}>
+        <div className="tbc-container tbc-hero-padding" style={{ animation: "tbcUp .6s both" }}>
           <div
             style={{
               font: "600 13px/1 'Inter'",
@@ -25,9 +25,8 @@ export default function MediaPage() {
             Media / Ecosystem Stories
           </div>
           <h1
+            className="tbc-hero-h1"
             style={{
-              font: "800 62px/1.05 'Inter'",
-              letterSpacing: "-.03em",
               color: "#fff",
               maxWidth: 820,
               marginBottom: 24,
@@ -43,20 +42,19 @@ export default function MediaPage() {
       </section>
 
       {/* FEATURED REPORT */}
-      <section style={{ maxWidth: 1160, margin: "0 auto", padding: "64px 40px 24px" }}>
+      <section className="tbc-container" style={{ paddingTop: 64, paddingBottom: 24 }}>
         <div
-          className="tbc-card"
+          className="tbc-card tbc-split-grid"
           style={{
             background: "#fff",
             border: "1px solid rgba(20,33,31,.08)",
             borderRadius: 20,
             overflow: "hidden",
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
+            gap: 0,
           }}
         >
           <ImagePlaceholder label={<>report cover<br />drop image here</>} style={{ minHeight: 300 }} />
-          <div style={{ padding: 48, display: "flex", flexDirection: "column", justifyContent: "center" }}>
+          <div className="tbc-card-padding" style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
             <span
               style={{
                 font: "600 12px/1 'Inter'",
@@ -83,7 +81,7 @@ export default function MediaPage() {
       </section>
 
       {/* CONTENT GRID */}
-      <section style={{ maxWidth: 1160, margin: "0 auto", padding: "24px 40px 100px" }}>
+      <section className="tbc-container" style={{ paddingTop: 24, paddingBottom: 80 }}>
         <div className="tbc-grid-3">
           {MEDIA_POSTS.map((post) => (
             <div

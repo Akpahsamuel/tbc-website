@@ -56,7 +56,7 @@ export default function HomePage() {
             }}
           />
         </div>
-        <div style={{ maxWidth: 1160, margin: "0 auto", padding: "104px 40px 96px", position: "relative" }}>
+        <div className="tbc-container tbc-hero-padding" style={{ position: "relative" }}>
           <div style={{ maxWidth: 760, animation: "tbcUp .7s both" }}>
             <div
               style={{
@@ -70,9 +70,8 @@ export default function HomePage() {
               Ecosystem Infrastructure for Web3
             </div>
             <h1
+              className="tbc-hero-h1"
               style={{
-                font: "800 72px/1.02 'Inter'",
-                letterSpacing: "-.03em",
                 color: "#fff",
                 marginBottom: 28,
               }}
@@ -124,16 +123,11 @@ export default function HomePage() {
 
       {/* STAT BAND */}
       <section style={{ background: "#fff", borderBottom: "1px solid rgba(20,33,31,.08)" }}>
-        <div style={{ maxWidth: 1160, margin: "0 auto", padding: "34px 40px", display: "flex", flexWrap: "wrap" }}>
-          {HOME_STATS.map((stat, i) => (
+        <div className="tbc-container tbc-stat-grid" style={{ paddingTop: 34, paddingBottom: 34 }}>
+          {HOME_STATS.map((stat) => (
             <div
               key={stat.label}
-              style={{
-                flex: 1,
-                minWidth: 180,
-                padding: i === 0 ? "0 32px 0 0" : "0 32px",
-                borderLeft: i === 0 ? undefined : "1px solid rgba(20,33,31,.1)",
-              }}
+              className="tbc-stat-item"
             >
               <div style={{ font: "800 38px/1 'Inter'", letterSpacing: "-.02em", color: "#1B4D4A" }}>
                 {stat.value}
@@ -147,17 +141,7 @@ export default function HomePage() {
       </section>
 
       {/* WHO WE ARE */}
-      <section
-        style={{
-          maxWidth: 1160,
-          margin: "0 auto",
-          padding: "104px 40px",
-          display: "grid",
-          gridTemplateColumns: ".9fr 1.1fr",
-          gap: 72,
-          alignItems: "center",
-        }}
-      >
+      <section className="tbc-container tbc-section-padding tbc-split-grid-who">
         <div>
           <div
             style={{
@@ -170,7 +154,7 @@ export default function HomePage() {
           >
             Who We Are
           </div>
-          <h2 style={{ font: "800 44px/1.1 'Inter'", letterSpacing: "-.02em", color: "#14211F" }}>
+          <h2 className="tbc-section-h2" style={{ color: "#14211F" }}>
             A trusted gateway for Web3 growth in Ghana.
           </h2>
         </div>
@@ -188,7 +172,7 @@ export default function HomePage() {
 
       {/* WHAT WE DO */}
       <section style={{ background: "#fff", borderTop: "1px solid rgba(20,33,31,.08)", borderBottom: "1px solid rgba(20,33,31,.08)" }}>
-        <div style={{ maxWidth: 1160, margin: "0 auto", padding: "100px 40px" }}>
+        <div className="tbc-container tbc-section-padding">
           <div
             style={{
               display: "flex",
@@ -211,7 +195,7 @@ export default function HomePage() {
               >
                 What We Do
               </div>
-              <h2 style={{ font: "800 44px/1.1 'Inter'", letterSpacing: "-.02em", color: "#14211F" }}>
+              <h2 className="tbc-section-h2" style={{ color: "#14211F" }}>
                 Five pillars, one ecosystem.
               </h2>
             </div>
@@ -279,10 +263,10 @@ export default function HomePage() {
       {/* GET INVOLVED BAND */}
       <section style={{ background: "#24D155" }}>
         <div
+          className="tbc-container"
           style={{
-            maxWidth: 1160,
-            margin: "0 auto",
-            padding: "64px 40px",
+            paddingTop: 64,
+            paddingBottom: 64,
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
@@ -318,7 +302,7 @@ export default function HomePage() {
 
       {/* PARTNERS */}
       <section style={{ background: "#fff", borderTop: "1px solid rgba(20,33,31,.08)", borderBottom: "1px solid rgba(20,33,31,.08)" }}>
-        <div style={{ maxWidth: 1160, margin: "0 auto", padding: "100px 40px" }}>
+        <div className="tbc-container tbc-section-padding">
           <div
             style={{
               display: "flex",
@@ -341,7 +325,7 @@ export default function HomePage() {
               >
                 Partners
               </div>
-              <h2 style={{ font: "800 44px/1.1 'Inter'", letterSpacing: "-.02em", color: "#14211F" }}>
+              <h2 className="tbc-section-h2" style={{ color: "#14211F" }}>
                 Building the ecosystem together.
               </h2>
             </div>
@@ -393,7 +377,7 @@ export default function HomePage() {
           >
             Ecosystem partners &amp; sponsors
           </div>
-          <div className="tbc-grid-4">
+          <div className="tbc-grid-4 tbc-grid-partners">
             {[0, 1, 2, 3].map((i) => (
               <ImagePlaceholder
                 key={i}
@@ -407,7 +391,7 @@ export default function HomePage() {
       </section>
 
       {/* UPCOMING */}
-      <section style={{ maxWidth: 1160, margin: "0 auto", padding: "100px 40px" }}>
+      <section className="tbc-container tbc-section-padding">
         <div
           style={{
             font: "600 13px/1 'Inter'",
@@ -419,17 +403,16 @@ export default function HomePage() {
         >
           Upcoming
         </div>
-        <h2 style={{ font: "800 44px/1.1 'Inter'", letterSpacing: "-.02em", color: "#14211F", marginBottom: 48 }}>
+        <h2 className="tbc-section-h2" style={{ color: "#14211F", marginBottom: 48 }}>
           What&rsquo;s coming up next.
         </h2>
         <div className="tbc-grid-2">
           <div
-            className="tbc-card"
+            className="tbc-card tbc-card-padding"
             style={{
               background: "#fff",
               border: "1px solid rgba(20,33,31,.08)",
               borderRadius: 16,
-              padding: 36,
               display: "flex",
               flexDirection: "column",
               gap: 16,
@@ -460,11 +443,10 @@ export default function HomePage() {
             </Link>
           </div>
           <div
-            className="tbc-card-dark"
+            className="tbc-card-dark tbc-card-padding"
             style={{
               background: "#14211F",
               borderRadius: 16,
-              padding: 36,
               display: "flex",
               flexDirection: "column",
               gap: 16,
