@@ -3,6 +3,8 @@ import ImagePlaceholder from "@/components/ImagePlaceholder";
 import { PILLARS } from "@/data/pillars";
 import { HOME_STATS } from "@/data/stats";
 import { PARTNER_VALUE_PROPS } from "@/data/partners";
+import ScrollReveal from "@/components/ScrollReveal";
+import StaggerGrid from "@/components/StaggerGrid";
 
 export default function HomePage() {
   return (
@@ -203,7 +205,7 @@ export default function HomePage() {
               See all pillars →
             </Link>
           </div>
-          <div className="tbc-grid-3">
+          <StaggerGrid className="tbc-grid-3" direction="up" staggerDelay={0.1}>
             {PILLARS.map((pillar) => (
               <div
                 key={pillar.title}
@@ -256,7 +258,7 @@ export default function HomePage() {
                 Explore the community →
               </Link>
             </div>
-          </div>
+          </StaggerGrid>
         </div>
       </section>
 

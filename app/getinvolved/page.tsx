@@ -6,6 +6,15 @@ export const metadata: Metadata = {
   title: "Get Involved",
   description:
     "Whether you're a beginner, a builder, a student, or a protocol looking to enter the Ghanaian market — here's how to get involved with TBC Ghana.",
+  alternates: {
+    canonical: "/getinvolved",
+  },
+  openGraph: {
+    title: "Get Involved · TBC Ghana",
+    description:
+      "Whether you're a beginner, a builder, a student, or a protocol looking to enter the Ghanaian market — here's how to get involved with TBC Ghana.",
+    url: "https://www.tbcafrica.org/getinvolved",
+  },
 };
 
 export default function GetInvolvedPage() {

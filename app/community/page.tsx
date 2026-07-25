@@ -6,6 +6,15 @@ export const metadata: Metadata = {
   title: "Community",
   description:
     "TBC Ghana is built as a structured ecosystem. As members grow, they move through five levels.",
+  alternates: {
+    canonical: "/community",
+  },
+  openGraph: {
+    title: "Community · TBC Ghana",
+    description:
+      "TBC Ghana is built as a structured ecosystem. As members grow, they move through five levels.",
+    url: "https://www.tbcafrica.org/community",
+  },
 };
 
 export default function CommunityPage() {

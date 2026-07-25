@@ -6,6 +6,15 @@ export const metadata: Metadata = {
   title: "Programs",
   description:
     "Recurring, structured initiatives spanning education, community, media and ecosystem intelligence.",
+  alternates: {
+    canonical: "/programs",
+  },
+  openGraph: {
+    title: "Programs · TBC Ghana",
+    description:
+      "Recurring, structured initiatives spanning education, community, media and ecosystem intelligence.",
+    url: "https://www.tbcafrica.org/programs",
+  },
 };
 
 export default function ProgramsPage() {

@@ -6,6 +6,15 @@ export const metadata: Metadata = {
   title: "About",
   description:
     "TBC Ghana was founded to become the leading Web3 ecosystem infrastructure in Ghana, and eventually across Africa.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About · TBC Ghana",
+    description:
+      "TBC Ghana was founded to become the leading Web3 ecosystem infrastructure in Ghana, and eventually across Africa.",
+    url: "https://www.tbcafrica.org/about",
+  },
 };
 
 export default function AboutPage() {

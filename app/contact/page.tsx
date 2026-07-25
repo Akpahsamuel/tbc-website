@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: "Contact",
   description:
     "For partnerships, media inquiries, or general questions, reach out to TBC Ghana.",
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contact · TBC Ghana",
+    description:
+      "For partnerships, media inquiries, or general questions, reach out to TBC Ghana.",
+    url: "https://www.tbcafrica.org/contact",
+  },
 };
 
 export default function ContactPage() {

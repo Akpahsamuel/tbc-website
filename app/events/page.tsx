@@ -6,6 +6,15 @@ export const metadata: Metadata = {
   title: "Events",
   description:
     "From weekly online spaces to city meetups and the flagship conference — here's what's coming up.",
+  alternates: {
+    canonical: "/events",
+  },
+  openGraph: {
+    title: "Events · TBC Ghana",
+    description:
+      "From weekly online spaces to city meetups and the flagship conference — here's what's coming up.",
+    url: "https://www.tbcafrica.org/events",
+  },
 };
 
 export default function EventsPage() {

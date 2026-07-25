@@ -6,6 +6,15 @@ export const metadata: Metadata = {
   title: "Media",
   description:
     "Home for TBC Ghana's original content — X Space recordings, the podcast, ecosystem reports, and short written pieces on Web3 in Ghana.",
+  alternates: {
+    canonical: "/media",
+  },
+  openGraph: {
+    title: "Media · TBC Ghana",
+    description:
+      "Home for TBC Ghana's original content — X Space recordings, the podcast, ecosystem reports, and short written pieces on Web3 in Ghana.",
+    url: "https://www.tbcafrica.org/media",
+  },
 };
 
 export default function MediaPage() {
