@@ -38,7 +38,7 @@ export default function ImagePlaceholder({
         <span
           style={{
             font: "500 11.5px/1.5 ui-monospace,Menlo,monospace",
-            color: variant === "dashed" ? "#a9b1aa" : "#8a938c",
+            color: "var(--tbc-text-faint)",
             textAlign: "center",
             letterSpacing: ".02em",
           }}

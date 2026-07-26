@@ -119,7 +119,7 @@ export default function MediaPage() {
                   >
                     {post.tag}
                   </span>
-                  <span style={{ font: "500 12.5px/1 'Inter'", color: "#9aa39c" }}>{post.date}</span>
+                  <span style={{ font: "500 12.5px/1 'Inter'", color: "var(--tbc-text-placeholder)" }}>{post.date}</span>
                 </div>
                 <h3
                   style={{
@@ -131,7 +131,7 @@ export default function MediaPage() {
                 >
                   {post.title}
                 </h3>
-                <p style={{ font: "400 14.5px/1.55 'Inter'", color: "#54615e" }}>{post.excerpt}</p>
+                <p style={{ font: "400 14.5px/1.55 'Inter'", color: "var(--tbc-text-muted)" }}>{post.excerpt}</p>
               </div>
             </div>
           ))}

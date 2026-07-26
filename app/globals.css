@@ -6,6 +6,34 @@
   box-sizing: border-box;
 }
 
+:root {
+  --tbc-bg: #f5f6f4;
+  --tbc-surface: #ffffff;
+  --tbc-text: #14211f;
+  --tbc-text-secondary: #3a453f;
+  --tbc-text-muted: #54615e;
+  --tbc-text-faint: #7b857f;
+  --tbc-text-placeholder: #9aa39c;
+  --tbc-border-soft: rgba(20, 33, 31, 0.06);
+  --tbc-border: rgba(20, 33, 31, 0.08);
+  --tbc-border-strong: rgba(20, 33, 31, 0.14);
+  --tbc-input-bg: #fbfcfb;
+}
+
+html[data-theme="dark"] {
+  --tbc-bg: #0f1614;
+  --tbc-surface: #16211f;
+  --tbc-text: #edefec;
+  --tbc-text-secondary: rgba(237, 239, 236, 0.82);
+  --tbc-text-muted: rgba(237, 239, 236, 0.62);
+  --tbc-text-faint: rgba(237, 239, 236, 0.46);
+  --tbc-text-placeholder: rgba(237, 239, 236, 0.34);
+  --tbc-border-soft: rgba(255, 255, 255, 0.06);
+  --tbc-border: rgba(255, 255, 255, 0.1);
+  --tbc-border-strong: rgba(255, 255, 255, 0.16);
+  --tbc-input-bg: rgba(255, 255, 255, 0.04);
+}
+
 html {
   height: 100%;
 }
@@ -65,7 +93,7 @@ button {
 
 input::placeholder,
 textarea::placeholder {
-  color: #9aa39c;
+  color: var(--tbc-text-placeholder);
 }
 
 input:focus,

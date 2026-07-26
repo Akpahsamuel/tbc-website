@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import { PILLARS } from "@/data/pillars";
 import { HOME_STATS } from "@/data/stats";
@@ -83,6 +84,7 @@ export default function HomePage() {
               style={{
                 color: "#fff",
                 marginBottom: 28,
+                textWrap: "balance",
               }}
             >
               <ScrambleText text="Building Ghana's" delay={0.1} /> <span style={{ color: "#24D155" }}><ScrambleText text="Web3 Future" delay={0.4} /></span> <ScrambleText text="Together." delay={0.7} />
@@ -100,7 +102,7 @@ export default function HomePage() {
             </p>
             <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
               <Link
-                href="/getinvolved"
+                href="https://chat.whatsapp.com/Jd9W4t16aYUH3UAONN0Ivm"
                 style={{
                   background: "#24D155",
                   color: "#14211f",
@@ -315,7 +317,7 @@ export default function HomePage() {
             </p>
           </div>
           <Link
-            href="/getinvolved"
+            href="https://chat.whatsapp.com/Jd9W4t16aYUH3UAONN0Ivm"
             style={{
               background: "#24D155",
               color: "#0C1614",
@@ -392,7 +394,7 @@ export default function HomePage() {
                 <div style={{ font: "700 20px/1.2 'Inter'", color: "#14211f", marginBottom: 10 }}>
                   {partner.title}
                 </div>
-                <p style={{ font: "400 15px/1.55 'Inter'", color: "#54615e" }}>{partner.description}</p>
+                <p style={{ font: "400 15px/1.55 'Inter'", color: "var(--tbc-text-muted)" }}>{partner.description}</p>
               </div>
             ))}
           </StaggerGrid>
@@ -401,7 +403,7 @@ export default function HomePage() {
               font: "600 12px/1 'Inter'",
               letterSpacing: ".16em",
               textTransform: "uppercase",
-              color: "#7b857f",
+              color: "var(--tbc-text-faint)",
               marginBottom: 20,
             }}
           >
@@ -418,7 +420,7 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* UPCOMING */}
       <section className="tbc-container tbc-section-padding">

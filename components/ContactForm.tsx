@@ -6,13 +6,13 @@ const inputStyle: React.CSSProperties = {
   border: "1px solid rgba(20,33,31,0.12)",
   borderRadius: 10,
   fontSize: 15,
-  color: "#14211F",
-  background: "#fbfcfb",
+  color: "var(--tbc-text)",
+  background: "var(--tbc-input-bg)",
 };
 
 const labelTextStyle: React.CSSProperties = {
   font: "600 13px/1 'Inter'",
-  color: "#14211F",
+  color: "var(--tbc-text)",
   display: "block",
   marginBottom: 9,
 };

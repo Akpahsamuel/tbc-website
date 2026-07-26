@@ -6,10 +6,13 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Countdown from "./Countdown";
 import { NAV_LINKS } from "@/data/navLinks";
+import { MoonIcon, SunIcon } from "./icons";
+import { useTheme } from "@/lib/theme";
 
 export default function Nav() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const { theme, toggleTheme, mounted } = useTheme();
 
   return (
     <div style={{ position: "sticky", top: 0, zIndex: 100 }}>
@@ -43,39 +46,69 @@ export default function Nav() {
           />
         </Link>
 
-        <div className="tbc-nav-links">
-          {NAV_LINKS.map((link) => {
-            const isActive = pathname === link.href;
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                style={{
-                  font: `${isActive ? 600 : 500} 14.5px/1 'Inter'`,
-                  color: isActive ? "#24D155" : "rgba(255,255,255,.82)",
-                  textDecoration: "none",
-                  whiteSpace: "nowrap",
-                }}
-              >
-                {link.label}
-              </Link>
-            );
-          })}
-          <Link
-            href="/getinvolved"
+        <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
+          <div className="tbc-nav-links">
+            {NAV_LINKS.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  style={{
+                    font: `${isActive ? 600 : 500} 14.5px/1 'Inter'`,
+                    color: isActive ? "#24D155" : "rgba(255,255,255,.82)",
+                    textDecoration: "none",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+            <Link
+              href="https://chat.whatsapp.com/Jd9W4t16aYUH3UAONN0Ivm"
+              style={{
+                background: "#24D155",
+                color: "#14211F",
+                font: "700 14px/1 'Inter'",
+                padding: "11px 18px",
+                borderRadius: 8,
+                textDecoration: "none",
+                whiteSpace: "nowrap",
+              }}
+            >
+              Join the Circle
+            </Link>
+          </div>
+
+          <button
+            onClick={toggleTheme}
+            aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
             style={{
               background: "#24D155",
               color: "#14211f",
               font: "700 14px/1 'Inter'",
               padding: "11px 18px",
               borderRadius: 8,
-              textDecoration: "none",
-              whiteSpace: "nowrap",
+              width: 40,
+              height: 40,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              cursor: "pointer",
+              flex: "none",
             }}
           >
-            Join the Circle
-          </Link>
-        </div>
+            {mounted ? (
+              theme === "dark" ? (
+                <SunIcon size={18} />
+              ) : (
+                <MoonIcon size={18} />
+              )
+            ) : (
+              <span style={{ width: 18, height: 18, display: "block" }} />
+            )}
+          </button>
 
         <button
           className="tbc-hamburger"

@@ -225,7 +225,7 @@ export default function AboutPage() {
               <div style={{ font: "700 14px/1 'Inter'", color: milestone.textColor, marginBottom: 12 }}>
                 {milestone.title}
               </div>
-              <p style={{ font: "400 15px/1.55 'Inter'", color: "#54615e" }}>{milestone.description}</p>
+              <p style={{ font: "400 15px/1.55 'Inter'", color: "var(--tbc-text-muted)" }}>{milestone.description}</p>
             </div>
           ))}
         </div>

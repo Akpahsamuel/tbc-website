@@ -160,7 +160,7 @@ export default function EventsPage() {
                 }}
               >
                 <div style={{ font: "800 15px/1.1 'Inter'", color: event.dateColor }}>{event.dateLabel}</div>
-                <div style={{ font: "500 12px/1.2 'Inter'", color: "#7b857f", marginTop: 4 }}>
+                <div style={{ font: "500 12px/1.2 'Inter'", color: "var(--tbc-text-faint)", marginTop: 4 }}>
                   {event.dateSubLabel}
                 </div>
               </div>
@@ -168,13 +168,13 @@ export default function EventsPage() {
                 <div style={{ font: "700 19px/1.25 'Inter'", color: "#14211f", marginBottom: 4 }}>
                   {event.title}
                 </div>
-                <div style={{ font: "400 15px/1.4 'Inter'", color: "#54615e" }}>{event.subtitle}</div>
+                <div style={{ font: "400 15px/1.4 'Inter'", color: "var(--tbc-text-muted)" }}>{event.subtitle}</div>
               </div>
               <span
                 style={{
                   font: "600 12px/1 'Inter'",
                   color: event.tagColor === "flagship" ? "#fff" : "#1B4D4A",
-                  background: event.tagColor === "flagship" ? "#D03433" : "#F5F6F4",
+                  background: event.tagColor === "flagship" ? "#D03433" : "var(--tbc-bg)",
                   padding: "8px 13px",
                   borderRadius: 100,
                   flex: "none",

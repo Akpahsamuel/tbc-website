@@ -94,7 +94,7 @@ export default function ProgramsPage() {
             <p
               style={{
                 font: "400 17px/1.6 'Inter'",
-                color: program.dark ? "rgba(255,255,255,.72)" : "#54615e",
+                color: program.dark ? "rgba(255,255,255,.72)" : "var(--tbc-text-muted)",
                 marginBottom: 20,
               }}
             >
@@ -109,7 +109,7 @@ export default function ProgramsPage() {
                     style={{
                       font: "500 13px/1 'Inter'",
                       color: "#1B4D4A",
-                      background: "#F5F6F4",
+                      background: "var(--tbc-bg)",
                       padding: "8px 13px",
                       borderRadius: 100,
                       transition: "background-color 0.18s ease, color 0.18s ease",
@@ -173,7 +173,7 @@ export default function ProgramsPage() {
               {RESEARCH_PROGRAM.title}
             </h2>
           </div>
-          <p style={{ font: "400 18px/1.65 'Inter'", color: "#54615e" }}>{RESEARCH_PROGRAM.description}</p>
+          <p style={{ font: "400 18px/1.65 'Inter'", color: "var(--tbc-text-muted)" }}>{RESEARCH_PROGRAM.description}</p>
         </div>
         </ScrollReveal>
       </section>

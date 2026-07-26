@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
+import { COMMUNITY_PARTNERS } from "@/data/communityPartners";
 import { COMMUNITY_LEVELS } from "@/data/communityLevels";
 
 export const metadata: Metadata = {
@@ -37,15 +39,15 @@ export default function CommunityPage() {
             className="tbc-hero-h1"
             style={{
               color: "#fff",
-              maxWidth: 820,
+              maxWidth: 900,
               marginBottom: 24,
             }}
           >
-            A structured ecosystem, not just an audience.
+            The communities inside the Circle.
           </h1>
-          <p style={{ font: "400 20px/1.6 'Inter'", color: "rgba(255,255,255,.76)", maxWidth: 640 }}>
-            TBC Ghana is built as a structured ecosystem. As members grow, they move through
-            five levels.
+          <p style={{ font: "400 20px/1.6 'Inter'", color: "rgba(255,255,255,.76)", maxWidth: 660 }}>
+            TBC Ghana is a circle of communities. Meet the ecosystem partners building blockchain,
+            tech and Web3 across Ghana and Africa alongside us.
           </p>
         </div>
       </section>
@@ -63,22 +65,17 @@ export default function CommunityPage() {
           >
             <div
               style={{
-                flex: "none",
-                width: 64,
-                height: 64,
+                position: "absolute",
+                top: -60,
+                right: -50,
+                width: 200,
+                height: 200,
                 borderRadius: "50%",
-                background: level.circleBg,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                font: "800 24px/1 'Inter'",
-                color: level.circleColor,
+                border: "1px solid rgba(36,209,85,.18)",
               }}
-            >
-              {level.number}
-            </div>
-            <div style={{ flex: 1 }}>
-              <h2
+            /> */}
+            {/* <div style={{ position: "relative" }}>
+              <div
                 style={{
                   font: "800 24px/1.15 'Inter'",
                   letterSpacing: "-.02em",
@@ -86,15 +83,25 @@ export default function CommunityPage() {
                   marginBottom: 6,
                 }}
               >
-                {level.title}
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#24D155"
+                  strokeWidth={2}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M12 5v14M5 12h14" />
+                </svg>
+              </div>
+              <h2 style={{ font: "800 22px/1.2 'Inter'", letterSpacing: "-.02em", color: "#fff", marginBottom: 10 }}>
+                List your community
               </h2>
-              <p
-                style={{
-                  font: "400 16px/1.5 'Inter'",
-                  color: level.dark ? "rgba(255,255,255,.7)" : "#54615e",
-                }}
-              >
-                {level.description}
+              <p style={{ font: "400 15.5px/1.6 'Inter'", color: "rgba(255,255,255,.7)", marginBottom: 22 }}>
+                Are you building a tech or Web3 community in Ghana or Africa? Join the Circle and
+                get featured here.
               </p>
             </div>
           </div>
@@ -138,6 +145,71 @@ export default function CommunityPage() {
           </Link>
         </div>
       </section>
+
+      {/* <section style={{ background: "#fff", borderTop: "1px solid rgba(20,33,31,.08)" }}>
+        <div style={{ maxWidth: 1000, margin: "0 auto", padding: "96px 40px" }}>
+          <div
+            style={{
+              font: "600 13px/1 'Inter'",
+              letterSpacing: ".18em",
+              textTransform: "uppercase",
+              color: "#24D155",
+              marginBottom: 16,
+            }}
+          >
+            How members grow
+          </div>
+          <h2 style={{ font: "800 40px/1.1 'Inter'", letterSpacing: "-.02em", color: "#14211F", marginBottom: 48 }}>
+            Five levels in the Circle.
+          </h2>
+          <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+            {COMMUNITY_LEVELS.map((level) => (
+              <div
+                key={level.number}
+                style={{
+                  background: "#F5F6F4",
+                  border: "1px solid rgba(20,33,31,.06)",
+                  borderRadius: 14,
+                  padding: "24px 28px",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 26,
+                }}
+              >
+                <div
+                  style={{
+                    flex: "none",
+                    width: 52,
+                    height: 52,
+                    borderRadius: "50%",
+                    background: "rgba(36,209,85,.14)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    font: "800 20px/1 'Inter'",
+                    color: "#24D155",
+                  }}
+                >
+                  {level.number}
+                </div>
+                <div style={{ flex: 1 }}>
+                  <h3
+                    style={{
+                      font: "800 20px/1.2 'Inter'",
+                      letterSpacing: "-.01em",
+                      color: "#14211F",
+                      marginBottom: 4,
+                    }}
+                  >
+                    {level.title}
+                  </h3>
+                  <p style={{ font: "400 15px/1.5 'Inter'", color: "#54615e" }}>{level.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section> */}
     </div>
   );
 }

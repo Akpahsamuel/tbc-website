@@ -8,18 +8,18 @@ const inputStyle: React.CSSProperties = {
   border: "1px solid rgba(20,33,31,0.12)",
   borderRadius: 10,
   fontSize: 15,
-  color: "#14211F",
-  background: "#fbfcfb",
+  color: "var(--tbc-text)",
+  background: "var(--tbc-input-bg)",
 };
 
 const selectStyle: React.CSSProperties = {
   ...inputStyle,
-  color: "#54615e",
+  color: "var(--tbc-text-muted)",
 };
 
 const labelTextStyle: React.CSSProperties = {
   font: "600 13px/1 'Inter'",
-  color: "#14211F",
+  color: "var(--tbc-text)",
   display: "block",
   marginBottom: 9,
 };
@@ -30,10 +30,10 @@ export default function GetInvolvedForm() {
       className="tbc-card tbc-card-padding"
       style={{ background: "#fff", border: "1px solid rgba(20,33,31,0.08)", borderRadius: 20 }}
     >
-      <h2 style={{ font: "800 30px/1.15 'Inter'", letterSpacing: "-.02em", color: "#14211F", marginBottom: 8 }}>
+      <h2 style={{ font: "800 30px/1.15 'Inter'", letterSpacing: "-.02em", color: "var(--tbc-text)", marginBottom: 8 }}>
         Join TBC Ghana
       </h2>
-      <p style={{ font: "400 16px/1.5 'Inter'", color: "#54615e", marginBottom: 32 }}>
+      <p style={{ font: "400 16px/1.5 'Inter'", color: "var(--tbc-text-muted)", marginBottom: 32 }}>
         Tell us a little about you and where you&rsquo;d like to plug in.
       </p>
       <form onSubmit={(e) => e.preventDefault()}>
