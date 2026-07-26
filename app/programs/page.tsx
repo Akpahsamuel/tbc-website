@@ -99,12 +99,14 @@ export default function ProgramsPage() {
                 {program.tags.map((tag) => (
                   <span
                     key={tag}
+                    className="tbc-tag"
                     style={{
                       font: "500 13px/1 'Inter'",
                       color: "#1B4D4A",
                       background: "#F5F6F4",
                       padding: "8px 13px",
                       borderRadius: 100,
+                      transition: "background-color 0.18s ease, color 0.18s ease",
                     }}
                   >
                     {tag}

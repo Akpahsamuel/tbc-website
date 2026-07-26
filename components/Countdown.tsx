@@ -13,7 +13,7 @@ function getSnapshot() {
 }
 
 // Server and the pre-hydration client render both return null (nothing
-// rendered) so there is never a text mismatch — the real number is filled in
+// rendered) so there is never a text mismatch  the real number is filled in
 // only once the client has mounted and can subscribe to live updates.
 function getServerSnapshot() {
   return null;

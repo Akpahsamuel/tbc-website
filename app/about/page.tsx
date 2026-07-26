@@ -56,8 +56,8 @@ export default function AboutPage() {
           the market.
         </p>
         <p style={{ font: "400 22px/1.65 'Inter'", color: "#3a453f" }}>
-          The Builders Circle Ghana changes that. Built on years of grassroots work — meetups,
-          university tours, speaking engagements and online community-building — TBC Ghana is
+          The Builders Circle Ghana changes that. Built on years of grassroots work  meetups,
+          university tours, speaking engagements and online community-building  TBC Ghana is
           now formalizing into a structured organization with one goal: to become the leading
           Web3 ecosystem infrastructure in Ghana, and eventually across Africa.
         </p>
@@ -103,7 +103,7 @@ export default function AboutPage() {
           </div>
           <p style={{ font: "500 21px/1.55 'Inter'", color: "#fff" }}>
             Bring together Ghana&rsquo;s Web3 and blockchain community into one structured
-            ecosystem — educating newcomers, developing builders, connecting local talent to
+            ecosystem  educating newcomers, developing builders, connecting local talent to
             global opportunity, and giving protocols a trusted partner in the African market.
           </p>
         </div>
@@ -127,7 +127,7 @@ export default function AboutPage() {
             Five pillars, one ecosystem.
           </h2>
           <p style={{ font: "400 19px/1.6 'Inter'", color: "#54615e", maxWidth: 620, marginBottom: 48 }}>
-            Everything TBC Ghana does maps to five pillars — each with concrete programs behind
+            Everything TBC Ghana does maps to five pillars  each with concrete programs behind
             it.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>

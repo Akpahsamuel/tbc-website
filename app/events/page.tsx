@@ -5,14 +5,14 @@ import { UPCOMING_EVENTS } from "@/data/events";
 export const metadata: Metadata = {
   title: "Events",
   description:
-    "From weekly online spaces to city meetups and the flagship conference — here's what's coming up.",
+    "From weekly online spaces to city meetups and the flagship conference  here's what's coming up.",
   alternates: {
     canonical: "/events",
   },
   openGraph: {
     title: "Events · TBC Ghana",
     description:
-      "From weekly online spaces to city meetups and the flagship conference — here's what's coming up.",
+      "From weekly online spaces to city meetups and the flagship conference  here's what's coming up.",
     url: "https://www.tbcafrica.org/events",
   },
 };
@@ -44,7 +44,7 @@ export default function EventsPage() {
             From weekly spaces to the flagship.
           </h1>
           <p style={{ font: "400 20px/1.6 'Inter'", color: "rgba(255,255,255,.76)", maxWidth: 640 }}>
-            From weekly online spaces to city meetups and the flagship conference — here&rsquo;s
+            From weekly online spaces to city meetups and the flagship conference  here&rsquo;s
             what&rsquo;s coming up.
           </p>
         </div>
@@ -90,7 +90,7 @@ export default function EventsPage() {
               TBC Ghana Blockchain &amp; Crypto Conference
             </h2>
             <p style={{ font: "400 18px/1.6 'Inter'", color: "rgba(255,255,255,.72)", maxWidth: 560 }}>
-              Ghana&rsquo;s flagship Web3 gathering — keynotes, startup showcases, workshops,
+              Ghana&rsquo;s flagship Web3 gathering  keynotes, startup showcases, workshops,
               hackathons, networking and policy discussions.
             </p>
           </div>

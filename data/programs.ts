@@ -49,7 +49,7 @@ export const PROGRAMS: Program[] = [
   {
     title: "Annual Flagship Conference",
     description:
-      "A major yearly event positioning Ghana as a leading Web3 hub — keynotes, startup showcases, workshops, hackathons, networking and policy discussions.",
+      "A major yearly event positioning Ghana as a leading Web3 hub  keynotes, startup showcases, workshops, hackathons, networking and policy discussions.",
     Icon: CalendarStarIcon,
     color: "#24D155",
     badge: "First edition · November 2026",
@@ -60,7 +60,7 @@ export const PROGRAMS: Program[] = [
 export const RESEARCH_PROGRAM = {
   title: "Ecosystem Research & Reports",
   description:
-    "Published reports on Web3 adoption, developer ecosystem trends and community insights in Ghana — establishing TBC Ghana as an ecosystem intelligence source.",
+    "Published reports on Web3 adoption, developer ecosystem trends and community insights in Ghana  establishing TBC Ghana as an ecosystem intelligence source.",
   Icon: DocumentChartIcon,
   color: "#1B4D4A",
 };

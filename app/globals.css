@@ -117,6 +117,10 @@ button:focus-visible {
   color: #fff !important;
 }
 
+.tbc-card:hover .tbc-tag {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
 .tbc-card-dark:hover {
   transform: translateY(-4px);
   box-shadow: 0 20px 46px -20px rgba(36, 209, 85, 0.5);

@@ -5,14 +5,14 @@ import { MEDIA_POSTS } from "@/data/mediaPosts";
 export const metadata: Metadata = {
   title: "Media",
   description:
-    "Home for TBC Ghana's original content — X Space recordings, the podcast, ecosystem reports, and short written pieces on Web3 in Ghana.",
+    "Home for TBC Ghana's original content  X Space recordings, the podcast, ecosystem reports, and short written pieces on Web3 in Ghana.",
   alternates: {
     canonical: "/media",
   },
   openGraph: {
     title: "Media · TBC Ghana",
     description:
-      "Home for TBC Ghana's original content — X Space recordings, the podcast, ecosystem reports, and short written pieces on Web3 in Ghana.",
+      "Home for TBC Ghana's original content  X Space recordings, the podcast, ecosystem reports, and short written pieces on Web3 in Ghana.",
     url: "https://www.tbcafrica.org/media",
   },
 };
@@ -44,7 +44,7 @@ export default function MediaPage() {
             The stories driving Web3 in Ghana.
           </h1>
           <p style={{ font: "400 20px/1.6 'Inter'", color: "rgba(255,255,255,.76)", maxWidth: 660 }}>
-            Home for TBC Ghana&rsquo;s original content — X Space recordings, the podcast,
+            Home for TBC Ghana&rsquo;s original content  X Space recordings, the podcast,
             ecosystem reports, and short written pieces on Web3 in Ghana.
           </p>
         </div>
@@ -79,7 +79,7 @@ export default function MediaPage() {
               The State of Web3 in Ghana
             </h2>
             <p style={{ font: "400 17px/1.6 'Inter'", color: "#54615e", marginBottom: 24 }}>
-              Adoption trends, developer ecosystem growth, and community insights — establishing
+              Adoption trends, developer ecosystem growth, and community insights  establishing
               TBC Ghana as an ecosystem intelligence source.
             </p>
             <a href="#" style={{ font: "700 15px/1 'Inter'", color: "#1B4D4A" }}>

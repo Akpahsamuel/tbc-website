@@ -1,4 +1,4 @@
-// Ghana/Accra is UTC+0 year-round (no DST) — pin the target with an explicit
+// Ghana/Accra is UTC+0 year-round (no DST)  pin the target with an explicit
 // offset so every visitor worldwide counts down to the same Accra midnight,
 // rather than each visitor's own local midnight (a bare ISO string without a
 // timezone designator parses as *local* time, which would silently produce a

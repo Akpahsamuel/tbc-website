@@ -17,7 +17,7 @@ export const MEDIA_POSTS: MediaPost[] = [
     date: "Weekly",
     title: "Friday X Space recordings",
     excerpt:
-      "Catch up on the weekly conversation — education, stories and market insights.",
+      "Catch up on the weekly conversation  education, stories and market insights.",
   },
   {
     tag: "Insight",

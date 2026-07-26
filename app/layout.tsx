@@ -13,7 +13,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.tbcafrica.org"),
   title: {
-    default: "TBC Ghana — Building Ghana's Web3 Future Together",
+    default: "TBC Ghana  Building Ghana's Web3 Future Together",
     template: "%s · TBC Ghana",
   },
   description:
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://www.tbcafrica.org",
-    title: "TBC Ghana — Building Ghana's Web3 Future Together",
+    title: "TBC Ghana  Building Ghana's Web3 Future Together",
     description:
       "TBC Ghana is the ecosystem infrastructure uniting education, builders, and community to grow blockchain and Web3 across Ghana and Africa.",
     images: [
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@Builders_Circle",
     creator: "@Builders_Circle",
-    title: "TBC Ghana — Building Ghana's Web3 Future Together",
+    title: "TBC Ghana  Building Ghana's Web3 Future Together",
     description:
       "TBC Ghana is the ecosystem infrastructure uniting education, builders, and community to grow blockchain and Web3 across Ghana and Africa.",
     images: ["/images/tbc-ghana-logo-color.svg"],

@@ -5,13 +5,16 @@ import { HOME_STATS } from "@/data/stats";
 import { PARTNER_VALUE_PROPS } from "@/data/partners";
 import ScrollReveal from "@/components/ScrollReveal";
 import StaggerGrid from "@/components/StaggerGrid";
+import ParallaxElement from "@/components/ParallaxElement";
+import PinnedSection from "@/components/PinnedSection";
 
 export default function HomePage() {
   return (
     <div style={{ width: "100%", color: "#14211F" }}>
       {/* HERO */}
       <section style={{ position: "relative", background: "#1B4D4A", overflow: "hidden" }}>
-        <div
+        <ParallaxElement
+          speed={70}
           style={{
             position: "absolute",
             top: -160,
@@ -22,7 +25,8 @@ export default function HomePage() {
             border: "1px solid rgba(36,209,85,.14)",
           }}
         />
-        <div
+        <ParallaxElement
+          speed={130}
           style={{
             position: "absolute",
             top: -40,
@@ -33,7 +37,8 @@ export default function HomePage() {
             border: "1px solid rgba(36,209,85,.22)",
           }}
         />
-        <div
+        <ParallaxElement
+          speed={220}
           style={{
             position: "absolute",
             top: 90,
@@ -57,7 +62,7 @@ export default function HomePage() {
               background: "#24D155",
             }}
           />
-        </div>
+        </ParallaxElement>
         <div className="tbc-container tbc-hero-padding" style={{ position: "relative" }}>
           <div style={{ maxWidth: 760, animation: "tbcUp .7s both" }}>
             <div
@@ -143,33 +148,40 @@ export default function HomePage() {
       </section>
 
       {/* WHO WE ARE */}
-      <section className="tbc-container tbc-section-padding tbc-split-grid-who">
-        <div>
-          <div
-            style={{
-              font: "600 13px/1 'Inter'",
-              letterSpacing: ".18em",
-              textTransform: "uppercase",
-              color: "#24D155",
-              marginBottom: 18,
-            }}
-          >
-            Who We Are
-          </div>
-          <h2 className="tbc-section-h2" style={{ color: "#14211F" }}>
-            A trusted gateway for Web3 growth in Ghana.
-          </h2>
-        </div>
-        <div>
-          <p style={{ font: "400 20px/1.65 'Inter'", color: "#3a453f", marginBottom: 28 }}>
-            TBC Ghana is a trusted gateway for blockchain and Web3 growth in Ghana and Africa —
-            educating new users, supporting builders, and connecting global ecosystems with
-            local communities.
-          </p>
-          <Link href="/about" style={{ font: "700 16px/1 'Inter'", color: "#1B4D4A", textDecoration: "none" }}>
-            Read our story →
-          </Link>
-        </div>
+      <section>
+        <PinnedSection
+          className="tbc-container tbc-section-padding tbc-split-grid-who"
+          leftContent={
+            <>
+              <div
+                style={{
+                  font: "600 13px/1 'Inter'",
+                  letterSpacing: ".18em",
+                  textTransform: "uppercase",
+                  color: "#24D155",
+                  marginBottom: 18,
+                }}
+              >
+                Who We Are
+              </div>
+              <h2 className="tbc-section-h2" style={{ color: "#14211F", maxWidth: 400 }}>
+                A trusted gateway for Web3 growth in Ghana.
+              </h2>
+            </>
+          }
+          rightContent={
+            <>
+              <p style={{ font: "400 20px/1.65 'Inter'", color: "#3a453f", marginBottom: 28 }}>
+                TBC Ghana is a trusted gateway for blockchain and Web3 growth in Ghana and Africa
+                educating new users, supporting builders, and connecting global ecosystems with
+                local communities.
+              </p>
+              <Link href="/about" style={{ font: "700 16px/1 'Inter'", color: "#1B4D4A", textDecoration: "none" }}>
+                Read our story →
+              </Link>
+            </>
+          }
+        />
       </section>
 
       {/* WHAT WE DO */}
@@ -437,7 +449,7 @@ export default function HomePage() {
             </div>
             <div style={{ font: "700 24px/1.2 'Inter'", color: "#14211F" }}>Weekly X Space</div>
             <p style={{ font: "400 16px/1.55 'Inter'", color: "#54615e", flex: 1 }}>
-              Every Friday at 7:30 PM GMT — blockchain education, African Web3 stories, founder
+              Every Friday at 7:30 PM GMT  blockchain education, African Web3 stories, founder
               interviews and market insights.
             </p>
             <Link href="/events" style={{ font: "700 15px/1 'Inter'", color: "#1B4D4A", textDecoration: "none" }}>
@@ -473,7 +485,7 @@ export default function HomePage() {
               Blockchain &amp; Crypto Conference
             </div>
             <p style={{ font: "400 16px/1.55 'Inter'", color: "rgba(255,255,255,.7)", flex: 1 }}>
-              Ghana&rsquo;s flagship Web3 gathering — keynotes, startup showcases, hackathons,
+              Ghana&rsquo;s flagship Web3 gathering  keynotes, startup showcases, hackathons,
               networking and policy discussions. Coming this November.
             </p>
             <Link href="/events" style={{ font: "700 15px/1 'Inter'", color: "#24D155", textDecoration: "none" }}>
