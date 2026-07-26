@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import SmoothScroller from "@/components/SmoothScroller";
+import CustomCursor from "@/components/CustomCursor";
 import "./globals.css";
 
 const inter = Inter({
@@ -116,12 +118,14 @@ export default function RootLayout({
       <body
         style={{
           fontFamily: "var(--font-inter), system-ui, sans-serif",
-          color: "#14211F",
         }}
       >
-        <Nav />
-        <main id="main-content">{children}</main>
-        <Footer />
+        <CustomCursor />
+        <SmoothScroller>
+          <Nav />
+          <main id="main-content">{children}</main>
+          <Footer />
+        </SmoothScroller>
       </body>
     </html>
   );

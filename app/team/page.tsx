@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function TeamPage() {
   return (
-    <div style={{ width: "100%", color: "#14211F" }}>
+    <div style={{ width: "100%" }}>
       <section style={{ background: "#1B4D4A" }}>
         <div className="tbc-container tbc-hero-padding">
           <ScrollReveal direction="up" delay={0}>
@@ -66,8 +66,6 @@ export default function TeamPage() {
               key={member.name}
               className="tbc-card"
               style={{
-                background: "#fff",
-                border: "1px solid rgba(20,33,31,.08)",
                 borderRadius: 16,
                 overflow: "hidden",
               }}
@@ -86,7 +84,7 @@ export default function TeamPage() {
                 <ImagePlaceholder label="headshot" style={{ aspectRatio: "1/1" }} />
               )}
               <div style={{ padding: "20px 22px 24px" }}>
-                <div style={{ font: "700 18px/1.25 'Inter'", letterSpacing: "-.01em", color: "#14211F", marginBottom: 5 }}>
+                <div style={{ font: "700 18px/1.25 'Inter'", letterSpacing: "-.01em", color: "#14211f", marginBottom: 5 }}>
                   {member.name}
                 </div>
                 <div style={{ font: "500 14px/1.4 'Inter'", color: "#1B4D4A" }}>{member.role}</div>

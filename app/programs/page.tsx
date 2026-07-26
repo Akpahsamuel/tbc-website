@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PROGRAMS, RESEARCH_PROGRAM } from "@/data/programs";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Programs",
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function ProgramsPage() {
   return (
-    <div style={{ width: "100%", color: "#14211F" }}>
+    <div style={{ width: "100%" }}>
       <section style={{ background: "#1B4D4A" }}>
         <div className="tbc-container tbc-hero-padding" style={{ animation: "tbcUp .6s both" }}>
           <div
@@ -51,35 +52,40 @@ export default function ProgramsPage() {
       </section>
 
       <section className="tbc-container tbc-grid-2" style={{ paddingTop: 64, paddingBottom: 80 }}>
+        <ScrollReveal className="tbc-full-span" style={{ display: "contents" }}>
         {PROGRAMS.map((program) => (
           <div
             key={program.title}
-            className={`tbc-card-padding ${program.dark ? "tbc-card-dark" : "tbc-card"}`}
+            className={`${program.dark ? "tbc-card-dark" : "tbc-card"}`}
             style={{
-              background: program.dark ? "#14211F" : "#fff",
-              border: program.dark ? undefined : "1px solid rgba(20,33,31,.08)",
+              background: program.dark ? "#1B4D4A" : "#fff",
+              border: program.dark ? undefined : "1px solid rgba(20,33,31,0.08)",
               borderRadius: 18,
+              overflow: "hidden",
             }}
           >
+            <div style={{ height: 4, background: program.color }} />
+            <div className="tbc-card-padding" style={{ paddingTop: 28 }}>
             <div
               style={{
-                width: 40,
-                height: 40,
-                borderRadius: 11,
-                background: program.color,
-                marginBottom: 24,
+                width: 44,
+                height: 44,
+                borderRadius: 12,
+                background: `${program.color}1a`,
+                marginBottom: 22,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                border: `1px solid ${program.color}33`,
               }}
             >
-              <program.Icon size={22} />
+              <program.Icon size={22} color={program.color} />
             </div>
             <h2
               style={{
                 font: "800 26px/1.15 'Inter'",
                 letterSpacing: "-.02em",
-                color: program.dark ? "#fff" : "#14211F",
+                color: program.dark ? "#fff" : "#14211f",
                 marginBottom: 14,
               }}
             >
@@ -136,37 +142,40 @@ export default function ProgramsPage() {
               </span>
             ) : null}
           </div>
+          </div>
         ))}
+        </ScrollReveal>
 
+        <ScrollReveal>
         <div
           className="tbc-full-span tbc-card tbc-card-padding tbc-split-grid"
           style={{
-            background: "#fff",
-            border: "1px solid rgba(20,33,31,.08)",
             borderRadius: 18,
           }}
         >
           <div>
             <div
               style={{
-                width: 40,
-                height: 40,
-                borderRadius: 11,
-                background: "#1B4D4A",
-                marginBottom: 24,
+                width: 44,
+                height: 44,
+                borderRadius: 12,
+                background: "#1B4D4A1a",
+                marginBottom: 22,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                border: "1px solid #1B4D4A33",
               }}
             >
-              <RESEARCH_PROGRAM.Icon size={22} />
+              <RESEARCH_PROGRAM.Icon size={22} color="#1B4D4A" />
             </div>
-            <h2 style={{ font: "800 26px/1.15 'Inter'", letterSpacing: "-.02em", color: "#14211F", marginBottom: 14 }}>
+            <h2 style={{ font: "800 26px/1.15 'Inter'", letterSpacing: "-.02em", color: "#14211f", marginBottom: 14 }}>
               {RESEARCH_PROGRAM.title}
             </h2>
           </div>
           <p style={{ font: "400 18px/1.65 'Inter'", color: "#54615e" }}>{RESEARCH_PROGRAM.description}</p>
         </div>
+        </ScrollReveal>
       </section>
     </div>
   );

@@ -3,7 +3,7 @@
 const inputStyle: React.CSSProperties = {
   width: "100%",
   padding: "14px 15px",
-  border: "1px solid rgba(20,33,31,.16)",
+  border: "1px solid rgba(20,33,31,0.12)",
   borderRadius: 10,
   fontSize: 15,
   color: "#14211F",
@@ -21,7 +21,7 @@ export default function ContactForm() {
   return (
     <div
       className="tbc-card tbc-card-padding"
-      style={{ background: "#fff", border: "1px solid rgba(20,33,31,.08)", borderRadius: 20 }}
+      style={{ background: "#fff", border: "1px solid rgba(20,33,31,0.08)", borderRadius: 20 }}
     >
       <form onSubmit={(e) => e.preventDefault()}>
         <div className="tbc-form-grid">

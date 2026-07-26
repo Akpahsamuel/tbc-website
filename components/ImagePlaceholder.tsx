@@ -15,8 +15,8 @@ export default function ImagePlaceholder({
   const base: React.CSSProperties =
     variant === "dashed"
       ? {
-          background: "#F5F6F4",
-          border: "1px dashed rgba(20,33,31,.18)",
+          background: "rgba(255,255,255,0.02)",
+          border: "1px dashed rgba(255,255,255,0.06)",
           borderRadius: "12px",
         }
       : {

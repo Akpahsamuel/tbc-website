@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 export default function CommunityPage() {
   return (
-    <div style={{ width: "100%", color: "#14211F" }}>
+    <div style={{ width: "100%" }}>
       <section style={{ background: "#1B4D4A" }}>
         <div className="tbc-container tbc-hero-padding" style={{ animation: "tbcUp .6s both" }}>
           <div
@@ -56,8 +56,8 @@ export default function CommunityPage() {
             key={level.number}
             className={`community-step community-step-${level.number} ${level.dark ? "tbc-card-dark" : "tbc-card"}`}
             style={{
-              background: level.dark ? "#14211F" : "#fff",
-              border: level.dark ? undefined : "1px solid rgba(20,33,31,.08)",
+              background: level.dark ? "#1B4D4A" : "#fff",
+              border: level.dark ? undefined : "1px solid rgba(20,33,31,0.08)",
               borderRadius: 16,
             }}
           >
@@ -82,7 +82,7 @@ export default function CommunityPage() {
                 style={{
                   font: "800 24px/1.15 'Inter'",
                   letterSpacing: "-.02em",
-                  color: level.dark ? "#fff" : "#14211F",
+                  color: level.dark ? "#fff" : "#14211f",
                   marginBottom: 6,
                 }}
               >
@@ -115,18 +115,18 @@ export default function CommunityPage() {
           }}
         >
           <div style={{ maxWidth: 520 }}>
-            <h2 style={{ font: "800 32px/1.15 'Inter'", letterSpacing: "-.02em", color: "#14211F", marginBottom: 8 }}>
+            <h2 style={{ font: "800 32px/1.15 'Inter'", letterSpacing: "-.02em", color: "#14211f", marginBottom: 8 }}>
               Everyone starts as an Explorer.
             </h2>
-            <p style={{ font: "400 17px/1.5 'Inter'", color: "rgba(20,33,31,.72)" }}>
+            <p style={{ font: "400 17px/1.5 'Inter'", color: "#14211f" }}>
               Join the community and begin your journey through the Circle.
             </p>
           </div>
           <Link
             href="/getinvolved"
             style={{
-              background: "#14211F",
-              color: "#fff",
+              background: "#e1e6e3",
+              color: "#14211f",
               font: "700 16px/1 'Inter'",
               padding: "18px 32px",
               borderRadius: 10,

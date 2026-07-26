@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import { MEDIA_POSTS } from "@/data/mediaPosts";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Media",
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function MediaPage() {
   return (
-    <div style={{ width: "100%", color: "#14211F" }}>
+    <div style={{ width: "100%" }}>
       <section style={{ background: "#1B4D4A" }}>
         <div className="tbc-container tbc-hero-padding" style={{ animation: "tbcUp .6s both" }}>
           <div
@@ -50,13 +51,12 @@ export default function MediaPage() {
         </div>
       </section>
 
+      <ScrollReveal>
       {/* FEATURED REPORT */}
       <section className="tbc-container" style={{ paddingTop: 64, paddingBottom: 24 }}>
         <div
           className="tbc-card tbc-split-grid"
           style={{
-            background: "#fff",
-            border: "1px solid rgba(20,33,31,.08)",
             borderRadius: 20,
             overflow: "hidden",
             gap: 0,
@@ -75,7 +75,7 @@ export default function MediaPage() {
             >
               Latest ecosystem report
             </span>
-            <h2 style={{ font: "800 32px/1.15 'Inter'", letterSpacing: "-.02em", color: "#14211F", marginBottom: 14 }}>
+            <h2 style={{ font: "800 32px/1.15 'Inter'", letterSpacing: "-.02em", color: "#14211f", marginBottom: 14 }}>
               The State of Web3 in Ghana
             </h2>
             <p style={{ font: "400 17px/1.6 'Inter'", color: "#54615e", marginBottom: 24 }}>
@@ -88,7 +88,9 @@ export default function MediaPage() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
+      <ScrollReveal>
       {/* CONTENT GRID */}
       <section className="tbc-container" style={{ paddingTop: 24, paddingBottom: 80 }}>
         <div className="tbc-grid-3">
@@ -97,8 +99,6 @@ export default function MediaPage() {
               key={post.title}
               className="tbc-card"
               style={{
-                background: "#fff",
-                border: "1px solid rgba(20,33,31,.08)",
                 borderRadius: 16,
                 overflow: "hidden",
               }}
@@ -125,7 +125,7 @@ export default function MediaPage() {
                   style={{
                     font: "700 19px/1.3 'Inter'",
                     letterSpacing: "-.01em",
-                    color: "#14211F",
+                    color: "#14211f",
                     marginBottom: 10,
                   }}
                 >
@@ -137,6 +137,7 @@ export default function MediaPage() {
           ))}
         </div>
       </section>
+      </ScrollReveal>
     </div>
   );
 }

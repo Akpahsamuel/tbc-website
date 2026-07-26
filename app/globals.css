@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -11,9 +13,16 @@ html {
 body {
   min-height: 100%;
   background: #f5f6f4;
+  color: #14211f;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body, a, button {
+    cursor: none !important;
+  }
 }
 
 ::selection {
@@ -92,43 +101,81 @@ button:focus-visible {
   }
 }
 
-.tbc-card,
-.tbc-card-dark {
+.tbc-card {
+  background: #ffffff;
+  border: 1px solid rgba(20, 33, 31, 0.08);
+  box-shadow: 0 4px 20px -8px rgba(20, 33, 31, 0.05);
   transition:
-    transform 0.18s ease,
-    box-shadow 0.2s ease,
-    border-color 0.18s ease,
-    background-color 0.2s ease;
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease;
 }
 
-.tbc-card *,
-.tbc-card-dark * {
-  transition: color 0.18s ease;
+.tbc-card-dark {
+  background: #1b4d4a;
+  border: 1px solid #1b4d4a;
+  color: #ffffff;
+  transition:
+    transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background-color 0.25s ease;
 }
 
 .tbc-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 42px -20px rgba(20, 33, 31, 0.5);
+  transform: translateY(-5px);
   background-color: #1b4d4a !important;
-  border-color: #1b4d4a;
+  border-color: #1b4d4a !important;
+  box-shadow: 0 20px 40px -15px rgba(27, 77, 74, 0.35);
 }
 
-.tbc-card:hover *:not(svg):not(path):not(circle):not(rect) {
-  color: #fff !important;
+.tbc-card:hover *:not(svg):not(path):not(circle):not(rect):not(input):not(textarea):not(select):not(button) {
+  color: #ffffff !important;
 }
 
 .tbc-card:hover .tbc-tag {
-  background-color: rgba(255, 255, 255, 0.15) !important;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
 }
 
 .tbc-card-dark:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 46px -20px rgba(36, 209, 85, 0.5);
+  transform: translateY(-5px);
   background-color: #24d155 !important;
+  border-color: #24d155 !important;
+  box-shadow: 0 20px 40px -15px rgba(36, 209, 85, 0.4);
 }
 
 .tbc-card-dark:hover *:not(svg):not(path):not(circle):not(rect) {
   color: #14211f !important;
+}
+
+/* Horizontal Scroll Mobile Responsive Controls */
+.tbc-horizontal-scroll-container {
+  overflow: hidden;
+}
+
+.tbc-horizontal-scroll-track {
+  display: flex;
+  gap: 24px;
+  padding: 40px 40px;
+  width: max-content;
+  flex-wrap: nowrap;
+}
+
+@media (max-width: 900px) {
+  .tbc-horizontal-scroll-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+  .tbc-horizontal-scroll-track {
+    width: max-content;
+    padding: 24px 20px;
+  }
+  .tbc-horizontal-scroll-track > * {
+    scroll-snap-align: start;
+  }
 }
 
 /* Responsive layout containers */

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Countdown from "@/components/Countdown";
 import { UPCOMING_EVENTS } from "@/data/events";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Events",
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function EventsPage() {
   return (
-    <div style={{ width: "100%", color: "#14211F" }}>
+    <div style={{ width: "100%" }}>
       <section style={{ background: "#1B4D4A" }}>
         <div className="tbc-container tbc-hero-padding" style={{ animation: "tbcUp .6s both" }}>
           <div
@@ -50,12 +51,13 @@ export default function EventsPage() {
         </div>
       </section>
 
+      <ScrollReveal>
       {/* FLAGSHIP FEATURE */}
       <section className="tbc-container" style={{ paddingTop: 64, paddingBottom: 40 }}>
         <div
           className="tbc-card-dark tbc-card-padding tbc-split-grid-flagship"
           style={{
-            background: "#14211F",
+            background: "#e1e6e3",
             borderRadius: 20,
             position: "relative",
             overflow: "hidden",
@@ -86,10 +88,10 @@ export default function EventsPage() {
             >
               Flagship · Sept–Oct / Nov 2026
             </span>
-            <h2 style={{ font: "800 40px/1.1 'Inter'", letterSpacing: "-.02em", color: "#fff", margin: "22px 0 14px" }}>
+            <h2 style={{ font: "800 40px/1.1 'Inter'", letterSpacing: "-.02em", color: "#14211f", margin: "22px 0 14px" }}>
               TBC Ghana Blockchain &amp; Crypto Conference
             </h2>
-            <p style={{ font: "400 18px/1.6 'Inter'", color: "rgba(255,255,255,.72)", maxWidth: 560 }}>
+            <p style={{ font: "400 18px/1.6 'Inter'", color: "#54615e", maxWidth: 560 }}>
               Ghana&rsquo;s flagship Web3 gathering  keynotes, startup showcases, workshops,
               hackathons, networking and policy discussions.
             </p>
@@ -119,11 +121,13 @@ export default function EventsPage() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
+      <ScrollReveal>
       {/* UPCOMING LIST */}
       <section className="tbc-container" style={{ paddingTop: 40, paddingBottom: 40 }}>
         <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 28 }}>
-          <h2 style={{ font: "800 28px/1 'Inter'", letterSpacing: "-.02em", color: "#14211F" }}>Upcoming</h2>
+          <h2 style={{ font: "800 28px/1 'Inter'", letterSpacing: "-.02em", color: "#14211f" }}>Upcoming</h2>
           <span
             style={{
               font: "600 12px/1 'Inter'",
@@ -142,8 +146,6 @@ export default function EventsPage() {
               key={event.title}
               className="tbc-card tbc-event-card"
               style={{
-                background: "#fff",
-                border: "1px solid rgba(20,33,31,.08)",
                 borderRadius: 14,
               }}
             >
@@ -153,7 +155,7 @@ export default function EventsPage() {
                   flex: "none",
                   width: 90,
                   textAlign: "center",
-                  borderRight: "1px solid rgba(20,33,31,.1)",
+                  borderRight: "1px solid rgba(20,33,31,0.08)",
                   paddingRight: 24,
                 }}
               >
@@ -163,7 +165,7 @@ export default function EventsPage() {
                 </div>
               </div>
               <div style={{ flex: 1 }}>
-                <div style={{ font: "700 19px/1.25 'Inter'", color: "#14211F", marginBottom: 4 }}>
+                <div style={{ font: "700 19px/1.25 'Inter'", color: "#14211f", marginBottom: 4 }}>
                   {event.title}
                 </div>
                 <div style={{ font: "400 15px/1.4 'Inter'", color: "#54615e" }}>{event.subtitle}</div>
@@ -194,6 +196,7 @@ export default function EventsPage() {
           for the latest dates and locations.
         </p>
       </section>
+      </ScrollReveal>
     </div>
   );
 }

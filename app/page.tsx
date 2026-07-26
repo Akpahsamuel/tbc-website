@@ -5,12 +5,14 @@ import { HOME_STATS } from "@/data/stats";
 import { PARTNER_VALUE_PROPS } from "@/data/partners";
 import ScrollReveal from "@/components/ScrollReveal";
 import StaggerGrid from "@/components/StaggerGrid";
+import HorizontalScrollTrack from "@/components/HorizontalScrollTrack";
 import ParallaxElement from "@/components/ParallaxElement";
 import PinnedSection from "@/components/PinnedSection";
+import ScrambleText from "@/components/ScrambleText";
 
 export default function HomePage() {
   return (
-    <div style={{ width: "100%", color: "#14211F" }}>
+    <div style={{ width: "100%" }}>
       {/* HERO */}
       <section style={{ position: "relative", background: "#1B4D4A", overflow: "hidden" }}>
         <ParallaxElement
@@ -83,7 +85,7 @@ export default function HomePage() {
                 marginBottom: 28,
               }}
             >
-              Building Ghana&rsquo;s <span style={{ color: "#24D155" }}>Web3 Future</span> Together.
+              <ScrambleText text="Building Ghana's" delay={0.1} /> <span style={{ color: "#24D155" }}><ScrambleText text="Web3 Future" delay={0.4} /></span> <ScrambleText text="Together." delay={0.7} />
             </h1>
             <p
               style={{
@@ -101,7 +103,7 @@ export default function HomePage() {
                 href="/getinvolved"
                 style={{
                   background: "#24D155",
-                  color: "#14211F",
+                  color: "#14211f",
                   font: "700 16px/1 'Inter'",
                   padding: "18px 32px",
                   borderRadius: 10,
@@ -129,26 +131,27 @@ export default function HomePage() {
       </section>
 
       {/* STAT BAND */}
-      <section style={{ background: "#fff", borderBottom: "1px solid rgba(20,33,31,.08)" }}>
-        <div className="tbc-container tbc-stat-grid" style={{ paddingTop: 34, paddingBottom: 34 }}>
+      <section style={{ background: "#ffffff", borderBottom: "1px solid rgba(20,33,31,0.08)" }}>
+        <StaggerGrid className="tbc-container tbc-stat-grid" style={{ paddingTop: 100, paddingBottom: 100 }}>
           {HOME_STATS.map((stat) => (
             <div
               key={stat.label}
               className="tbc-stat-item"
             >
-              <div style={{ font: "800 38px/1 'Inter'", letterSpacing: "-.02em", color: "#1B4D4A" }}>
+              <div style={{ font: "800 52px/1 'Inter'", letterSpacing: "-.02em", color: "#1B4D4A" }}>
                 {stat.value}
               </div>
-              <div style={{ font: "500 14px/1.4 'Inter'", color: "#54615e", marginTop: 8 }}>
+              <div style={{ font: "500 16px/1.4 'Inter'", color: "#54615e", marginTop: 14 }}>
                 {stat.label}
               </div>
             </div>
           ))}
-        </div>
+        </StaggerGrid>
       </section>
 
       {/* WHO WE ARE */}
       <section>
+        <ScrollReveal>
         <PinnedSection
           className="tbc-container tbc-section-padding tbc-split-grid-who"
           leftContent={
@@ -164,14 +167,14 @@ export default function HomePage() {
               >
                 Who We Are
               </div>
-              <h2 className="tbc-section-h2" style={{ color: "#14211F", maxWidth: 400 }}>
+              <h2 className="tbc-section-h2" style={{ color: "#14211f", maxWidth: 400 }}>
                 A trusted gateway for Web3 growth in Ghana.
               </h2>
             </>
           }
           rightContent={
             <>
-              <p style={{ font: "400 20px/1.65 'Inter'", color: "#3a453f", marginBottom: 28 }}>
+              <p style={{ font: "400 20px/1.65 'Inter'", color: "#54615e", marginBottom: 28 }}>
                 TBC Ghana is a trusted gateway for blockchain and Web3 growth in Ghana and Africa
                 educating new users, supporting builders, and connecting global ecosystems with
                 local communities.
@@ -182,10 +185,11 @@ export default function HomePage() {
             </>
           }
         />
+        </ScrollReveal>
       </section>
 
       {/* WHAT WE DO */}
-      <section style={{ background: "#fff", borderTop: "1px solid rgba(20,33,31,.08)", borderBottom: "1px solid rgba(20,33,31,.08)" }}>
+      <section style={{ background: "#ffffff", borderTop: "1px solid rgba(20,33,31,0.08)", borderBottom: "1px solid rgba(20,33,31,0.08)" }}>
         <div className="tbc-container tbc-section-padding">
           <div
             style={{
@@ -209,58 +213,70 @@ export default function HomePage() {
               >
                 What We Do
               </div>
-              <h2 className="tbc-section-h2" style={{ color: "#14211F" }}>
+              <h2 className="tbc-section-h2" style={{ color: "#14211f" }}>
                 Five pillars, one ecosystem.
               </h2>
             </div>
-            <Link href="/about" style={{ font: "700 15px/1 'Inter'", color: "#1B4D4A", textDecoration: "none" }}>
+            <Link href="/about" style={{ font: "700 15px/1 'Inter'", color: "#24D155", textDecoration: "none" }}>
               See all pillars →
             </Link>
           </div>
-          <StaggerGrid className="tbc-grid-3" direction="up" staggerDelay={0.1}>
-            {PILLARS.map((pillar) => (
-              <div
-                key={pillar.title}
-                className="tbc-card"
-                style={{
-                  background: "#F5F6F4",
-                  borderRadius: 14,
-                  padding: 28,
-                  border: "1px solid rgba(20,33,31,.06)",
-                }}
-              >
+        </div>
+        {/* We close tbc-container here so the horizontal track can bleed edge-to-edge */}
+        <HorizontalScrollTrack>
+          {PILLARS.map((pillar, i) => (
+            <div
+              key={pillar.title}
+              className="tbc-card"
+              style={{
+                width: 320,
+                borderRadius: 16,
+                padding: 0,
+                flexShrink: 0,
+                overflow: "hidden",
+              }}
+            >
+              <div style={{ height: 4, background: pillar.color }} />
+              <div style={{ padding: 32 }}>
                 <div
                   style={{
-                    width: 34,
-                    height: 34,
-                    borderRadius: 9,
-                    background: pillar.color,
-                    marginBottom: 20,
+                    width: 48,
+                    height: 48,
+                    borderRadius: 14,
+                    background: `${pillar.color}1a`,
+                    marginBottom: 22,
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
+                    border: `1px solid ${pillar.color}33`,
                   }}
                 >
-                  <pillar.Icon />
+                  <pillar.Icon size={22} color={pillar.color} />
                 </div>
-                <div style={{ font: "700 20px/1.2 'Inter'", color: "#14211F", marginBottom: 10 }}>
+                <div style={{ font: "700 20px/1.2 'Inter'", color: "#14211f", marginBottom: 10 }}>
                   {pillar.title}
                 </div>
-                <p style={{ font: "400 15px/1.55 'Inter'", color: "#54615e" }}>{pillar.description}</p>
+                <p style={{ font: "400 14.5px/1.55 'Inter'", color: "#54615e", marginBottom: 20 }}>
+                  {pillar.description}
+                </p>
+                <div style={{ font: "600 13px/1 'Inter'", color: pillar.color }}>
+                  {(i + 1).toString().padStart(2, "0")}
+                </div>
               </div>
-            ))}
-            <div
-              className="tbc-card-dark"
-              style={{
-                background: "#1B4D4A",
-                borderRadius: 14,
-                padding: 28,
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-              }}
-            >
-              <div style={{ font: "700 20px/1.3 'Inter'", color: "#fff", marginBottom: 10 }}>
+            </div>
+          ))}
+          <div
+            className="tbc-card-dark"
+            style={{
+              width: 320,
+              borderRadius: 16,
+              flexShrink: 0,
+              overflow: "hidden",
+            }}
+          >
+            <div style={{ height: 4, background: "#24D155" }} />
+            <div style={{ padding: 32, display: "flex", flexDirection: "column", justifyContent: "center", minHeight: 200 }}>
+              <div style={{ font: "700 22px/1.3 'Inter'", color: "#fff", marginBottom: 16 }}>
                 Find where you fit.
               </div>
               <Link
@@ -270,12 +286,13 @@ export default function HomePage() {
                 Explore the community →
               </Link>
             </div>
-          </StaggerGrid>
-        </div>
+          </div>
+        </HorizontalScrollTrack>
       </section>
 
       {/* GET INVOLVED BAND */}
-      <section style={{ background: "#24D155" }}>
+      <section style={{ background: "rgba(36,209,85,0.05)", borderTop: "1px solid rgba(36,209,85,0.2)", borderBottom: "1px solid rgba(36,209,85,0.2)" }}>
+        <ScrollReveal>
         <div
           className="tbc-container"
           style={{
@@ -289,10 +306,10 @@ export default function HomePage() {
           }}
         >
           <div style={{ maxWidth: 660 }}>
-            <h2 style={{ font: "800 38px/1.15 'Inter'", letterSpacing: "-.02em", color: "#14211F", marginBottom: 12 }}>
+            <h2 style={{ font: "800 38px/1.15 'Inter'", letterSpacing: "-.02em", color: "#14211f", marginBottom: 12 }}>
               There&rsquo;s a place for you in the Circle.
             </h2>
-            <p style={{ font: "400 18px/1.5 'Inter'", color: "rgba(20,33,31,.72)" }}>
+            <p style={{ font: "400 18px/1.5 'Inter'", color: "#54615e" }}>
               Whether you&rsquo;re just starting out or already building, join a structured
               ecosystem made for you.
             </p>
@@ -300,8 +317,8 @@ export default function HomePage() {
           <Link
             href="/getinvolved"
             style={{
-              background: "#14211F",
-              color: "#fff",
+              background: "#24D155",
+              color: "#0C1614",
               font: "700 16px/1 'Inter'",
               padding: "18px 34px",
               borderRadius: 10,
@@ -312,10 +329,11 @@ export default function HomePage() {
             Join TBC Ghana
           </Link>
         </div>
+        </ScrollReveal>
       </section>
 
       {/* PARTNERS */}
-      <section style={{ background: "#fff", borderTop: "1px solid rgba(20,33,31,.08)", borderBottom: "1px solid rgba(20,33,31,.08)" }}>
+      <section style={{ background: "#ffffff", borderTop: "1px solid rgba(20,33,31,0.08)", borderBottom: "1px solid rgba(20,33,31,0.08)" }}>
         <div className="tbc-container tbc-section-padding">
           <div
             style={{
@@ -339,7 +357,7 @@ export default function HomePage() {
               >
                 Partners
               </div>
-              <h2 className="tbc-section-h2" style={{ color: "#14211F" }}>
+              <h2 className="tbc-section-h2" style={{ color: "#14211f" }}>
                 Building the ecosystem together.
               </h2>
             </div>
@@ -347,16 +365,14 @@ export default function HomePage() {
               Partner with us →
             </Link>
           </div>
-          <div className="tbc-grid-3" style={{ marginBottom: 40 }}>
+          <StaggerGrid className="tbc-grid-3" style={{ marginBottom: 40 }}>
             {PARTNER_VALUE_PROPS.map((partner) => (
               <div
                 key={partner.title}
                 className="tbc-card"
                 style={{
-                  background: "#F5F6F4",
                   borderRadius: 14,
                   padding: 28,
-                  border: "1px solid rgba(20,33,31,.06)",
                 }}
               >
                 <div
@@ -373,13 +389,13 @@ export default function HomePage() {
                 >
                   <partner.Icon />
                 </div>
-                <div style={{ font: "700 20px/1.2 'Inter'", color: "#14211F", marginBottom: 10 }}>
+                <div style={{ font: "700 20px/1.2 'Inter'", color: "#14211f", marginBottom: 10 }}>
                   {partner.title}
                 </div>
                 <p style={{ font: "400 15px/1.55 'Inter'", color: "#54615e" }}>{partner.description}</p>
               </div>
             ))}
-          </div>
+          </StaggerGrid>
           <div
             style={{
               font: "600 12px/1 'Inter'",
@@ -417,15 +433,13 @@ export default function HomePage() {
         >
           Upcoming
         </div>
-        <h2 className="tbc-section-h2" style={{ color: "#14211F", marginBottom: 48 }}>
+        <h2 className="tbc-section-h2" style={{ color: "#14211f", marginBottom: 48 }}>
           What&rsquo;s coming up next.
         </h2>
-        <div className="tbc-grid-2">
+        <StaggerGrid className="tbc-grid-2" staggerDelay={0.15}>
           <div
             className="tbc-card tbc-card-padding"
             style={{
-              background: "#fff",
-              border: "1px solid rgba(20,33,31,.08)",
               borderRadius: 16,
               display: "flex",
               flexDirection: "column",
@@ -447,7 +461,7 @@ export default function HomePage() {
                 Weekly · Online
               </span>
             </div>
-            <div style={{ font: "700 24px/1.2 'Inter'", color: "#14211F" }}>Weekly X Space</div>
+            <div style={{ font: "700 24px/1.2 'Inter'", color: "#14211f" }}>Weekly X Space</div>
             <p style={{ font: "400 16px/1.55 'Inter'", color: "#54615e", flex: 1 }}>
               Every Friday at 7:30 PM GMT  blockchain education, African Web3 stories, founder
               interviews and market insights.
@@ -459,7 +473,7 @@ export default function HomePage() {
           <div
             className="tbc-card-dark tbc-card-padding"
             style={{
-              background: "#14211F",
+              background: "#e1e6e3",
               borderRadius: 16,
               display: "flex",
               flexDirection: "column",
@@ -481,10 +495,10 @@ export default function HomePage() {
                 Flagship · Nov 2026
               </span>
             </div>
-            <div style={{ font: "700 24px/1.2 'Inter'", color: "#fff" }}>
+            <div style={{ font: "700 24px/1.2 'Inter'", color: "#14211f" }}>
               Blockchain &amp; Crypto Conference
             </div>
-            <p style={{ font: "400 16px/1.55 'Inter'", color: "rgba(255,255,255,.7)", flex: 1 }}>
+            <p style={{ font: "400 16px/1.55 'Inter'", color: "#54615e", flex: 1 }}>
               Ghana&rsquo;s flagship Web3 gathering  keynotes, startup showcases, hackathons,
               networking and policy discussions. Coming this November.
             </p>
@@ -492,7 +506,7 @@ export default function HomePage() {
               Event details →
             </Link>
           </div>
-        </div>
+        </StaggerGrid>
       </section>
     </div>
   );

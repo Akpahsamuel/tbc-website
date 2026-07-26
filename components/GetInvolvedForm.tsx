@@ -5,7 +5,7 @@ import { INTEREST_OPTIONS } from "@/data/getInvolvedOptions";
 const inputStyle: React.CSSProperties = {
   width: "100%",
   padding: "14px 15px",
-  border: "1px solid rgba(20,33,31,.16)",
+  border: "1px solid rgba(20,33,31,0.12)",
   borderRadius: 10,
   fontSize: 15,
   color: "#14211F",
@@ -28,7 +28,7 @@ export default function GetInvolvedForm() {
   return (
     <div
       className="tbc-card tbc-card-padding"
-      style={{ background: "#fff", border: "1px solid rgba(20,33,31,.08)", borderRadius: 20 }}
+      style={{ background: "#fff", border: "1px solid rgba(20,33,31,0.08)", borderRadius: 20 }}
     >
       <h2 style={{ font: "800 30px/1.15 'Inter'", letterSpacing: "-.02em", color: "#14211F", marginBottom: 8 }}>
         Join TBC Ghana

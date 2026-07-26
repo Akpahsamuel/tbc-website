@@ -19,7 +19,7 @@ export default function Nav() {
             width: 6,
             height: 6,
             borderRadius: "50%",
-            background: "#fff",
+            background: "#24D155",
             display: "inline-block",
             flex: "none",
           }}
@@ -65,7 +65,7 @@ export default function Nav() {
             href="/getinvolved"
             style={{
               background: "#24D155",
-              color: "#14211F",
+              color: "#14211f",
               font: "700 14px/1 'Inter'",
               padding: "11px 18px",
               borderRadius: 8,
@@ -95,9 +95,9 @@ export default function Nav() {
             gap: 4,
           }}
         >
-          <span style={{ width: 18, height: 2, background: "#fff", display: "block" }} />
-          <span style={{ width: 18, height: 2, background: "#fff", display: "block" }} />
-          <span style={{ width: 18, height: 2, background: "#fff", display: "block" }} />
+          <span style={{ width: 18, height: 2, background: "rgba(255,255,255,0.7)", display: "block" }} />
+          <span style={{ width: 18, height: 2, background: "rgba(255,255,255,0.7)", display: "block" }} />
+          <span style={{ width: 18, height: 2, background: "rgba(255,255,255,0.7)", display: "block" }} />
         </button>
       </nav>
 
@@ -105,9 +105,9 @@ export default function Nav() {
         className={`tbc-mobile-panel${open ? " open" : ""}`}
         style={{
           flexDirection: "column",
-          background: "#14211F",
+          background: "#e1e6e3",
           gap: 4,
-          borderBottom: "1px solid rgba(255,255,255,.07)",
+          borderBottom: "1px solid rgba(20,33,31,0.08)",
         }}
       >
         {NAV_LINKS.map((link) => {
@@ -119,7 +119,7 @@ export default function Nav() {
               onClick={() => setOpen(false)}
               style={{
                 font: `${isActive ? 600 : 500} 15px/1 'Inter'`,
-                color: isActive ? "#24D155" : "rgba(255,255,255,.82)",
+                color: isActive ? "#24D155" : "#14211f",
                 textDecoration: "none",
                 padding: "12px 0",
               }}
@@ -133,7 +133,7 @@ export default function Nav() {
           onClick={() => setOpen(false)}
           style={{
             background: "#24D155",
-            color: "#14211F",
+            color: "#14211f",
             font: "700 14px/1 'Inter'",
             padding: "12px 18px",
             borderRadius: 8,
