@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
 
 * {
@@ -40,8 +41,8 @@ html {
 
 body {
   min-height: 100%;
-  background: #f5f6f4;
-  color: #14211f;
+  background: var(--tbc-bg, #f5f6f4);
+  color: var(--tbc-text, #14211f);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -130,8 +131,8 @@ button:focus-visible {
 }
 
 .tbc-card {
-  background: #ffffff;
-  border: 1px solid rgba(20, 33, 31, 0.08);
+  background: var(--tbc-surface, #ffffff);
+  border: 1px solid var(--tbc-border, rgba(20, 33, 31, 0.08));
   box-shadow: 0 4px 20px -8px rgba(20, 33, 31, 0.05);
   transition:
     transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
@@ -176,6 +177,37 @@ button:focus-visible {
 
 .tbc-card-dark:hover *:not(svg):not(path):not(circle):not(rect) {
   color: #14211f !important;
+}
+
+.tbc-no-hover:hover {
+  transform: none !important;
+  background-color: #1b4d4a !important;
+  border-color: #1b4d4a !important;
+  box-shadow: none !important;
+}
+
+.tbc-no-hover:hover *:not(svg):not(path):not(circle):not(rect) {
+  color: inherit !important;
+}
+
+/* Partner 3D cards — GSAP owns the transform, CSS handles color/shadow only */
+.partner-card-3d {
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease !important;
+  /* Disable CSS transform transition so GSAP quickTo runs without fighting */
+  will-change: transform;
+}
+
+.partner-card-3d:hover {
+  background-color: #1b4d4a !important;
+  border-color: #1b4d4a !important;
+  box-shadow: 0 24px 48px -12px rgba(27, 77, 74, 0.4), 0 0 0 1px rgba(36,209,85,0.2) !important;
+}
+
+.partner-card-3d:hover *:not(svg):not(path):not(circle):not(rect) {
+  color: #ffffff !important;
 }
 
 /* Horizontal Scroll Mobile Responsive Controls */

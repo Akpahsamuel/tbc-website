@@ -10,6 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 interface StaggerGridProps {
   children: React.ReactNode;
   className?: string;
+  style?: React.CSSProperties;
   staggerDelay?: number;
   direction?: "up" | "down" | "left" | "right" | "scale";
   triggerOffset?: string;
@@ -18,6 +19,7 @@ interface StaggerGridProps {
 export default function StaggerGrid({
   children,
   className = "",
+  style,
   staggerDelay = 0.1,
   direction = "up",
   triggerOffset = "top 80%",
@@ -76,7 +78,7 @@ export default function StaggerGrid({
   );
 
   return (
-    <div ref={container} className={className}>
+    <div ref={container} className={className} style={style}>
       {children}
     </div>
   );

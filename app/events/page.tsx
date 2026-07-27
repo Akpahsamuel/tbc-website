@@ -55,9 +55,8 @@ export default function EventsPage() {
       {/* FLAGSHIP FEATURE */}
       <section className="tbc-container" style={{ paddingTop: 64, paddingBottom: 40 }}>
         <div
-          className="tbc-card-dark tbc-card-padding tbc-split-grid-flagship"
+          className="tbc-card-dark tbc-card-padding tbc-split-grid-flagship tbc-no-hover"
           style={{
-            background: "#e1e6e3",
             borderRadius: 20,
             position: "relative",
             overflow: "hidden",
@@ -88,10 +87,10 @@ export default function EventsPage() {
             >
               Flagship · Sept–Oct / Nov 2026
             </span>
-            <h2 style={{ font: "800 40px/1.1 'Inter'", letterSpacing: "-.02em", color: "#14211f", margin: "22px 0 14px" }}>
+            <h2 style={{ font: "800 40px/1.1 'Inter'", letterSpacing: "-.02em", color: "#ffffff", margin: "22px 0 14px" }}>
               TBC Ghana Blockchain &amp; Crypto Conference
             </h2>
-            <p style={{ font: "400 18px/1.6 'Inter'", color: "#54615e", maxWidth: 560 }}>
+            <p style={{ font: "400 18px/1.6 'Inter'", color: "rgba(255,255,255,.72)", maxWidth: 560 }}>
               Ghana&rsquo;s flagship Web3 gathering  keynotes, startup showcases, workshops,
               hackathons, networking and policy discussions.
             </p>
@@ -100,8 +99,8 @@ export default function EventsPage() {
             style={{
               position: "relative",
               textAlign: "center",
-              background: "rgba(255,255,255,.04)",
-              border: "1px solid rgba(255,255,255,.1)",
+              background: "rgba(0,0,0,.15)",
+              border: "1px solid rgba(255,255,255,.12)",
               borderRadius: 16,
               padding: 32,
             }}
@@ -171,6 +170,7 @@ export default function EventsPage() {
                 <div style={{ font: "400 15px/1.4 'Inter'", color: "var(--tbc-text-muted)" }}>{event.subtitle}</div>
               </div>
               <span
+                className="tbc-tag"
                 style={{
                   font: "600 12px/1 'Inter'",
                   color: event.tagColor === "flagship" ? "#fff" : "#1B4D4A",

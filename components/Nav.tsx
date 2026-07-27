@@ -6,14 +6,11 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Countdown from "./Countdown";
 import { NAV_LINKS } from "@/data/navLinks";
-import { MoonIcon, SunIcon } from "./icons";
-import { useTheme } from "@/lib/theme";
+
 
 export default function Nav() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const { theme, toggleTheme, mounted } = useTheme();
-
   return (
     <div style={{ position: "sticky", top: 0, zIndex: 100 }}>
       <div className="tbc-banner">
@@ -81,34 +78,7 @@ export default function Nav() {
             </Link>
           </div>
 
-          <button
-            onClick={toggleTheme}
-            aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-            style={{
-              background: "#24D155",
-              color: "#14211f",
-              font: "700 14px/1 'Inter'",
-              padding: "11px 18px",
-              borderRadius: 8,
-              width: 40,
-              height: 40,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              cursor: "pointer",
-              flex: "none",
-            }}
-          >
-            {mounted ? (
-              theme === "dark" ? (
-                <SunIcon size={18} />
-              ) : (
-                <MoonIcon size={18} />
-              )
-            ) : (
-              <span style={{ width: 18, height: 18, display: "block" }} />
-            )}
-          </button>
+        </div>
 
         <button
           className="tbc-hamburger"

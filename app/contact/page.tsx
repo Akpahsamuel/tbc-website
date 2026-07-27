@@ -82,7 +82,7 @@ export default function ContactPage() {
               14 Nii Owoo Street
               <br />
               Dzorwulu, Accra, Ghana
-            </p> */}
+            </p>
           </div>
           <div>
             <div

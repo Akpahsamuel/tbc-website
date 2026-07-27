@@ -65,17 +65,21 @@ export default function CommunityPage() {
           >
             <div
               style={{
-                position: "absolute",
-                top: -60,
-                right: -50,
-                width: 200,
-                height: 200,
+                width: 64,
+                height: 64,
                 borderRadius: "50%",
-                border: "1px solid rgba(36,209,85,.18)",
+                background: level.circleBg,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                font: "800 24px/1 'Inter'",
+                color: level.circleColor,
               }}
-            /> */}
-            {/* <div style={{ position: "relative" }}>
-              <div
+            >
+              {level.number}
+            </div>
+            <div style={{ flex: 1 }}>
+              <h2
                 style={{
                   font: "800 24px/1.15 'Inter'",
                   letterSpacing: "-.02em",
@@ -83,25 +87,15 @@ export default function CommunityPage() {
                   marginBottom: 6,
                 }}
               >
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="#24D155"
-                  strokeWidth={2}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M12 5v14M5 12h14" />
-                </svg>
-              </div>
-              <h2 style={{ font: "800 22px/1.2 'Inter'", letterSpacing: "-.02em", color: "#fff", marginBottom: 10 }}>
-                List your community
+                {level.title}
               </h2>
-              <p style={{ font: "400 15.5px/1.6 'Inter'", color: "rgba(255,255,255,.7)", marginBottom: 22 }}>
-                Are you building a tech or Web3 community in Ghana or Africa? Join the Circle and
-                get featured here.
+              <p
+                style={{
+                  font: "400 16px/1.5 'Inter'",
+                  color: level.dark ? "rgba(255,255,255,.7)" : "#54615e",
+                }}
+              >
+                {level.description}
               </p>
             </div>
           </div>

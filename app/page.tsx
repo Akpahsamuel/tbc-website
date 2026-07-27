@@ -6,6 +6,7 @@ import { HOME_STATS } from "@/data/stats";
 import { PARTNER_VALUE_PROPS } from "@/data/partners";
 import ScrollReveal from "@/components/ScrollReveal";
 import StaggerGrid from "@/components/StaggerGrid";
+import PartnerCards3D from "@/components/PartnerCards3D";
 import HorizontalScrollTrack from "@/components/HorizontalScrollTrack";
 import ParallaxElement from "@/components/ParallaxElement";
 import PinnedSection from "@/components/PinnedSection";
@@ -134,7 +135,8 @@ export default function HomePage() {
 
       {/* STAT BAND */}
       <section style={{ background: "#ffffff", borderBottom: "1px solid rgba(20,33,31,0.08)" }}>
-        <StaggerGrid className="tbc-container tbc-stat-grid" style={{ paddingTop: 100, paddingBottom: 100 }}>
+        <div className="tbc-container tbc-stat-grid" style={{ paddingTop: 100, paddingBottom: 100 }}>
+          <StaggerGrid>
           {HOME_STATS.map((stat) => (
             <div
               key={stat.label}
@@ -149,6 +151,7 @@ export default function HomePage() {
             </div>
           ))}
         </StaggerGrid>
+        </div>
       </section>
 
       {/* WHO WE ARE */}
@@ -293,7 +296,7 @@ export default function HomePage() {
       </section>
 
       {/* GET INVOLVED BAND */}
-      <section style={{ background: "rgba(36,209,85,0.05)", borderTop: "1px solid rgba(36,209,85,0.2)", borderBottom: "1px solid rgba(36,209,85,0.2)" }}>
+      <section style={{ background: "rgba(36,209,85,0.10)", borderTop: "1px solid rgba(36,209,85,0.28)", borderBottom: "1px solid rgba(36,209,85,0.28)" }}>
         <ScrollReveal>
         <div
           className="tbc-container"
@@ -367,37 +370,8 @@ export default function HomePage() {
               Partner with us →
             </Link>
           </div>
-          <StaggerGrid className="tbc-grid-3" style={{ marginBottom: 40 }}>
-            {PARTNER_VALUE_PROPS.map((partner) => (
-              <div
-                key={partner.title}
-                className="tbc-card"
-                style={{
-                  borderRadius: 14,
-                  padding: 28,
-                }}
-              >
-                <div
-                  style={{
-                    width: 34,
-                    height: 34,
-                    borderRadius: 9,
-                    background: partner.color,
-                    marginBottom: 20,
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
-                >
-                  <partner.Icon />
-                </div>
-                <div style={{ font: "700 20px/1.2 'Inter'", color: "#14211f", marginBottom: 10 }}>
-                  {partner.title}
-                </div>
-                <p style={{ font: "400 15px/1.55 'Inter'", color: "var(--tbc-text-muted)" }}>{partner.description}</p>
-              </div>
-            ))}
-          </StaggerGrid>
+          <PartnerCards3D />
+
           <div
             style={{
               font: "600 12px/1 'Inter'",
@@ -420,7 +394,7 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* UPCOMING */}
       <section className="tbc-container tbc-section-padding">
