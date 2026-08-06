@@ -6,35 +6,20 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Countdown from "./Countdown";
 import { NAV_LINKS } from "@/data/navLinks";
-import { MoonIcon, SunIcon } from "./icons";
-import { useTheme } from "@/lib/theme";
+
 
 export default function Nav() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const { theme, toggleTheme, mounted } = useTheme();
-
   return (
     <div style={{ position: "sticky", top: 0, zIndex: 100 }}>
-      <div
-        style={{
-          background: "#D03433",
-          color: "#fff",
-          padding: "10px 40px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: 12,
-          font: "600 13px/1 'Inter'",
-          textAlign: "center",
-        }}
-      >
+      <div className="tbc-banner">
         <span
           style={{
             width: 6,
             height: 6,
             borderRadius: "50%",
-            background: "#fff",
+            background: "#24D155",
             display: "inline-block",
             flex: "none",
           }}
@@ -44,16 +29,7 @@ export default function Nav() {
         <Countdown variant="banner" />
       </div>
 
-      <nav
-        style={{
-          background: "#14211F",
-          padding: "16px 40px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          borderBottom: "1px solid rgba(255,255,255,.07)",
-        }}
-      >
+      <nav className="tbc-nav">
         <Link
           href="/"
           style={{ display: "flex", alignItems: "center", textDecoration: "none" }}
@@ -102,66 +78,39 @@ export default function Nav() {
             </Link>
           </div>
 
-          <button
-            onClick={toggleTheme}
-            aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-            style={{
-              background: "none",
-              border: "1px solid rgba(255,255,255,.3)",
-              borderRadius: 8,
-              width: 40,
-              height: 40,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              cursor: "pointer",
-              flex: "none",
-            }}
-          >
-            {mounted ? (
-              theme === "dark" ? (
-                <SunIcon size={18} />
-              ) : (
-                <MoonIcon size={18} />
-              )
-            ) : (
-              <span style={{ width: 18, height: 18, display: "block" }} />
-            )}
-          </button>
-
-          <button
-            className="tbc-hamburger"
-            onClick={() => setOpen((v) => !v)}
-            aria-label="Toggle menu"
-            aria-expanded={open}
-            style={{
-              background: "none",
-              border: "1px solid rgba(255,255,255,.3)",
-              borderRadius: 8,
-              width: 40,
-              height: 40,
-              alignItems: "center",
-              justifyContent: "center",
-              cursor: "pointer",
-              flexDirection: "column",
-              gap: 4,
-            }}
-          >
-            <span style={{ width: 18, height: 2, background: "#fff", display: "block" }} />
-            <span style={{ width: 18, height: 2, background: "#fff", display: "block" }} />
-            <span style={{ width: 18, height: 2, background: "#fff", display: "block" }} />
-          </button>
         </div>
+
+        <button
+          className="tbc-hamburger"
+          onClick={() => setOpen((v) => !v)}
+          aria-label="Toggle menu"
+          aria-expanded={open}
+          style={{
+            background: "none",
+            border: "1px solid rgba(255,255,255,.3)",
+            borderRadius: 8,
+            width: 40,
+            height: 40,
+            alignItems: "center",
+            justifyContent: "center",
+            cursor: "pointer",
+            flexDirection: "column",
+            gap: 4,
+          }}
+        >
+          <span style={{ width: 18, height: 2, background: "rgba(255,255,255,0.7)", display: "block" }} />
+          <span style={{ width: 18, height: 2, background: "rgba(255,255,255,0.7)", display: "block" }} />
+          <span style={{ width: 18, height: 2, background: "rgba(255,255,255,0.7)", display: "block" }} />
+        </button>
       </nav>
 
       <div
         className={`tbc-mobile-panel${open ? " open" : ""}`}
         style={{
           flexDirection: "column",
-          background: "#14211F",
-          padding: "8px 40px 24px",
+          background: "#e1e6e3",
           gap: 4,
-          borderBottom: "1px solid rgba(255,255,255,.07)",
+          borderBottom: "1px solid rgba(20,33,31,0.08)",
         }}
       >
         {NAV_LINKS.map((link) => {
@@ -173,7 +122,7 @@ export default function Nav() {
               onClick={() => setOpen(false)}
               style={{
                 font: `${isActive ? 600 : 500} 15px/1 'Inter'`,
-                color: isActive ? "#24D155" : "rgba(255,255,255,.82)",
+                color: isActive ? "#24D155" : "#14211f",
                 textDecoration: "none",
                 padding: "12px 0",
               }}
@@ -187,7 +136,7 @@ export default function Nav() {
           onClick={() => setOpen(false)}
           style={{
             background: "#24D155",
-            color: "#14211F",
+            color: "#14211f",
             font: "700 14px/1 'Inter'",
             padding: "12px 18px",
             borderRadius: 8,

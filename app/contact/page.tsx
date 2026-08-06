@@ -5,13 +5,22 @@ export const metadata: Metadata = {
   title: "Contact",
   description:
     "For partnerships, media inquiries, or general questions, reach out to TBC Ghana.",
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contact · TBC Ghana",
+    description:
+      "For partnerships, media inquiries, or general questions, reach out to TBC Ghana.",
+    url: "https://www.tbcafrica.org/contact",
+  },
 };
 
 export default function ContactPage() {
   return (
-    <div style={{ width: "100%", color: "var(--tbc-text)" }}>
-      <section style={{ background: "#1B4D4A", padding: "96px 40px" }}>
-        <div style={{ maxWidth: 1160, margin: "0 auto", animation: "tbcUp .6s both" }}>
+    <div style={{ width: "100%" }}>
+      <section style={{ background: "#1B4D4A" }}>
+        <div className="tbc-container tbc-hero-padding" style={{ animation: "tbcUp .6s both" }}>
           <div
             style={{
               font: "600 13px/1 'Inter'",
@@ -24,9 +33,8 @@ export default function ContactPage() {
             Contact
           </div>
           <h1
+            className="tbc-hero-h1"
             style={{
-              font: "800 62px/1.05 'Inter'",
-              letterSpacing: "-.03em",
               color: "#fff",
               maxWidth: 820,
               marginBottom: 24,
@@ -40,16 +48,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section
-        style={{
-          maxWidth: 1160,
-          margin: "0 auto",
-          padding: "80px 40px 100px",
-          display: "grid",
-          gridTemplateColumns: ".85fr 1.15fr",
-          gap: 56,
-        }}
-      >
+      <section className="tbc-container tbc-split-grid-contact" style={{ paddingTop: 64, paddingBottom: 80 }}>
         <div>
           <div style={{ marginBottom: 36 }}>
             <div
@@ -63,8 +62,8 @@ export default function ContactPage() {
             >
               Email
             </div>
-            <a href="mailto:thebuilderscircleghana@gmail.com" style={{ font: "600 20px/1.3 'Inter'", color: "var(--tbc-text)" }}>
-              thebuilderscircleghana@gmail.com
+            <a href="mailto:info@tbcafrica.org" style={{ font: "600 20px/1.3 'Inter'", color: "#14211f" }}>
+              info@tbcafrica.org
             </a>
           </div>
           <div style={{ marginBottom: 36 }}>
@@ -79,11 +78,11 @@ export default function ContactPage() {
             >
               Office
             </div>
-            {/* <p style={{ font: "500 18px/1.5 'Inter'", color: "var(--tbc-text)" }}>
+            <p style={{ font: "500 18px/1.5 'Inter'", color: "#14211f" }}>
               14 Nii Owoo Street
               <br />
               Dzorwulu, Accra, Ghana
-            </p> */}
+            </p>
           </div>
           <div>
             <div
@@ -98,10 +97,10 @@ export default function ContactPage() {
               Social
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-              <a href="https://x.com/Builders_Circle" style={{ font: "500 16px/1.3 'Inter'", color: "var(--tbc-text)" }}>
+              <a href="https://x.com/Builders_Circle" style={{ font: "500 16px/1.3 'Inter'", color: "#14211f" }}>
                 X (Twitter) · @Builders_Circle
               </a>
-              <a href="#" style={{ font: "500 16px/1.3 'Inter'", color: "var(--tbc-text)" }}>
+              <a href="#" style={{ font: "500 16px/1.3 'Inter'", color: "#14211f" }}>
                 LinkedIn · The Builders Circle Ghana
               </a>
             </div>

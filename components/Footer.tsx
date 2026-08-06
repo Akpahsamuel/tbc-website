@@ -18,7 +18,7 @@ const headingStyle: React.CSSProperties = {
 
 export default function Footer() {
   return (
-    <footer style={{ background: "#14211F", color: "#fff", padding: "72px 40px 32px" }}>
+    <footer className="tbc-container" style={{ background: "#080c0a", color: "#fff", paddingTop: 72, paddingBottom: 32, maxWidth: "100%" }}>
       <div className="tbc-footer-grid" style={{ maxWidth: 1160, margin: "0 auto" }}>
         <div>
           <div style={{ display: "flex", alignItems: "center", marginBottom: 18 }}>

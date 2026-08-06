@@ -1,18 +1,28 @@
 import type { Metadata } from "next";
 import Countdown from "@/components/Countdown";
 import { UPCOMING_EVENTS } from "@/data/events";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Events",
   description:
-    "From weekly online spaces to city meetups and the flagship conference — here's what's coming up.",
+    "From weekly online spaces to city meetups and the flagship conference  here's what's coming up.",
+  alternates: {
+    canonical: "/events",
+  },
+  openGraph: {
+    title: "Events · TBC Ghana",
+    description:
+      "From weekly online spaces to city meetups and the flagship conference  here's what's coming up.",
+    url: "https://www.tbcafrica.org/events",
+  },
 };
 
 export default function EventsPage() {
   return (
-    <div style={{ width: "100%", color: "var(--tbc-text)" }}>
-      <section style={{ background: "#1B4D4A", padding: "96px 40px" }}>
-        <div style={{ maxWidth: 1160, margin: "0 auto", animation: "tbcUp .6s both" }}>
+    <div style={{ width: "100%" }}>
+      <section style={{ background: "#1B4D4A" }}>
+        <div className="tbc-container tbc-hero-padding" style={{ animation: "tbcUp .6s both" }}>
           <div
             style={{
               font: "600 13px/1 'Inter'",
@@ -25,9 +35,8 @@ export default function EventsPage() {
             Events
           </div>
           <h1
+            className="tbc-hero-h1"
             style={{
-              font: "800 62px/1.05 'Inter'",
-              letterSpacing: "-.03em",
               color: "#fff",
               maxWidth: 820,
               marginBottom: 24,
@@ -36,24 +45,19 @@ export default function EventsPage() {
             From weekly spaces to the flagship.
           </h1>
           <p style={{ font: "400 20px/1.6 'Inter'", color: "rgba(255,255,255,.76)", maxWidth: 640 }}>
-            From weekly online spaces to city meetups and the flagship conference — here&rsquo;s
+            From weekly online spaces to city meetups and the flagship conference  here&rsquo;s
             what&rsquo;s coming up.
           </p>
         </div>
       </section>
 
+      <ScrollReveal>
       {/* FLAGSHIP FEATURE */}
-      <section style={{ maxWidth: 1160, margin: "0 auto", padding: "64px 40px 40px" }}>
+      <section className="tbc-container" style={{ paddingTop: 64, paddingBottom: 40 }}>
         <div
-          className="tbc-card-dark"
+          className="tbc-card-dark tbc-card-padding tbc-split-grid-flagship tbc-no-hover"
           style={{
-            background: "#14211F",
             borderRadius: 20,
-            padding: 52,
-            display: "grid",
-            gridTemplateColumns: "1.4fr .6fr",
-            gap: 40,
-            alignItems: "center",
             position: "relative",
             overflow: "hidden",
           }}
@@ -83,11 +87,11 @@ export default function EventsPage() {
             >
               Flagship · Sept–Oct / Nov 2026
             </span>
-            <h2 style={{ font: "800 40px/1.1 'Inter'", letterSpacing: "-.02em", color: "#fff", margin: "22px 0 14px" }}>
+            <h2 style={{ font: "800 40px/1.1 'Inter'", letterSpacing: "-.02em", color: "#ffffff", margin: "22px 0 14px" }}>
               TBC Ghana Blockchain &amp; Crypto Conference
             </h2>
             <p style={{ font: "400 18px/1.6 'Inter'", color: "rgba(255,255,255,.72)", maxWidth: 560 }}>
-              Ghana&rsquo;s flagship Web3 gathering — keynotes, startup showcases, workshops,
+              Ghana&rsquo;s flagship Web3 gathering  keynotes, startup showcases, workshops,
               hackathons, networking and policy discussions.
             </p>
           </div>
@@ -95,8 +99,8 @@ export default function EventsPage() {
             style={{
               position: "relative",
               textAlign: "center",
-              background: "rgba(255,255,255,.04)",
-              border: "1px solid rgba(255,255,255,.1)",
+              background: "rgba(0,0,0,.15)",
+              border: "1px solid rgba(255,255,255,.12)",
               borderRadius: 16,
               padding: 32,
             }}
@@ -116,11 +120,13 @@ export default function EventsPage() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
+      <ScrollReveal>
       {/* UPCOMING LIST */}
-      <section style={{ maxWidth: 1160, margin: "0 auto", padding: "40px 40px 40px" }}>
+      <section className="tbc-container" style={{ paddingTop: 40, paddingBottom: 40 }}>
         <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 28 }}>
-          <h2 style={{ font: "800 28px/1 'Inter'", letterSpacing: "-.02em", color: "var(--tbc-text)" }}>Upcoming</h2>
+          <h2 style={{ font: "800 28px/1 'Inter'", letterSpacing: "-.02em", color: "#14211f" }}>Upcoming</h2>
           <span
             style={{
               font: "600 12px/1 'Inter'",
@@ -137,23 +143,18 @@ export default function EventsPage() {
           {UPCOMING_EVENTS.map((event) => (
             <div
               key={event.title}
-              className="tbc-card"
+              className="tbc-card tbc-event-card"
               style={{
-                background: "var(--tbc-surface)",
-                border: "1px solid var(--tbc-border)",
                 borderRadius: 14,
-                padding: "26px 30px",
-                display: "flex",
-                alignItems: "center",
-                gap: 28,
               }}
             >
               <div
+                className="tbc-event-date-box"
                 style={{
                   flex: "none",
                   width: 90,
                   textAlign: "center",
-                  borderRight: "1px solid var(--tbc-border-strong)",
+                  borderRight: "1px solid rgba(20,33,31,0.08)",
                   paddingRight: 24,
                 }}
               >
@@ -163,12 +164,13 @@ export default function EventsPage() {
                 </div>
               </div>
               <div style={{ flex: 1 }}>
-                <div style={{ font: "700 19px/1.25 'Inter'", color: "var(--tbc-text)", marginBottom: 4 }}>
+                <div style={{ font: "700 19px/1.25 'Inter'", color: "#14211f", marginBottom: 4 }}>
                   {event.title}
                 </div>
                 <div style={{ font: "400 15px/1.4 'Inter'", color: "var(--tbc-text-muted)" }}>{event.subtitle}</div>
               </div>
               <span
+                className="tbc-tag"
                 style={{
                   font: "600 12px/1 'Inter'",
                   color: event.tagColor === "flagship" ? "#fff" : "#1B4D4A",
@@ -185,8 +187,8 @@ export default function EventsPage() {
         </div>
       </section>
 
-      <section style={{ maxWidth: 1160, margin: "0 auto", padding: "24px 40px 100px" }}>
-        <p style={{ font: "400 14px/1.6 'Inter'", color: "var(--tbc-text-faint)" }}>
+      <section className="tbc-container" style={{ paddingTop: 24, paddingBottom: 80 }}>
+        <p style={{ font: "400 14px/1.6 'Inter'", color: "#7b857f" }}>
           Events are updated regularly. Follow{" "}
           <a href="https://x.com/Builders_Circle" style={{ fontWeight: 600 }}>
             @Builders_Circle
@@ -194,6 +196,7 @@ export default function EventsPage() {
           for the latest dates and locations.
         </p>
       </section>
+      </ScrollReveal>
     </div>
   );
 }

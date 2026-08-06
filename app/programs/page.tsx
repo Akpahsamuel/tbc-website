@@ -1,18 +1,28 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PROGRAMS, RESEARCH_PROGRAM } from "@/data/programs";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Programs",
   description:
     "Recurring, structured initiatives spanning education, community, media and ecosystem intelligence.",
+  alternates: {
+    canonical: "/programs",
+  },
+  openGraph: {
+    title: "Programs · TBC Ghana",
+    description:
+      "Recurring, structured initiatives spanning education, community, media and ecosystem intelligence.",
+    url: "https://www.tbcafrica.org/programs",
+  },
 };
 
 export default function ProgramsPage() {
   return (
-    <div style={{ width: "100%", color: "var(--tbc-text)" }}>
-      <section style={{ background: "#1B4D4A", padding: "96px 40px" }}>
-        <div style={{ maxWidth: 1160, margin: "0 auto", animation: "tbcUp .6s both" }}>
+    <div style={{ width: "100%" }}>
+      <section style={{ background: "#1B4D4A" }}>
+        <div className="tbc-container tbc-hero-padding" style={{ animation: "tbcUp .6s both" }}>
           <div
             style={{
               font: "600 13px/1 'Inter'",
@@ -25,9 +35,8 @@ export default function ProgramsPage() {
             Programs &amp; Initiatives
           </div>
           <h1
+            className="tbc-hero-h1"
             style={{
-              font: "800 62px/1.05 'Inter'",
-              letterSpacing: "-.03em",
               color: "#fff",
               maxWidth: 820,
               marginBottom: 24,
@@ -42,37 +51,41 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      <section className="tbc-grid-2" style={{ maxWidth: 1160, margin: "0 auto", padding: "80px 40px 96px" }}>
+      <section className="tbc-container tbc-grid-2" style={{ paddingTop: 64, paddingBottom: 80 }}>
+        <ScrollReveal className="tbc-full-span" style={{ display: "contents" }}>
         {PROGRAMS.map((program) => (
           <div
             key={program.title}
-            className={program.dark ? "tbc-card-dark" : "tbc-card"}
+            className={`${program.dark ? "tbc-card-dark" : "tbc-card"}`}
             style={{
-              background: program.dark ? "#14211F" : "var(--tbc-surface)",
-              border: program.dark ? undefined : "1px solid var(--tbc-border)",
+              background: program.dark ? "#1B4D4A" : "#fff",
+              border: program.dark ? undefined : "1px solid rgba(20,33,31,0.08)",
               borderRadius: 18,
-              padding: 40,
+              overflow: "hidden",
             }}
           >
+            <div style={{ height: 4, background: program.color }} />
+            <div className="tbc-card-padding" style={{ paddingTop: 28 }}>
             <div
               style={{
-                width: 40,
-                height: 40,
-                borderRadius: 11,
-                background: program.color,
-                marginBottom: 24,
+                width: 44,
+                height: 44,
+                borderRadius: 12,
+                background: `${program.color}1a`,
+                marginBottom: 22,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                border: `1px solid ${program.color}33`,
               }}
             >
-              <program.Icon size={22} />
+              <program.Icon size={22} color={program.color} />
             </div>
             <h2
               style={{
                 font: "800 26px/1.15 'Inter'",
                 letterSpacing: "-.02em",
-                color: program.dark ? "#fff" : "var(--tbc-text)",
+                color: program.dark ? "#fff" : "#14211f",
                 marginBottom: 14,
               }}
             >
@@ -92,12 +105,14 @@ export default function ProgramsPage() {
                 {program.tags.map((tag) => (
                   <span
                     key={tag}
+                    className="tbc-tag"
                     style={{
                       font: "500 13px/1 'Inter'",
                       color: "#1B4D4A",
                       background: "var(--tbc-bg)",
                       padding: "8px 13px",
                       borderRadius: 100,
+                      transition: "background-color 0.18s ease, color 0.18s ease",
                     }}
                   >
                     {tag}
@@ -127,42 +142,40 @@ export default function ProgramsPage() {
               </span>
             ) : null}
           </div>
+          </div>
         ))}
+        </ScrollReveal>
 
+        <ScrollReveal>
         <div
+          className="tbc-full-span tbc-card tbc-card-padding tbc-split-grid"
           style={{
-            gridColumn: "span 2",
-            background: "var(--tbc-surface)",
-            border: "1px solid var(--tbc-border)",
             borderRadius: 18,
-            padding: 40,
-            display: "grid",
-            gridTemplateColumns: ".8fr 1.2fr",
-            gap: 40,
-            alignItems: "center",
           }}
         >
           <div>
             <div
               style={{
-                width: 40,
-                height: 40,
-                borderRadius: 11,
-                background: "#1B4D4A",
-                marginBottom: 24,
+                width: 44,
+                height: 44,
+                borderRadius: 12,
+                background: "#1B4D4A1a",
+                marginBottom: 22,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                border: "1px solid #1B4D4A33",
               }}
             >
-              <RESEARCH_PROGRAM.Icon size={22} />
+              <RESEARCH_PROGRAM.Icon size={22} color="#1B4D4A" />
             </div>
-            <h2 style={{ font: "800 26px/1.15 'Inter'", letterSpacing: "-.02em", color: "var(--tbc-text)", marginBottom: 14 }}>
+            <h2 style={{ font: "800 26px/1.15 'Inter'", letterSpacing: "-.02em", color: "#14211f", marginBottom: 14 }}>
               {RESEARCH_PROGRAM.title}
             </h2>
           </div>
           <p style={{ font: "400 18px/1.65 'Inter'", color: "var(--tbc-text-muted)" }}>{RESEARCH_PROGRAM.description}</p>
         </div>
+        </ScrollReveal>
       </section>
     </div>
   );

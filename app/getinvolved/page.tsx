@@ -5,14 +5,23 @@ import { GET_INVOLVED_WAYS } from "@/data/getInvolvedOptions";
 export const metadata: Metadata = {
   title: "Get Involved",
   description:
-    "Whether you're a beginner, a builder, a student, or a protocol looking to enter the Ghanaian market — here's how to get involved with TBC Ghana.",
+    "Whether you're a beginner, a builder, a student, or a protocol looking to enter the Ghanaian market  here's how to get involved with TBC Ghana.",
+  alternates: {
+    canonical: "/getinvolved",
+  },
+  openGraph: {
+    title: "Get Involved · TBC Ghana",
+    description:
+      "Whether you're a beginner, a builder, a student, or a protocol looking to enter the Ghanaian market  here's how to get involved with TBC Ghana.",
+    url: "https://www.tbcafrica.org/getinvolved",
+  },
 };
 
 export default function GetInvolvedPage() {
   return (
-    <div style={{ width: "100%", color: "var(--tbc-text)" }}>
-      <section style={{ background: "#1B4D4A", padding: "96px 40px" }}>
-        <div style={{ maxWidth: 1160, margin: "0 auto", animation: "tbcUp .6s both" }}>
+    <div style={{ width: "100%" }}>
+      <section style={{ background: "#1B4D4A" }}>
+        <div className="tbc-container tbc-hero-padding" style={{ animation: "tbcUp .6s both" }}>
           <div
             style={{
               font: "600 13px/1 'Inter'",
@@ -25,9 +34,8 @@ export default function GetInvolvedPage() {
             Get Involved
           </div>
           <h1
+            className="tbc-hero-h1"
             style={{
-              font: "800 62px/1.05 'Inter'",
-              letterSpacing: "-.03em",
               color: "#fff",
               maxWidth: 820,
               marginBottom: 24,
@@ -37,26 +45,26 @@ export default function GetInvolvedPage() {
           </h1>
           <p style={{ font: "400 20px/1.6 'Inter'", color: "rgba(255,255,255,.76)", maxWidth: 660 }}>
             Whether you&rsquo;re a beginner, a builder, a student, or a protocol looking to
-            enter the Ghanaian market — here&rsquo;s how to get involved.
+            enter the Ghanaian market  here&rsquo;s how to get involved.
           </p>
         </div>
       </section>
 
-      <section className="tbc-grid-4" style={{ maxWidth: 1160, margin: "0 auto", padding: "80px 40px 40px" }}>
+      <section className="tbc-container tbc-grid-4" style={{ paddingTop: 64, paddingBottom: 40 }}>
         {GET_INVOLVED_WAYS.map((way) => (
           <div
             key={way.title}
             className="tbc-card"
-            style={{ background: "var(--tbc-surface)", border: "1px solid var(--tbc-border)", borderRadius: 16, padding: 28 }}
+            style={{ borderRadius: 16, padding: 28 }}
           >
             <div style={{ width: 32, height: 32, borderRadius: 9, background: way.color, marginBottom: 18 }} />
-            <h3 style={{ font: "700 18px/1.2 'Inter'", color: "var(--tbc-text)", marginBottom: 8 }}>{way.title}</h3>
-            <p style={{ font: "400 14.5px/1.5 'Inter'", color: "var(--tbc-text-muted)" }}>{way.description}</p>
+            <h3 style={{ font: "700 18px/1.2 'Inter'", color: "#14211f", marginBottom: 8 }}>{way.title}</h3>
+            <p style={{ font: "400 14.5px/1.5 'Inter'", color: "#54615e" }}>{way.description}</p>
           </div>
         ))}
       </section>
 
-      <section style={{ maxWidth: 760, margin: "0 auto", padding: "40px 40px 100px" }}>
+      <section className="tbc-container" style={{ maxWidth: 760, paddingTop: 40, paddingBottom: 80 }}>
         <GetInvolvedForm />
       </section>
     </div>

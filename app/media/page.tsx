@@ -1,18 +1,28 @@
 import type { Metadata } from "next";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import { MEDIA_POSTS } from "@/data/mediaPosts";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Media",
   description:
-    "Home for TBC Ghana's original content — X Space recordings, the podcast, ecosystem reports, and short written pieces on Web3 in Ghana.",
+    "Home for TBC Ghana's original content  X Space recordings, the podcast, ecosystem reports, and short written pieces on Web3 in Ghana.",
+  alternates: {
+    canonical: "/media",
+  },
+  openGraph: {
+    title: "Media · TBC Ghana",
+    description:
+      "Home for TBC Ghana's original content  X Space recordings, the podcast, ecosystem reports, and short written pieces on Web3 in Ghana.",
+    url: "https://www.tbcafrica.org/media",
+  },
 };
 
 export default function MediaPage() {
   return (
-    <div style={{ width: "100%", color: "var(--tbc-text)" }}>
-      <section style={{ background: "#1B4D4A", padding: "96px 40px" }}>
-        <div style={{ maxWidth: 1160, margin: "0 auto", animation: "tbcUp .6s both" }}>
+    <div style={{ width: "100%" }}>
+      <section style={{ background: "#1B4D4A" }}>
+        <div className="tbc-container tbc-hero-padding" style={{ animation: "tbcUp .6s both" }}>
           <div
             style={{
               font: "600 13px/1 'Inter'",
@@ -25,9 +35,8 @@ export default function MediaPage() {
             Media / Ecosystem Stories
           </div>
           <h1
+            className="tbc-hero-h1"
             style={{
-              font: "800 62px/1.05 'Inter'",
-              letterSpacing: "-.03em",
               color: "#fff",
               maxWidth: 820,
               marginBottom: 24,
@@ -36,27 +45,25 @@ export default function MediaPage() {
             The stories driving Web3 in Ghana.
           </h1>
           <p style={{ font: "400 20px/1.6 'Inter'", color: "rgba(255,255,255,.76)", maxWidth: 660 }}>
-            Home for TBC Ghana&rsquo;s original content — X Space recordings, the podcast,
+            Home for TBC Ghana&rsquo;s original content  X Space recordings, the podcast,
             ecosystem reports, and short written pieces on Web3 in Ghana.
           </p>
         </div>
       </section>
 
+      <ScrollReveal>
       {/* FEATURED REPORT */}
-      <section style={{ maxWidth: 1160, margin: "0 auto", padding: "64px 40px 24px" }}>
+      <section className="tbc-container" style={{ paddingTop: 64, paddingBottom: 24 }}>
         <div
-          className="tbc-card"
+          className="tbc-card tbc-split-grid"
           style={{
-            background: "var(--tbc-surface)",
-            border: "1px solid var(--tbc-border)",
             borderRadius: 20,
             overflow: "hidden",
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
+            gap: 0,
           }}
         >
           <ImagePlaceholder label={<>report cover<br />drop image here</>} style={{ minHeight: 300 }} />
-          <div style={{ padding: 48, display: "flex", flexDirection: "column", justifyContent: "center" }}>
+          <div className="tbc-card-padding" style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
             <span
               style={{
                 font: "600 12px/1 'Inter'",
@@ -68,11 +75,11 @@ export default function MediaPage() {
             >
               Latest ecosystem report
             </span>
-            <h2 style={{ font: "800 32px/1.15 'Inter'", letterSpacing: "-.02em", color: "var(--tbc-text)", marginBottom: 14 }}>
+            <h2 style={{ font: "800 32px/1.15 'Inter'", letterSpacing: "-.02em", color: "#14211f", marginBottom: 14 }}>
               The State of Web3 in Ghana
             </h2>
-            <p style={{ font: "400 17px/1.6 'Inter'", color: "var(--tbc-text-muted)", marginBottom: 24 }}>
-              Adoption trends, developer ecosystem growth, and community insights — establishing
+            <p style={{ font: "400 17px/1.6 'Inter'", color: "#54615e", marginBottom: 24 }}>
+              Adoption trends, developer ecosystem growth, and community insights  establishing
               TBC Ghana as an ecosystem intelligence source.
             </p>
             <a href="#" style={{ font: "700 15px/1 'Inter'", color: "#1B4D4A" }}>
@@ -81,17 +88,17 @@ export default function MediaPage() {
           </div>
         </div>
       </section>
+      </ScrollReveal>
 
+      <ScrollReveal>
       {/* CONTENT GRID */}
-      <section style={{ maxWidth: 1160, margin: "0 auto", padding: "24px 40px 100px" }}>
+      <section className="tbc-container" style={{ paddingTop: 24, paddingBottom: 80 }}>
         <div className="tbc-grid-3">
           {MEDIA_POSTS.map((post) => (
             <div
               key={post.title}
               className="tbc-card"
               style={{
-                background: "var(--tbc-surface)",
-                border: "1px solid var(--tbc-border)",
                 borderRadius: 16,
                 overflow: "hidden",
               }}
@@ -118,7 +125,7 @@ export default function MediaPage() {
                   style={{
                     font: "700 19px/1.3 'Inter'",
                     letterSpacing: "-.01em",
-                    color: "var(--tbc-text)",
+                    color: "#14211f",
                     marginBottom: 10,
                   }}
                 >
@@ -130,6 +137,7 @@ export default function MediaPage() {
           ))}
         </div>
       </section>
+      </ScrollReveal>
     </div>
   );
 }
