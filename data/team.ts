@@ -16,7 +16,7 @@ export const TEAM: TeamMember[] = [
   { name: "Juliet Edeh", role: "Community Lead", image: "/images/team/uju.JPG", objectPosition: "center 25%" },
   { name: "Akosua Osei", role: "Partnerships & Growth", image: "/images/team/akosua.JPG", objectPosition: "center 20%" },
   { name: "Wasiu Jimoh (Evergenius)", role: "Partnerships & Growth", image: "/images/team/Evergenius.jpg", objectPosition: "center 20%" },
-  { name: "Ola", role: "Core Team", image: "/images/team/bello.jpg", objectPosition: "center 15%" },
+  { name: "Ola", role: "Core Team", image: "/images/team/Bello.jpg", objectPosition: "center 15%" },
   { name: "Gideon", role: "Core Team", image: "/images/team/Gideon.PNG", objectPosition: "center 20%" },
   { name: "Kweku Tech", role: "Media Head", image: "/images/team/kweku.jpg", objectPosition: "center 5%" },
 ];
