@@ -339,49 +339,18 @@ export default function CommunityPage() {
                   style={{
                     position: "absolute",
                     inset: 0,
-                    background: "linear-gradient(to top, rgba(8, 16, 14, 0.88) 0%, rgba(8, 16, 14, 0.25) 55%, transparent 100%)",
+                    background: "linear-gradient(to top, rgba(8, 16, 14, 0.85) 0%, transparent 60%)",
                     display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-between",
-                    padding: 24,
+                    alignItems: "flex-end",
+                    padding: 20,
                   }}
                 >
-                  <span
-                    style={{
-                      alignSelf: "flex-start",
-                      background: "rgba(10, 20, 18, 0.85)",
-                      color: "#FFFFFF",
-                      backdropFilter: "blur(10px)",
-                      WebkitBackdropFilter: "blur(10px)",
-                      border: "1px solid rgba(255, 255, 255, 0.18)",
-                      font: "600 12px/1 'Inter'",
-                      letterSpacing: ".06em",
-                      textTransform: "uppercase",
-                      padding: "7px 14px",
-                      borderRadius: 20,
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: 7,
-                      boxShadow: "0 4px 12px rgba(0, 0, 0, 0.25)",
-                    }}
-                  >
-                    <span
-                      style={{
-                        width: 6,
-                        height: 6,
-                        borderRadius: "50%",
-                        background: "#24D155",
-                        boxShadow: "0 0 6px #24D155",
-                      }}
-                    />
-                    {item.category}
-                  </span>
                   <h3
                     style={{
-                      font: "700 20px/1.3 'Inter'",
+                      font: "700 18px/1.3 'Inter'",
                       color: "#FFFFFF",
                       margin: 0,
-                      textShadow: "0 2px 8px rgba(0,0,0,0.5)",
+                      textShadow: "0 2px 6px rgba(0,0,0,0.6)",
                     }}
                   >
                     {item.title}
