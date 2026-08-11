@@ -51,7 +51,7 @@ export const metadata: Metadata = {
       "TBC Ghana is the ecosystem infrastructure uniting education, builders, and community to grow blockchain and Web3 across Ghana and Africa.",
     images: [
       {
-        url: "/images/tbc-ghana-logo-color.svg",
+        url: "/images/tbc-logos/tbc-ghana-logo-color.svg",
         width: 1200,
         height: 630,
         alt: "TBC Ghana Logo",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     title: "TBC Ghana  Building Ghana's Web3 Future Together",
     description:
       "TBC Ghana is the ecosystem infrastructure uniting education, builders, and community to grow blockchain and Web3 across Ghana and Africa.",
-    images: ["/images/tbc-ghana-logo-color.svg"],
+    images: ["/images/tbc-logos/tbc-ghana-logo-color.svg"],
   },
   icons: {
     icon: "/icon.svg",
@@ -79,7 +79,7 @@ const jsonLd = {
   name: "The Builders Circle Ghana",
   alternateName: ["TBC Ghana", "The Builders Circle"],
   url: "https://www.tbcafrica.org",
-  logo: "https://www.tbcafrica.org/images/tbc-ghana-logo-color.svg",
+  logo: "https://www.tbcafrica.org/images/tbc-logos/tbc-ghana-logo-color.svg",
   description:
     "TBC Ghana is the ecosystem infrastructure uniting education, builders, and community to grow blockchain and Web3 across Ghana and Africa.",
   address: {
