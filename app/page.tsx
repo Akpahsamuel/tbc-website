@@ -4,6 +4,8 @@ import ImagePlaceholder from "@/components/ImagePlaceholder";
 import { PILLARS } from "@/data/pillars";
 import { HOME_STATS } from "@/data/stats";
 import { PARTNER_VALUE_PROPS } from "@/data/partners";
+import { COMMUNITY_PARTNERS } from "@/data/communityPartners";
+import LogoMarquee from "@/components/LogoMarquee";
 import ScrollReveal from "@/components/ScrollReveal";
 import StaggerGrid from "@/components/StaggerGrid";
 import PartnerCards3D from "@/components/PartnerCards3D";
@@ -383,16 +385,7 @@ export default function HomePage() {
           >
             Ecosystem partners &amp; sponsors
           </div>
-          <div className="tbc-grid-4 tbc-grid-partners">
-            {[0, 1, 2, 3].map((i) => (
-              <ImagePlaceholder
-                key={i}
-                variant="dashed"
-                label="partner logo"
-                style={{ aspectRatio: "2/1" }}
-              />
-            ))}
-          </div>
+          <LogoMarquee />
         </div>
       </section>
 

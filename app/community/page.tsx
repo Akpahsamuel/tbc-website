@@ -140,6 +140,127 @@ export default function CommunityPage() {
         </div>
       </section>
 
+      {/* COMMUNITY PARTNERS SECTION */}
+      <section style={{ background: "#F5F6F4", borderTop: "1px solid rgba(20,33,31,.08)", padding: "80px 0" }}>
+        <div className="tbc-container" style={{ maxWidth: 1160, margin: "0 auto" }}>
+          <div
+            style={{
+              font: "600 13px/1 'Inter'",
+              letterSpacing: ".18em",
+              textTransform: "uppercase",
+              color: "#1B4D4A",
+              marginBottom: 16,
+            }}
+          >
+            Ecosystem Partners
+          </div>
+          <h2 style={{ font: "800 36px/1.15 'Inter'", letterSpacing: "-.02em", color: "#14211F", marginBottom: 16 }}>
+            Communities inside the Circle
+          </h2>
+          <p style={{ font: "400 18px/1.6 'Inter'", color: "#54615E", maxWidth: 700, marginBottom: 48 }}>
+            Meet the ecosystem communities, labs, and organizations driving Web3 education, development, and adoption across Ghana and Africa alongside us.
+          </p>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
+              alignItems: "start",
+              gap: 24,
+            }}
+          >
+            {COMMUNITY_PARTNERS.map((partner) => (
+              <div
+                key={partner.name}
+                className="tbc-card-clean"
+                style={{
+                  background: "#fff",
+                  border: "1px solid rgba(20,33,31,0.08)",
+                  borderRadius: 16,
+                  padding: 24,
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                }}
+              >
+                <div>
+                  <div
+                    style={{
+                      height: 56,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "flex-start",
+                      marginBottom: 20,
+                    }}
+                  >
+                    <Image
+                      src={partner.logo}
+                      alt={`${partner.name} logo`}
+                      width={160}
+                      height={50}
+                      style={{
+                        objectFit: "contain",
+                        maxHeight: 50,
+                        maxWidth: "100%",
+                        transform: partner.logoScale ? `scale(${partner.logoScale})` : undefined,
+                        transformOrigin: "center center",
+                      }}
+                    />
+                  </div>
+                  <h3
+                    style={{
+                      font: "700 20px/1.3 'Inter'",
+                      color: "#14211F",
+                      marginBottom: 0,
+                    }}
+                  >
+                    {partner.name}
+                  </h3>
+
+                  <div className="tbc-partner-reveal">
+                    <p
+                      style={{
+                        font: "400 14px/1.6 'Inter'",
+                        color: "#54615E",
+                        marginBottom: 16,
+                      }}
+                    >
+                      {partner.description}
+                    </p>
+
+                    {partner.links.length > 0 && (
+                      <div
+                        style={{
+                          display: "flex",
+                          flexWrap: "wrap",
+                          gap: 8,
+                          paddingTop: 14,
+                          borderTop: "1px solid rgba(20,33,31,0.08)",
+                        }}
+                      >
+                        {partner.links.map((link) => (
+                          <a
+                            key={link.title}
+                            href={link.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title={link.title}
+                            className="tbc-partner-badge"
+                          >
+                            <link.Icon size={14} />
+                            <span>{link.title}</span>
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* <section style={{ background: "#fff", borderTop: "1px solid rgba(20,33,31,.08)" }}>
         <div style={{ maxWidth: 1000, margin: "0 auto", padding: "96px 40px" }}>
           <div

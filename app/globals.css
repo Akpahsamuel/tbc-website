@@ -168,6 +168,65 @@ button:focus-visible {
   color: #ffffff !important;
 }
 
+/* Clean partner card hover (no green background shift, rock solid hover area) */
+.tbc-card-clean {
+  background-color: #ffffff;
+  border: 1px solid rgba(20, 33, 31, 0.08);
+  border-radius: 16px;
+  align-self: start;
+  height: fit-content;
+  cursor: pointer;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.tbc-card-clean:hover {
+  border-color: rgba(20, 33, 31, 0.18) !important;
+  box-shadow: 0 12px 32px -8px rgba(20, 33, 31, 0.12) !important;
+  background-color: #ffffff !important;
+}
+
+/* Reveal info & links on hover only */
+.tbc-partner-reveal {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  will-change: max-height, opacity;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease, margin-top 0.3s ease;
+}
+
+.tbc-card-clean:hover .tbc-partner-reveal {
+  max-height: 400px;
+  opacity: 1;
+  margin-top: 12px;
+}
+
+/* Partner link badge hover states (no green background) */
+.tbc-partner-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #f5f6f4;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #14211f !important;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(20, 33, 31, 0.08);
+}
+
+.tbc-partner-badge:hover {
+  background-color: #14211f !important;
+  color: #ffffff !important;
+  border-color: #14211f !important;
+}
+
+.tbc-partner-badge:hover * {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+
 .tbc-card-dark:hover {
   transform: translateY(-5px);
   background-color: #24d155 !important;
@@ -410,6 +469,58 @@ button:focus-visible {
 
 .tbc-full-span {
   grid-column: span 2;
+}
+
+/* Infinite Logo Marquee */
+@keyframes tbcMarquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.tbc-marquee-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+}
+
+.tbc-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 20px;
+  animation: tbcMarquee 35s linear infinite;
+  will-change: transform;
+}
+
+.tbc-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.tbc-marquee-item {
+  flex: 0 0 auto;
+  height: 75px;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.25s ease;
+  opacity: 0.88;
+}
+
+.tbc-marquee-item:hover {
+  transform: scale(1.28);
+  opacity: 1;
+  border: none;
+  box-shadow: none;
+  z-index: 10;
 }
 
 /* Media Queries */

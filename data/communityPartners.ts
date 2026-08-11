@@ -24,6 +24,7 @@ export type CommunityPartner = {
   logoBg: string;
   description: string;
   links: CommunityLink[];
+  logoScale?: number;
 };
 
 export const COMMUNITY_PARTNERS: CommunityPartner[] = [
@@ -31,6 +32,7 @@ export const COMMUNITY_PARTNERS: CommunityPartner[] = [
     name: "BeTechConnected",
     logo: "/images/com-Logos/BeTechConnected.png",
     logoBg: "#fff",
+    logoScale: 1.0,
     description:
       "BeTechConnected is a pan-African tech-focused social enterprise empowering young people with skills and knowledge for the future of work as well as connecting them to global tech opportunities.",
     links: [
@@ -45,6 +47,7 @@ export const COMMUNITY_PARTNERS: CommunityPartner[] = [
     name: "KayabaLabs",
     logo: "/images/com-Logos/KayabLabs.png",
     logoBg: "#fff",
+    logoScale: 1.0,
     description:
       "­ A­ blockchain­ research­ and­ development­ lab,­ training­ developers­ and­ building­ the­ decentralized­ future­globally. Our team is composed of diverse contributors who actively collaborate to promote Blockchain adoption across West Africa and the broader Sub-Saharan region.",
     links: [
@@ -60,6 +63,7 @@ export const COMMUNITY_PARTNERS: CommunityPartner[] = [
     name: "The Digital College",
     logo: "/images/com-Logos/the-digital-college.png",
     logoBg: "#fff",
+    logoScale: 2.0,
     description:
       "The Digital College equips African talents with practical, industry-relevant digital skills. We help learners build confidence, portfolios, and career opportunities through hands-on education.",
     links: [
@@ -73,6 +77,7 @@ export const COMMUNITY_PARTNERS: CommunityPartner[] = [
     name: "Crypto Investors Network Africa",
     logo: "/images/com-Logos/crypto-investors-network-africa.png",
     logoBg: "#fff",
+    logoScale: 2.0,
     description:
       "A robust community of Blockchain and Crypto Investors across Africa, bringing crypto adoption & wealth to the masses.",
     links: [
@@ -87,7 +92,8 @@ export const COMMUNITY_PARTNERS: CommunityPartner[] = [
   {
     name: "Decrypting Crypto",
     logo: "/images/com-Logos/decrypting-crypto.jpeg",
-    logoBg: "#14211F",
+    logoBg: "#fff",
+    logoScale: 2.0,
     description: "Crypto Education One Person At a Time",
     links: [
       { title: "WhatsApp Community", href: "https://chat.whatsapp.com/LGH0enDzGHv7diPzS4AZfp", Icon: WhatsAppIcon },
@@ -99,6 +105,7 @@ export const COMMUNITY_PARTNERS: CommunityPartner[] = [
     name: "ICP HUB Ghana",
     logo: "/images/com-Logos/icp-hub-ghana.png",
     logoBg: "#fff",
+    logoScale: 1.0,
     description:
       "ICP HUB Ghana is a community that promotes Web3 adoption in Ghana by educating developers, supporting startups, and growing the Internet Computer (ICP) ecosystem.",
     links: [
@@ -111,6 +118,7 @@ export const COMMUNITY_PARTNERS: CommunityPartner[] = [
     name: "Crypto Focus Community",
     logo: "/images/com-Logos/crypto-focus.png",
     logoBg: "#fff",
+    logoScale: 2.0,
     description:
       "Crypto Focus is Ghana’s leading cryptocurrency and blockchain education community, committed to making digital asset knowledge accessible through education, awareness, mentorship, research, and community engagement while fostering responsible adoption across Africa and beyond.",
     links: [
@@ -127,6 +135,7 @@ export const COMMUNITY_PARTNERS: CommunityPartner[] = [
     name: "Sui Network Ghana",
     logo: "/images/com-Logos/sui-network-ghana.png",
     logoBg: "#fff",
+    logoScale: 2.0,
     description:
       "Sui Ghana is a community-led initiative dedicated to growing the Sui ecosystem in Ghana by empowering developers, students, and Web3 enthusiasts through education, innovation, and ecosystem collaboration.",
     links: [
@@ -140,6 +149,7 @@ export const COMMUNITY_PARTNERS: CommunityPartner[] = [
     name: "Kweku Tech",
     logo: "/images/com-Logos/KwekuTech.png",
     logoBg: "#fff",
+    logoScale: 3.8,
     description:
       "Kweku Tech is a tech media company that documents and amplifies Africa tech ecosystem through professional media and event coverage.",
     links: [
@@ -153,6 +163,7 @@ export const COMMUNITY_PARTNERS: CommunityPartner[] = [
     name: "Chosen Fintech Solutions",
     logo: "/images/com-Logos/chosen-fintech.jpg",
     logoBg: "#fff",
+    logoScale: 2.0,
     description:
       "We are committed to educating, onboarding and empowering individuals and organisations to navigate digital technology for effective socio-economic systems.",
     links: [
@@ -166,6 +177,7 @@ export const COMMUNITY_PARTNERS: CommunityPartner[] = [
     name: "Web3Agenda",
     logo: "/images/com-Logos/web3-agenda.jpeg",
     logoBg: "#fff",
+    logoScale: 2.0,
     description:
       "Amplifying Web3 innovation, events, and education to drive decentralized adoption across Africa.",
     links: [
@@ -180,6 +192,7 @@ export const COMMUNITY_PARTNERS: CommunityPartner[] = [
     name: "HackerBoost Developer LBG",
     logo: "/images/com-Logos/hackerboost-logos/singlelinelogos/hackerboost-single-line-1.png",
     logoBg: "#fff",
+    logoScale: 1.0,
     description:
       "HackerBoost is a nonprofit technology community dedicated to equipping young Africans with practical skills in software engineering, artificial intelligence, blockchain, cybersecurity, and entrepreneurship. Through bootcamps, workshops, hackathons, internships, mentorship, and startup incubation, HackerBoost bridges the gap between education and industry while fostering innovation and creating pathways to employment.",
     links: [
