@@ -349,18 +349,31 @@ export default function CommunityPage() {
                   <span
                     style={{
                       alignSelf: "flex-start",
-                      background: "rgba(36, 209, 85, 0.2)",
-                      color: "#24D155",
-                      backdropFilter: "blur(8px)",
-                      WebkitBackdropFilter: "blur(8px)",
-                      border: "1px solid rgba(36, 209, 85, 0.3)",
+                      background: "rgba(10, 20, 18, 0.85)",
+                      color: "#FFFFFF",
+                      backdropFilter: "blur(10px)",
+                      WebkitBackdropFilter: "blur(10px)",
+                      border: "1px solid rgba(255, 255, 255, 0.18)",
                       font: "600 12px/1 'Inter'",
                       letterSpacing: ".06em",
                       textTransform: "uppercase",
-                      padding: "6px 12px",
+                      padding: "7px 14px",
                       borderRadius: 20,
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: 7,
+                      boxShadow: "0 4px 12px rgba(0, 0, 0, 0.25)",
                     }}
                   >
+                    <span
+                      style={{
+                        width: 6,
+                        height: 6,
+                        borderRadius: "50%",
+                        background: "#24D155",
+                        boxShadow: "0 0 6px #24D155",
+                      }}
+                    />
                     {item.category}
                   </span>
                   <h3
