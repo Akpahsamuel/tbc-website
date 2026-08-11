@@ -3,6 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { COMMUNITY_PARTNERS } from "@/data/communityPartners";
 import { COMMUNITY_LEVELS } from "@/data/communityLevels";
+import CommunityLevelsStack from "@/components/CommunityLevelsStack";
+import PartnerCardsStack from "@/components/PartnerCardsStack";
 
 export const metadata: Metadata = {
   title: "Community",
@@ -80,54 +82,31 @@ export default function CommunityPage() {
         </div>
       </section>
 
-      <section className="tbc-container" style={{ maxWidth: 1000, paddingTop: 64, paddingBottom: 64, display: "flex", flexDirection: "column", gap: 16 }}>
-        {COMMUNITY_LEVELS.map((level) => (
-          <div
-            key={level.number}
-            className={`community-step community-step-${level.number} ${level.dark ? "tbc-card-dark" : "tbc-card"}`}
-            style={{
-              background: level.dark ? "#1B4D4A" : "#fff",
-              border: level.dark ? undefined : "1px solid rgba(20,33,31,0.08)",
-              borderRadius: 16,
-            }}
-          >
+      {/* COMMUNITY ROLES - STICKY SCROLL STACK */}
+      <section style={{ background: "#F5F6F4", borderBottom: "1px solid rgba(20,33,31,.08)", padding: "80px 0 100px 0" }}>
+        <div className="tbc-container" style={{ maxWidth: 1160, margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: 48 }}>
             <div
               style={{
-                width: 64,
-                height: 64,
-                borderRadius: "50%",
-                background: level.circleBg,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                font: "800 24px/1 'Inter'",
-                color: level.circleColor,
+                font: "600 13px/1 'Inter'",
+                letterSpacing: ".18em",
+                textTransform: "uppercase",
+                color: "#1B4D4A",
+                marginBottom: 16,
               }}
             >
-              {level.number}
+              Community Roles & Journey
             </div>
-            <div style={{ flex: 1 }}>
-              <h2
-                style={{
-                  font: "800 24px/1.15 'Inter'",
-                  letterSpacing: "-.02em",
-                  color: level.dark ? "#fff" : "#14211f",
-                  marginBottom: 6,
-                }}
-              >
-                {level.title}
-              </h2>
-              <p
-                style={{
-                  font: "400 16px/1.5 'Inter'",
-                  color: level.dark ? "rgba(255,255,255,.7)" : "#54615e",
-                }}
-              >
-                {level.description}
-              </p>
-            </div>
+            <h2 style={{ font: "800 36px/1.15 'Inter'", letterSpacing: "-.02em", color: "#14211F", marginBottom: 14 }}>
+              Roles inside the Circle
+            </h2>
+            <p style={{ font: "400 18px/1.6 'Inter'", color: "#54615E", maxWidth: 620, margin: "0 auto" }}>
+              From Explorers to Ecosystem Leads, see how members participate, contribute, and build within TBC Ghana.
+            </p>
           </div>
-        ))}
+
+          <CommunityLevelsStack />
+        </div>
       </section>
 
       <section className="tbc-container" style={{ maxWidth: 1000, paddingBottom: 80 }}>
@@ -171,121 +150,27 @@ export default function CommunityPage() {
       {/* COMMUNITY PARTNERS SECTION */}
       <section style={{ background: "#F5F6F4", borderTop: "1px solid rgba(20,33,31,.08)", padding: "80px 0" }}>
         <div className="tbc-container" style={{ maxWidth: 1160, margin: "0 auto" }}>
-          <div
-            style={{
-              font: "600 13px/1 'Inter'",
-              letterSpacing: ".18em",
-              textTransform: "uppercase",
-              color: "#1B4D4A",
-              marginBottom: 16,
-            }}
-          >
-            Ecosystem Partners
+          <div style={{ textAlign: "center", marginBottom: 48 }}>
+            <div
+              style={{
+                font: "600 13px/1 'Inter'",
+                letterSpacing: ".18em",
+                textTransform: "uppercase",
+                color: "#1B4D4A",
+                marginBottom: 16,
+              }}
+            >
+              Ecosystem Partners
+            </div>
+            <h2 style={{ font: "800 36px/1.15 'Inter'", letterSpacing: "-.02em", color: "#14211F", marginBottom: 16 }}>
+              Communities inside the Circle
+            </h2>
+            <p style={{ font: "400 18px/1.6 'Inter'", color: "#54615E", maxWidth: 700, margin: "0 auto 48px auto" }}>
+              Meet the ecosystem communities, labs, and organizations driving Web3 education, development, and adoption across Ghana and Africa alongside us.
+            </p>
           </div>
-          <h2 style={{ font: "800 36px/1.15 'Inter'", letterSpacing: "-.02em", color: "#14211F", marginBottom: 16 }}>
-            Communities inside the Circle
-          </h2>
-          <p style={{ font: "400 18px/1.6 'Inter'", color: "#54615E", maxWidth: 700, marginBottom: 48 }}>
-            Meet the ecosystem communities, labs, and organizations driving Web3 education, development, and adoption across Ghana and Africa alongside us.
-          </p>
 
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))",
-              alignItems: "start",
-              gap: 24,
-            }}
-          >
-            {COMMUNITY_PARTNERS.map((partner) => (
-              <div
-                key={partner.name}
-                className="tbc-card-clean"
-                style={{
-                  background: "#fff",
-                  border: "1px solid rgba(20,33,31,0.08)",
-                  borderRadius: 16,
-                  padding: 24,
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                }}
-              >
-                <div>
-                  <div
-                    style={{
-                      height: 56,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "flex-start",
-                      marginBottom: 20,
-                    }}
-                  >
-                    <Image
-                      src={partner.logo}
-                      alt={`${partner.name} logo`}
-                      width={160}
-                      height={50}
-                      style={{
-                        objectFit: "contain",
-                        maxHeight: 50,
-                        maxWidth: "100%",
-                        transform: partner.logoScale ? `scale(${partner.logoScale})` : undefined,
-                        transformOrigin: "center center",
-                      }}
-                    />
-                  </div>
-                  <h3
-                    style={{
-                      font: "700 20px/1.3 'Inter'",
-                      color: "#14211F",
-                      marginBottom: 0,
-                    }}
-                  >
-                    {partner.name}
-                  </h3>
-
-                  <div className="tbc-partner-reveal">
-                    <p
-                      style={{
-                        font: "400 14px/1.6 'Inter'",
-                        color: "#54615E",
-                        marginBottom: 16,
-                      }}
-                    >
-                      {partner.description}
-                    </p>
-
-                    {partner.links.length > 0 && (
-                      <div
-                        style={{
-                          display: "flex",
-                          flexWrap: "wrap",
-                          gap: 8,
-                          paddingTop: 14,
-                          borderTop: "1px solid rgba(20,33,31,0.08)",
-                        }}
-                      >
-                        {partner.links.map((link) => (
-                          <a
-                            key={link.title}
-                            href={link.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            title={link.title}
-                            className="tbc-partner-badge"
-                          >
-                            <link.Icon size={14} />
-                            <span>{link.title}</span>
-                          </a>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <PartnerCardsStack />
         </div>
       </section>
 
@@ -362,70 +247,6 @@ export default function CommunityPage() {
         </div>
       </section>
 
-      {/* <section style={{ background: "#fff", borderTop: "1px solid rgba(20,33,31,.08)" }}>
-        <div style={{ maxWidth: 1000, margin: "0 auto", padding: "96px 40px" }}>
-          <div
-            style={{
-              font: "600 13px/1 'Inter'",
-              letterSpacing: ".18em",
-              textTransform: "uppercase",
-              color: "#24D155",
-              marginBottom: 16,
-            }}
-          >
-            How members grow
-          </div>
-          <h2 style={{ font: "800 40px/1.1 'Inter'", letterSpacing: "-.02em", color: "#14211F", marginBottom: 48 }}>
-            Five levels in the Circle.
-          </h2>
-          <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-            {COMMUNITY_LEVELS.map((level) => (
-              <div
-                key={level.number}
-                style={{
-                  background: "#F5F6F4",
-                  border: "1px solid rgba(20,33,31,.06)",
-                  borderRadius: 14,
-                  padding: "24px 28px",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 26,
-                }}
-              >
-                <div
-                  style={{
-                    flex: "none",
-                    width: 52,
-                    height: 52,
-                    borderRadius: "50%",
-                    background: "rgba(36,209,85,.14)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    font: "800 20px/1 'Inter'",
-                    color: "#24D155",
-                  }}
-                >
-                  {level.number}
-                </div>
-                <div style={{ flex: 1 }}>
-                  <h3
-                    style={{
-                      font: "800 20px/1.2 'Inter'",
-                      letterSpacing: "-.01em",
-                      color: "#14211F",
-                      marginBottom: 4,
-                    }}
-                  >
-                    {level.title}
-                  </h3>
-                  <p style={{ font: "400 15px/1.5 'Inter'", color: "#54615e" }}>{level.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
     </div>
   );
 }

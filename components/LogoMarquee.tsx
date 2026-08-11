@@ -27,7 +27,9 @@ export default function LogoMarquee() {
                 objectFit: "contain",
                 maxHeight: 50,
                 maxWidth: "100%",
+                margin: "0 auto",
                 transform: partner.logoScale ? `scale(${partner.logoScale})` : undefined,
+                transformOrigin: "center center",
               }}
             />
           </Link>
