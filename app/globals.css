@@ -200,6 +200,24 @@ button:focus-visible {
   margin-top: 12px;
 }
 
+/* Community in Action Gallery */
+.tbc-gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(20, 33, 31, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+}
+
+.tbc-gallery-item img {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.tbc-gallery-item:hover img {
+  transform: scale(1.06) !important;
+}
+
 /* Partner link badge hover states (no green background) */
 .tbc-partner-badge {
   display: inline-flex;

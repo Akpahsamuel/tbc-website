@@ -19,6 +19,34 @@ export const metadata: Metadata = {
   },
 };
 
+const COMMUNITY_GALLERY = [
+  {
+    title: "Aya Builders Meetup",
+    category: "Developer Community",
+    image: "/images/group-images/aya-group.jpg",
+  },
+  {
+    title: "Sui Network Ghana Builder Session",
+    category: "Ecosystem Growth",
+    image: "/images/group-images/sui-group.jpg",
+  },
+  {
+    title: "BeTechConnected Youth Empowerment",
+    category: "Tech Talent",
+    image: "/images/group-images/betech-group.jpg",
+  },
+  {
+    title: "Celo Web3 Developer Gathering",
+    category: "Web3 Builders",
+    image: "/images/group-images/celo-group.jpg",
+  },
+  {
+    title: "ICP Hub Ghana Hackathon",
+    category: "Hackathon & Bootcamps",
+    image: "/images/group-images/icp-group.jpg",
+  },
+];
+
 export default function CommunityPage() {
   return (
     <div style={{ width: "100%" }}>
@@ -254,6 +282,97 @@ export default function CommunityPage() {
                       </div>
                     )}
                   </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* COMMUNITY IN ACTION GALLERY */}
+      <section style={{ background: "#ffffff", borderTop: "1px solid rgba(20,33,31,.08)", padding: "80px 0" }}>
+        <div className="tbc-container" style={{ maxWidth: 1160, margin: "0 auto" }}>
+          <div
+            style={{
+              font: "600 13px/1 'Inter'",
+              letterSpacing: ".18em",
+              textTransform: "uppercase",
+              color: "#1B4D4A",
+              marginBottom: 16,
+            }}
+          >
+            Community in Action
+          </div>
+          <h2 style={{ font: "800 36px/1.15 'Inter'", letterSpacing: "-.02em", color: "#14211F", marginBottom: 16 }}>
+            Moments from the Ecosystem
+          </h2>
+          <p style={{ font: "400 18px/1.6 'Inter'", color: "#54615E", maxWidth: 700, marginBottom: 48 }}>
+            Bringing together builders, founders, and innovators across Web3 & tech meetups, hackathons, and developer bootcamps in Ghana.
+          </p>
+
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))",
+              gap: 24,
+            }}
+          >
+            {COMMUNITY_GALLERY.map((item) => (
+              <div
+                key={item.title}
+                className="tbc-gallery-item"
+                style={{
+                  height: 280,
+                  position: "relative",
+                  borderRadius: 16,
+                  overflow: "hidden",
+                }}
+              >
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  style={{ objectFit: "cover" }}
+                />
+                <div
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    background: "linear-gradient(to top, rgba(8, 16, 14, 0.88) 0%, rgba(8, 16, 14, 0.25) 55%, transparent 100%)",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+                    padding: 24,
+                  }}
+                >
+                  <span
+                    style={{
+                      alignSelf: "flex-start",
+                      background: "rgba(36, 209, 85, 0.2)",
+                      color: "#24D155",
+                      backdropFilter: "blur(8px)",
+                      WebkitBackdropFilter: "blur(8px)",
+                      border: "1px solid rgba(36, 209, 85, 0.3)",
+                      font: "600 12px/1 'Inter'",
+                      letterSpacing: ".06em",
+                      textTransform: "uppercase",
+                      padding: "6px 12px",
+                      borderRadius: 20,
+                    }}
+                  >
+                    {item.category}
+                  </span>
+                  <h3
+                    style={{
+                      font: "700 20px/1.3 'Inter'",
+                      color: "#FFFFFF",
+                      margin: 0,
+                      textShadow: "0 2px 8px rgba(0,0,0,0.5)",
+                    }}
+                  >
+                    {item.title}
+                  </h3>
                 </div>
               </div>
             ))}
