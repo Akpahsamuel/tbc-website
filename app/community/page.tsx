@@ -1,22 +1,18 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Image from "next/image";
-import { COMMUNITY_PARTNERS } from "@/data/communityPartners";
-import { COMMUNITY_LEVELS } from "@/data/communityLevels";
-import CommunityLevelsStack from "@/components/CommunityLevelsStack";
-import PartnerCardsStack from "@/components/PartnerCardsStack";
+import PartnerCardsGrid from "@/components/PartnerCardsGrid";
 
 export const metadata: Metadata = {
   title: "Community",
   description:
-    "TBC Ghana is built as a structured ecosystem. As members grow, they move through five levels.",
+    "TBC Ghana is a circle of communities building blockchain, tech and Web3 across Ghana and Africa.",
   alternates: {
     canonical: "/community",
   },
   openGraph: {
     title: "Community · TBC Ghana",
     description:
-      "TBC Ghana is built as a structured ecosystem. As members grow, they move through five levels.",
+      "TBC Ghana is a circle of communities building blockchain, tech and Web3 across Ghana and Africa.",
     url: "https://www.tbcafrica.org/community",
   },
 };
@@ -82,71 +78,6 @@ export default function CommunityPage() {
         </div>
       </section>
 
-      {/* COMMUNITY ROLES - STICKY SCROLL STACK */}
-      <section style={{ background: "#F5F6F4", borderBottom: "1px solid rgba(20,33,31,.08)", padding: "80px 0 100px 0" }}>
-        <div className="tbc-container" style={{ maxWidth: 1160, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 48 }}>
-            <div
-              style={{
-                font: "600 13px/1 'Inter'",
-                letterSpacing: ".18em",
-                textTransform: "uppercase",
-                color: "#1B4D4A",
-                marginBottom: 16,
-              }}
-            >
-              Community Roles & Journey
-            </div>
-            <h2 style={{ font: "800 36px/1.15 'Inter'", letterSpacing: "-.02em", color: "#14211F", marginBottom: 14 }}>
-              Roles inside the Circle
-            </h2>
-            <p style={{ font: "400 18px/1.6 'Inter'", color: "#54615E", maxWidth: 620, margin: "0 auto" }}>
-              From Explorers to Ecosystem Leads, see how members participate, contribute, and build within TBC Ghana.
-            </p>
-          </div>
-
-          <CommunityLevelsStack />
-        </div>
-      </section>
-
-      <section className="tbc-container" style={{ maxWidth: 1000, paddingBottom: 80 }}>
-        <div
-          className="tbc-card-padding"
-          style={{
-            background: "#24D155",
-            borderRadius: 18,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            flexWrap: "wrap",
-            gap: 24,
-          }}
-        >
-          <div style={{ maxWidth: 520 }}>
-            <h2 style={{ font: "800 32px/1.15 'Inter'", letterSpacing: "-.02em", color: "#14211f", marginBottom: 8 }}>
-              Everyone starts as an Explorer.
-            </h2>
-            <p style={{ font: "400 17px/1.5 'Inter'", color: "#14211f" }}>
-              Join the community and begin your journey through the Circle.
-            </p>
-          </div>
-          <Link
-            href="/getinvolved"
-            style={{
-              background: "#e1e6e3",
-              color: "#14211f",
-              font: "700 16px/1 'Inter'",
-              padding: "18px 32px",
-              borderRadius: 10,
-              textDecoration: "none",
-              whiteSpace: "nowrap",
-            }}
-          >
-            Join as an Explorer →
-          </Link>
-        </div>
-      </section>
-
       {/* COMMUNITY PARTNERS SECTION */}
       <section style={{ background: "#F5F6F4", borderTop: "1px solid rgba(20,33,31,.08)", padding: "80px 0" }}>
         <div className="tbc-container" style={{ maxWidth: 1160, margin: "0 auto" }}>
@@ -170,7 +101,7 @@ export default function CommunityPage() {
             </p>
           </div>
 
-          <PartnerCardsStack />
+          <PartnerCardsGrid />
         </div>
       </section>
 

@@ -308,7 +308,7 @@ button:focus-visible {
 
 .tbc-horizontal-scroll-track {
   display: flex;
-  gap: 24px;
+  gap: 4px;
   padding: 40px 40px;
   width: max-content;
   flex-wrap: nowrap;
@@ -345,6 +345,10 @@ button:focus-visible {
 .tbc-hero-padding {
   padding-top: 96px;
   padding-bottom: 96px;
+}
+
+.tbc-hero-section {
+  background-position: left center;
 }
 
 .tbc-card-padding {
@@ -432,13 +436,16 @@ button:focus-visible {
 
 .tbc-stat-grid {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
   width: 100%;
+  gap: 0;
 }
 
 .tbc-stat-item {
   flex: 1;
-  min-width: 180px;
   padding: 0 32px;
   border-left: 1px solid rgba(20, 33, 31, 0.1);
 }
@@ -599,6 +606,9 @@ button:focus-visible {
     padding-top: 56px;
     padding-bottom: 56px;
   }
+  .tbc-hero-section {
+    background-position: center center;
+  }
   .tbc-hero-h1 {
     font-size: 34px !important;
     line-height: 1.12 !important;
@@ -650,12 +660,13 @@ button:focus-visible {
     padding: 8px 20px 24px;
   }
   .tbc-stat-grid {
-    gap: 16px 0;
+    flex-direction: column;
+    gap: 32px;
   }
   .tbc-stat-item {
-    flex: 1 1 50%;
-    min-width: 140px;
-    padding: 12px 10px !important;
+    flex: none;
+    width: 100%;
+    padding: 0 !important;
     border-left: none !important;
   }
   .community-step {

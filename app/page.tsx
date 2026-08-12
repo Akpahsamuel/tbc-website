@@ -18,7 +18,28 @@ export default function HomePage() {
   return (
     <div style={{ width: "100%" }}>
       {/* HERO */}
-      <section style={{ position: "relative", background: "#1B4D4A", overflow: "hidden" }}>
+      <section
+        className="tbc-hero-section"
+        style={{
+          position: "relative",
+          overflow: "hidden",
+          backgroundImage: "url('/images/tbc_hero.jpg')",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        {/* Dark overlay — heavier on the left for text legibility, fades right */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "linear-gradient(105deg, rgba(14,28,25,0.92) 0%, rgba(14,28,25,0.75) 50%, rgba(14,28,25,0.30) 100%)",
+            zIndex: 1,
+          }}
+        />
+
+        {/* Parallax ring decorations — sit above the overlay on the right */}
         <ParallaxElement
           speed={70}
           style={{
@@ -29,6 +50,7 @@ export default function HomePage() {
             height: 620,
             borderRadius: "50%",
             border: "1px solid rgba(36,209,85,.14)",
+            zIndex: 2,
           }}
         />
         <ParallaxElement
@@ -41,6 +63,7 @@ export default function HomePage() {
             height: 420,
             borderRadius: "50%",
             border: "1px solid rgba(36,209,85,.22)",
+            zIndex: 2,
           }}
         />
         <ParallaxElement
@@ -54,6 +77,7 @@ export default function HomePage() {
             borderRadius: "50%",
             border: "2px solid rgba(36,209,85,.45)",
             animation: "tbcRing 44s linear infinite",
+            zIndex: 2,
           }}
         >
           <span
@@ -69,7 +93,8 @@ export default function HomePage() {
             }}
           />
         </ParallaxElement>
-        <div className="tbc-container tbc-hero-padding" style={{ position: "relative" }}>
+
+        <div className="tbc-container tbc-hero-padding" style={{ position: "relative", zIndex: 3 }}>
           <div style={{ maxWidth: 760, animation: "tbcUp .7s both" }}>
             <div
               style={{
@@ -95,7 +120,7 @@ export default function HomePage() {
             <p
               style={{
                 font: "400 21px/1.6 'Inter'",
-                color: "rgba(255,255,255,.76)",
+                color: "rgba(255,255,255,.82)",
                 maxWidth: 600,
                 marginBottom: 40,
               }}
@@ -137,67 +162,86 @@ export default function HomePage() {
 
       {/* STAT BAND */}
       <section style={{ background: "#ffffff", borderBottom: "1px solid rgba(20,33,31,0.08)" }}>
-        <div className="tbc-container tbc-stat-grid" style={{ paddingTop: 100, paddingBottom: 100 }}>
-          <StaggerGrid>
-          {HOME_STATS.map((stat) => (
-            <div
-              key={stat.label}
-              className="tbc-stat-item"
-            >
-              <div style={{ font: "800 52px/1 'Inter'", letterSpacing: "-.02em", color: "#1B4D4A" }}>
-                {stat.value}
+        <div className="tbc-container" style={{ paddingTop: 40, paddingBottom: 40 }}>
+          <StaggerGrid className="tbc-stat-grid">
+            {HOME_STATS.map((stat) => (
+              <div
+                key={stat.label}
+                className="tbc-stat-item"
+              >
+                <div style={{ font: "800 52px/1 'Inter'", letterSpacing: "-.02em", color: "#1B4D4A" }}>
+                  {stat.value}
+                </div>
+                <div style={{ font: "500 16px/1.4 'Inter'", color: "#54615e", marginTop: 14 }}>
+                  {stat.label}
+                </div>
               </div>
-              <div style={{ font: "500 16px/1.4 'Inter'", color: "#54615e", marginTop: 14 }}>
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </StaggerGrid>
+            ))}
+          </StaggerGrid>
         </div>
       </section>
 
       {/* WHO WE ARE */}
       <section>
         <ScrollReveal>
-        <PinnedSection
-          className="tbc-container tbc-section-padding tbc-split-grid-who"
-          leftContent={
-            <>
-              <div
-                style={{
-                  font: "600 13px/1 'Inter'",
-                  letterSpacing: ".18em",
-                  textTransform: "uppercase",
-                  color: "#24D155",
-                  marginBottom: 18,
-                }}
-              >
-                Who We Are
-              </div>
-              <h2 className="tbc-section-h2" style={{ color: "#14211f", maxWidth: 400 }}>
-                A trusted gateway for Web3 growth in Ghana.
-              </h2>
-            </>
-          }
-          rightContent={
-            <>
-              <p style={{ font: "400 20px/1.65 'Inter'", color: "#54615e", marginBottom: 28 }}>
-                TBC Ghana is a trusted gateway for blockchain and Web3 growth in Ghana and Africa
-                educating new users, supporting builders, and connecting global ecosystems with
-                local communities.
-              </p>
-              <Link href="/about" style={{ font: "700 16px/1 'Inter'", color: "#1B4D4A", textDecoration: "none" }}>
-                Read our story →
-              </Link>
-            </>
-          }
-        />
+          <PinnedSection
+            className="tbc-container tbc-section-padding tbc-split-grid-who"
+            leftContent={
+              <>
+                <div
+                  style={{
+                    font: "600 13px/1 'Inter'",
+                    letterSpacing: ".18em",
+                    textTransform: "uppercase",
+                    color: "#24D155",
+                    marginBottom: 18,
+                  }}
+                >
+                  Who We Are
+                </div>
+                <h2 className="tbc-section-h2" style={{ color: "#14211f", maxWidth: 400 }}>
+                  A trusted gateway for Web3 growth in Ghana.
+                </h2>
+              </>
+            }
+            rightContent={
+              <>
+                <p style={{ font: "400 20px/1.65 'Inter'", color: "#54615e", marginBottom: 28 }}>
+                  TBC Ghana is a trusted gateway for blockchain and Web3 growth in Ghana and Africa
+                  educating new users, supporting builders, and connecting global ecosystems with
+                  local communities.
+                </p>
+                <Link href="/about" style={{ font: "700 16px/1 'Inter'", color: "#1B4D4A", textDecoration: "none" }}>
+                  Read our story →
+                </Link>
+              </>
+            }
+          />
         </ScrollReveal>
       </section>
 
       {/* WHAT WE DO */}
-      <section style={{ background: "#ffffff", borderTop: "1px solid rgba(20,33,31,0.08)", borderBottom: "1px solid rgba(20,33,31,0.08)" }}>
-        <div className="tbc-container tbc-section-padding">
+      <section
+        style={{
+          position: "relative",
+          backgroundImage: "url('/images/pillars-bg.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          borderTop: "1px solid rgba(20,33,31,0.08)",
+          borderBottom: "1px solid rgba(20,33,31,0.08)",
+        }}
+      >
+        {/* subtle vignette overlay */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            background: "linear-gradient(180deg, rgba(14,28,25,0.55) 0%, rgba(14,28,25,0.25) 100%)",
+            pointerEvents: "none",
+          }}
+        />
+        <div className="tbc-container tbc-section-padding" style={{ position: "relative", paddingTop: 56, paddingBottom: 0 }}>
           <div
             style={{
               display: "flex",
@@ -220,7 +264,7 @@ export default function HomePage() {
               >
                 What We Do
               </div>
-              <h2 className="tbc-section-h2" style={{ color: "#14211f" }}>
+              <h2 className="tbc-section-h2" style={{ color: "#fff" }}>
                 Five pillars, one ecosystem.
               </h2>
             </div>
@@ -300,42 +344,42 @@ export default function HomePage() {
       {/* GET INVOLVED BAND */}
       <section style={{ background: "rgba(36,209,85,0.10)", borderTop: "1px solid rgba(36,209,85,0.28)", borderBottom: "1px solid rgba(36,209,85,0.28)" }}>
         <ScrollReveal>
-        <div
-          className="tbc-container"
-          style={{
-            paddingTop: 64,
-            paddingBottom: 64,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            flexWrap: "wrap",
-            gap: 24,
-          }}
-        >
-          <div style={{ maxWidth: 660 }}>
-            <h2 style={{ font: "800 38px/1.15 'Inter'", letterSpacing: "-.02em", color: "#14211f", marginBottom: 12 }}>
-              There&rsquo;s a place for you in the Circle.
-            </h2>
-            <p style={{ font: "400 18px/1.5 'Inter'", color: "#54615e" }}>
-              Whether you&rsquo;re just starting out or already building, join a structured
-              ecosystem made for you.
-            </p>
-          </div>
-          <Link
-            href="https://chat.whatsapp.com/Jd9W4t16aYUH3UAONN0Ivm"
+          <div
+            className="tbc-container"
             style={{
-              background: "#24D155",
-              color: "#0C1614",
-              font: "700 16px/1 'Inter'",
-              padding: "18px 34px",
-              borderRadius: 10,
-              textDecoration: "none",
-              whiteSpace: "nowrap",
+              paddingTop: 64,
+              paddingBottom: 64,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              flexWrap: "wrap",
+              gap: 24,
             }}
           >
-            Join TBC Ghana
-          </Link>
-        </div>
+            <div style={{ maxWidth: 660 }}>
+              <h2 style={{ font: "800 38px/1.15 'Inter'", letterSpacing: "-.02em", color: "#14211f", marginBottom: 12 }}>
+                There&rsquo;s a place for you in the Circle.
+              </h2>
+              <p style={{ font: "400 18px/1.5 'Inter'", color: "#54615e" }}>
+                Whether you&rsquo;re just starting out or already building, join a structured
+                ecosystem made for you.
+              </p>
+            </div>
+            <Link
+              href="https://chat.whatsapp.com/Jd9W4t16aYUH3UAONN0Ivm"
+              style={{
+                background: "#24D155",
+                color: "#0C1614",
+                font: "700 16px/1 'Inter'",
+                padding: "18px 34px",
+                borderRadius: 10,
+                textDecoration: "none",
+                whiteSpace: "nowrap",
+              }}
+            >
+              Join TBC Ghana
+            </Link>
+          </div>
         </ScrollReveal>
       </section>
 

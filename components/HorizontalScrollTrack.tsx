@@ -36,14 +36,20 @@ export default function HorizontalScrollTrack({ children, className = "" }: Hori
           ease: "none",
         });
 
+        // Pin the whole parent section so the spacer covers heading + cards
+        const sectionEl =
+          containerRef.current.closest("section") ??
+          containerRef.current.parentElement ??
+          containerRef.current;
+
         ScrollTrigger.create({
-          trigger: containerRef.current,
-          start: "top top+=80", 
-          end: () => `+=${getScrollAmount() * -1}`, // scroll distance equals the width to scroll
+          trigger: sectionEl,
+          start: "top top+=80",
+          end: () => `+=${getScrollAmount() * -1}`,
           pin: true,
           animation: tween,
           scrub: 1,
-          invalidateOnRefresh: true, // recalculate on resize
+          invalidateOnRefresh: true,
         });
       });
 
