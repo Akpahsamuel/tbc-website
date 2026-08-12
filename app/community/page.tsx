@@ -43,6 +43,11 @@ const COMMUNITY_GALLERY = [
     category: "Hackathon & Bootcamps",
     image: "/images/group-images/icp-group.jpg",
   },
+  {
+    title: "Tech Wrap Up",
+    category: "Tech Media",
+    image: "/images/group-images/Kweku_group.jpg",
+  },
 ];
 
 export default function CommunityPage() {
