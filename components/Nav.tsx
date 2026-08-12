@@ -35,7 +35,7 @@ export default function Nav() {
           style={{ display: "flex", alignItems: "center", textDecoration: "none" }}
         >
           <Image 
-            src="/images/tbc-ghana-logo-reverse-color.svg" 
+            src="/images/tbc-logos/tbc-ghana-logo-reverse-color.svg" 
             alt="TBC Ghana Logo" 
             width={120} 
             height={32} 

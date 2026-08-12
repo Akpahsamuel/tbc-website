@@ -23,7 +23,7 @@ export default function Footer() {
         <div>
           <div style={{ display: "flex", alignItems: "center", marginBottom: 18 }}>
             <Image 
-              src="/images/tbc-ghana-logo-reverse-color.svg" 
+              src="/images/tbc-logos/tbc-ghana-logo-reverse-color.svg" 
               alt="TBC Ghana Logo" 
               width={140} 
               height={38} 

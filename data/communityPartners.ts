@@ -24,15 +24,17 @@ export type CommunityPartner = {
   logoBg: string;
   description: string;
   links: CommunityLink[];
+  logoScale?: number;
 };
 
 export const COMMUNITY_PARTNERS: CommunityPartner[] = [
   {
     name: "BeTechConnected",
-    logo: "/images/logos/BeTechConnected.png",
+    logo: "/images/com-Logos/BeTechConnected.png",
     logoBg: "#fff",
+    logoScale: 1.0,
     description:
-      "A pan-African tech-focused social enterprise empowering young people with skills and knowledge for the future of work, and connecting them to global tech opportunities.",
+      "BeTechConnected is a pan-African tech-focused social enterprise empowering young people with skills and knowledge for the future of work as well as connecting them to global tech opportunities.",
     links: [
       { title: "Website", href: "https://www.betechconnected.com/", Icon: GlobeIcon },
       { title: "X", href: "https://x.com/betechconnected", Icon: XIcon },
@@ -43,8 +45,9 @@ export const COMMUNITY_PARTNERS: CommunityPartner[] = [
   },
   {
     name: "KayabaLabs",
-    logo: "/images/logos/KayabLabs.png",
+    logo: "/images/com-Logos/KayabLabs.png",
     logoBg: "#fff",
+    logoScale: 1.0,
     description:
       "­ A­ blockchain­ research­ and­ development­ lab,­ training­ developers­ and­ building­ the­ decentralized­ future­globally. Our team is composed of diverse contributors who actively collaborate to promote Blockchain adoption across West Africa and the broader Sub-Saharan region.",
     links: [
@@ -58,10 +61,11 @@ export const COMMUNITY_PARTNERS: CommunityPartner[] = [
   },
   {
     name: "The Digital College",
-    logo: "/images/logos/The Digital College .PNG",
+    logo: "/images/com-Logos/the-digital-college.png",
     logoBg: "#fff",
+    logoScale: 2.0,
     description:
-      "The Digital College equips African talents with practical, industry-relevant digital skills — helping learners build confidence, portfolios, and career opportunities through hands-on education.",
+      "The Digital College equips African talents with practical, industry-relevant digital skills. We help learners build confidence, portfolios, and career opportunities through hands-on education.",
     links: [
       { title: "WhatsApp Community", href: "https://chat.whatsapp.com/Gk30wA3yiiDAsbIYW8wGCe", Icon: WhatsAppIcon },
       { title: "LinkedIn", href: "https://www.linkedin.com/company/thedigitalcollege/", Icon: LinkedInIcon },
@@ -71,10 +75,11 @@ export const COMMUNITY_PARTNERS: CommunityPartner[] = [
   },
   {
     name: "Crypto Investors Network Africa",
-    logo: "/images/logos/Crypto Investors Network Africa.PNG",
+    logo: "/images/com-Logos/crypto-investors-network-africa.png",
     logoBg: "#fff",
+    logoScale: 2.0,
     description:
-      "A robust community of blockchain and crypto investors across Africa, bringing crypto adoption and wealth to the masses.",
+      "A robust community of Blockchain and Crypto Investors across Africa, bringing crypto adoption & wealth to the masses.",
     links: [
       { title: "Community", href: "https://tr.ee/gMHYKtQh7i", Icon: GlobeIcon },
       { title: "Telegram", href: "https://t.me/CINA_Official1", Icon: TelegramIcon },
@@ -86,9 +91,10 @@ export const COMMUNITY_PARTNERS: CommunityPartner[] = [
   },
   {
     name: "Decrypting Crypto",
-    logo: "/images/logos/decrypting crypto.jpeg",
-    logoBg: "#14211F",
-    description: "Crypto education, one person at a time.",
+    logo: "/images/com-Logos/decrypting-crypto.jpeg",
+    logoBg: "#fff",
+    logoScale: 2.0,
+    description: "Crypto Education One Person At a Time",
     links: [
       { title: "WhatsApp Community", href: "https://chat.whatsapp.com/LGH0enDzGHv7diPzS4AZfp", Icon: WhatsAppIcon },
       { title: "Telegram", href: "https://t.me/decrypting_crypto", Icon: TelegramIcon },
@@ -97,10 +103,11 @@ export const COMMUNITY_PARTNERS: CommunityPartner[] = [
   },
   {
     name: "ICP HUB Ghana",
-    logo: "/images/logos/ICP HUB Ghana.png",
+    logo: "/images/com-Logos/icp-hub-ghana.png",
     logoBg: "#fff",
+    logoScale: 1.0,
     description:
-      "ICP HUB Ghana promotes Web3 adoption in Ghana by educating developers, supporting startups, and growing the Internet Computer (ICP) ecosystem.",
+      "ICP HUB Ghana is a community that promotes Web3 adoption in Ghana by educating developers, supporting startups, and growing the Internet Computer (ICP) ecosystem.",
     links: [
       { title: "X", href: "https://x.com/icphub_GH", Icon: XIcon },
       { title: "LinkedIn", href: "https://www.linkedin.com/company/icp-hub-ghana/", Icon: LinkedInIcon },
@@ -109,10 +116,11 @@ export const COMMUNITY_PARTNERS: CommunityPartner[] = [
   },
   {
     name: "Crypto Focus Community",
-    logo: "/images/logos/Crypto Focus.png",
+    logo: "/images/com-Logos/crypto-focus.png",
     logoBg: "#fff",
+    logoScale: 2.0,
     description:
-      "A global crypto community connecting enthusiasts across platforms through education, discussion and shared market focus.",
+      "Crypto Focus is Ghana’s leading cryptocurrency and blockchain education community, committed to making digital asset knowledge accessible through education, awareness, mentorship, research, and community engagement while fostering responsible adoption across Africa and beyond.",
     links: [
       { title: "WhatsApp Community", href: "https://chat.whatsapp.com/L3tCw0uGCP79q1L49yUeef", Icon: WhatsAppIcon },
       { title: "Telegram", href: "https://t.me/cryptofocusglobal", Icon: TelegramIcon },
@@ -125,10 +133,11 @@ export const COMMUNITY_PARTNERS: CommunityPartner[] = [
   },
   {
     name: "Sui Network Ghana",
-    logo: "/images/logos/Sui Network Ghana.png",
+    logo: "/images/com-Logos/sui-network-ghana.png",
     logoBg: "#fff",
+    logoScale: 2.0,
     description:
-      "A community-led initiative growing the Sui ecosystem in Ghana — empowering developers, students and Web3 enthusiasts through education, innovation and ecosystem collaboration.",
+      "Sui Ghana is a community-led initiative dedicated to growing the Sui ecosystem in Ghana by empowering developers, students, and Web3 enthusiasts through education, innovation, and ecosystem collaboration.",
     links: [
       { title: "Website", href: "https://www.suicommunitygh.website/", Icon: GlobeIcon },
       { title: "X", href: "https://x.com/suinetworkghana", Icon: XIcon },
@@ -138,15 +147,61 @@ export const COMMUNITY_PARTNERS: CommunityPartner[] = [
   },
   {
     name: "Kweku Tech",
-    logo: "/images/logos/KwekuTech.png",
+    logo: "/images/com-Logos/KwekuTech.png",
     logoBg: "#fff",
+    logoScale: 3.8,
     description:
-      "A tech media company that documents and amplifies Africa’s tech ecosystem through professional media and event coverage.",
+      "Kweku Tech is a tech media company that documents and amplifies Africa tech ecosystem through professional media and event coverage.",
     links: [
       { title: "Website", href: "https://www.kweku.tech/", Icon: GlobeIcon },
       { title: "X", href: "https://x.com/kwekutech", Icon: XIcon },
       { title: "Instagram", href: "https://www.instagram.com/kwekutech", Icon: InstagramIcon },
       { title: "LinkedIn", href: "https://www.linkedin.com/company/kwekutech", Icon: LinkedInIcon },
+    ],
+  },
+  {
+    name: "Chosen Fintech Solutions",
+    logo: "/images/com-Logos/chosen-fintech.jpg",
+    logoBg: "#fff",
+    logoScale: 2.0,
+    description:
+      "We are committed to educating, onboarding and empowering individuals and organisations to navigate digital technology for effective socio-economic systems.",
+    links: [
+      { title: "Website", href: "https://www.chosenfintech.org", Icon: GlobeIcon },
+      { title: "X", href: "https://x.com/chosenfintech", Icon: XIcon },
+      { title: "Telegram", href: "https://t.me/chosenfintech", Icon: TelegramIcon },
+      { title: "LinkedIn", href: "https://www.linkedin.com/company/chosenfintech/", Icon: LinkedInIcon },
+    ],
+  },
+  {
+    name: "Web3Agenda",
+    logo: "/images/com-Logos/web3-agenda.jpeg",
+    logoBg: "#fff",
+    logoScale: 2.0,
+    description:
+      "Amplifying Web3 innovation, events, and education to drive decentralized adoption across Africa.",
+    links: [
+      { title: "Website", href: "https://web3agenda.com", Icon: GlobeIcon },
+      { title: "WhatsApp Community", href: "https://chat.whatsapp.com/IMCpwdvTtMwI2lbzPjHvPd", Icon: WhatsAppIcon },
+      { title: "X", href: "https://x.com/web3agenda_", Icon: XIcon },
+      { title: "Instagram", href: "https://www.instagram.com/web3agenda/", Icon: InstagramIcon },
+      { title: "Email", href: "mailto:info@web3agenda.com", Icon: MailIcon },
+    ],
+  },
+  {
+    name: "HackerBoost Developer LBG",
+    logo: "/images/com-Logos/hackerboost-logos/singlelinelogos/hackerboost-single-line-1.png",
+    logoBg: "#fff",
+    logoScale: 1.0,
+    description:
+      "HackerBoost is a nonprofit technology community dedicated to equipping young Africans with practical skills in software engineering, artificial intelligence, blockchain, cybersecurity, and entrepreneurship. Through bootcamps, workshops, hackathons, internships, mentorship, and startup incubation, HackerBoost bridges the gap between education and industry while fostering innovation and creating pathways to employment.",
+    links: [
+      { title: "Website", href: "https://www.hackerboost.org", Icon: GlobeIcon },
+      { title: "WhatsApp Community", href: "https://chat.whatsapp.com/EGuCJ0Tmyf39l8NGyvFE72", Icon: WhatsAppIcon },
+      { title: "X", href: "https://x.com/hackerboostX", Icon: XIcon },
+      { title: "LinkedIn", href: "https://www.linkedin.com/company/hackerboost", Icon: LinkedInIcon },
+      { title: "Facebook", href: "https://www.facebook.com/hackerbooster", Icon: FacebookIcon },
+      { title: "Email", href: "mailto:hackerboost24@gmail.com", Icon: MailIcon },
     ],
   },
 ];

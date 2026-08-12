@@ -168,6 +168,97 @@ button:focus-visible {
   color: #ffffff !important;
 }
 
+/* Clean partner card hover (no green background shift, rock solid hover area) */
+.tbc-card-clean {
+  background-color: #ffffff;
+  border: 1px solid rgba(20, 33, 31, 0.08);
+  border-radius: 16px;
+  align-self: start;
+  height: fit-content;
+  cursor: pointer;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.tbc-card-clean:hover {
+  border-color: rgba(20, 33, 31, 0.18) !important;
+  box-shadow: 0 12px 32px -8px rgba(20, 33, 31, 0.12) !important;
+  background-color: #ffffff !important;
+}
+
+/* Reveal info & links on hover only */
+.tbc-partner-reveal {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  will-change: max-height, opacity;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease, margin-top 0.3s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .tbc-card-clean:hover .tbc-partner-reveal {
+    max-height: 450px;
+    opacity: 1;
+    margin-top: 14px;
+  }
+}
+
+.tbc-card-clean.is-expanded .tbc-partner-reveal {
+  max-height: 450px !important;
+  opacity: 1 !important;
+  margin-top: 14px !important;
+}
+
+/* Community in Action Gallery */
+.tbc-gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(20, 33, 31, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+}
+
+.tbc-gallery-item img {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.tbc-gallery-item:hover img {
+  transform: scale(1.06) !important;
+}
+
+.tbc-sticky-level-card:hover,
+.tbc-sticky-partner-card:hover {
+  transform: rotate(0deg) scale(1.015) !important;
+  z-index: 15;
+}
+
+/* Partner link badge hover states (no green background) */
+.tbc-partner-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #f5f6f4;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #14211f !important;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(20, 33, 31, 0.08);
+}
+
+.tbc-partner-badge:hover {
+  background-color: #14211f !important;
+  color: #ffffff !important;
+  border-color: #14211f !important;
+}
+
+.tbc-partner-badge:hover * {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+
 .tbc-card-dark:hover {
   transform: translateY(-5px);
   background-color: #24d155 !important;
@@ -217,7 +308,7 @@ button:focus-visible {
 
 .tbc-horizontal-scroll-track {
   display: flex;
-  gap: 24px;
+  gap: 4px;
   padding: 40px 40px;
   width: max-content;
   flex-wrap: nowrap;
@@ -254,6 +345,10 @@ button:focus-visible {
 .tbc-hero-padding {
   padding-top: 96px;
   padding-bottom: 96px;
+}
+
+.tbc-hero-section {
+  background-position: left center;
 }
 
 .tbc-card-padding {
@@ -341,13 +436,16 @@ button:focus-visible {
 
 .tbc-stat-grid {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
   width: 100%;
+  gap: 0;
 }
 
 .tbc-stat-item {
   flex: 1;
-  min-width: 180px;
   padding: 0 32px;
   border-left: 1px solid rgba(20, 33, 31, 0.1);
 }
@@ -412,7 +510,67 @@ button:focus-visible {
   grid-column: span 2;
 }
 
+/* Infinite Logo Marquee */
+@keyframes tbcMarquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.tbc-marquee-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+}
+
+.tbc-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 20px;
+  animation: tbcMarquee 35s linear infinite;
+  will-change: transform;
+}
+
+.tbc-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.tbc-marquee-item {
+  flex: 0 0 auto;
+  height: 75px;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.25s ease;
+  opacity: 0.88;
+}
+
+.tbc-marquee-item:hover {
+  transform: scale(1.28);
+  opacity: 1;
+  border: none;
+  box-shadow: none;
+  z-index: 10;
+}
+
 /* Media Queries */
+@media (max-width: 768px) {
+  .tbc-sticky-level-card,
+  .tbc-sticky-partner-card {
+    margin-bottom: 24px !important;
+    padding: 20px 22px !important;
+  }
+}
+
 @media (max-width: 900px) {
   .tbc-grid-2,
   .tbc-grid-3,
@@ -447,6 +605,9 @@ button:focus-visible {
   .tbc-hero-padding {
     padding-top: 56px;
     padding-bottom: 56px;
+  }
+  .tbc-hero-section {
+    background-position: center center;
   }
   .tbc-hero-h1 {
     font-size: 34px !important;
@@ -499,12 +660,13 @@ button:focus-visible {
     padding: 8px 20px 24px;
   }
   .tbc-stat-grid {
-    gap: 16px 0;
+    flex-direction: column;
+    gap: 32px;
   }
   .tbc-stat-item {
-    flex: 1 1 50%;
-    min-width: 140px;
-    padding: 12px 10px !important;
+    flex: none;
+    width: 100%;
+    padding: 0 !important;
     border-left: none !important;
   }
   .community-step {
