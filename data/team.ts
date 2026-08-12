@@ -18,5 +18,5 @@ export const TEAM: TeamMember[] = [
   { name: "Wasiu Jimoh (Evergenius)", role: "Partnerships & Growth", image: "/images/team/Evergenius.jpg", objectPosition: "center 20%" },
   { name: "Ola", role: "Community Team", image: "/images/team/Bello.jpg", objectPosition: "center 15%" },
   { name: "Gideon", role: "Design Team", image: "/images/team/Gideon.PNG", objectPosition: "center 20%" },
-  { name: "Kweku Tech", role: "Media Head", image: "/images/team/kweku.jpg", objectPosition: "center 5%" },
+  { name: "Kweku Tech", role: "Media Lead", image: "/images/team/kweku.jpg", objectPosition: "center 5%" },
 ];
