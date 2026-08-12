@@ -92,7 +92,7 @@ const jsonLd = {
   sameAs: ["https://x.com/Builders_Circle"],
   contactPoint: {
     "@type": "ContactPoint",
-    email: "info@tbcafrica.org",
+    email: "thebuilderscircleghana@gmail.com",
     contactType: "customer service",
   },
 };

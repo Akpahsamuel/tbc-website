@@ -62,8 +62,8 @@ export default function ContactPage() {
             >
               Email
             </div>
-            <a href="mailto:info@tbcafrica.org" style={{ font: "600 20px/1.3 'Inter'", color: "#14211f" }}>
-              info@tbcafrica.org
+            <a href="mailto:thebuilderscircleghana@gmail.com" style={{ font: "600 20px/1.3 'Inter'", color: "#14211f" }}>
+              thebuilderscircleghana@gmail.com
             </a>
           </div>
           <div style={{ marginBottom: 36 }}>

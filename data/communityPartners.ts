@@ -147,9 +147,9 @@ export const COMMUNITY_PARTNERS: CommunityPartner[] = [
   },
   {
     name: "Kweku Tech",
-    logo: "/images/com-Logos/KwekuTech.png",
+    logo: "/images/com-Logos/KwekuTech-logo.png",
     logoBg: "#fff",
-    logoScale: 3.8,
+    logoScale: 1.0,
     description:
       "Kweku Tech is a tech media company that documents and amplifies Africa tech ecosystem through professional media and event coverage.",
     links: [
