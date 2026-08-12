@@ -480,7 +480,7 @@ export default function HomePage() {
             </div>
             <div style={{ font: "700 24px/1.2 'Inter'", color: "#14211f" }}>Weekly X Space</div>
             <p style={{ font: "400 16px/1.55 'Inter'", color: "#54615e", flex: 1 }}>
-              Every Friday at 7:30 PM GMT  blockchain education, African Web3 stories, founder
+              Every Friday at 7:00 PM GMT  blockchain education, African Web3 stories, founder
               interviews and market insights.
             </p>
             <Link href="/events" style={{ font: "700 15px/1 'Inter'", color: "#1B4D4A", textDecoration: "none" }}>
