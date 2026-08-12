@@ -60,6 +60,8 @@ export default function PartnerCardsGrid() {
                 objectFit: "contain",
                 maxHeight: 56,
                 maxWidth: "100%",
+                width: "auto",
+                height: "auto",
                 transform: partner.logoScale ? `scale(${partner.logoScale})` : undefined,
                 transformOrigin: "center center",
               }}
