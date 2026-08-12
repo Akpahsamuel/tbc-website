@@ -4,6 +4,8 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import SmoothScroller from "@/components/SmoothScroller";
 import CustomCursor from "@/components/CustomCursor";
+import { ThemeProvider } from "@/lib/theme";
+import { THEME_INIT_SCRIPT } from "@/lib/theme-constants";
 
 import "./globals.css";
 
@@ -103,8 +105,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="dark" suppressHydrationWarning>
       <head>
+        <script
+          dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -115,12 +120,14 @@ export default function RootLayout({
           fontFamily: "var(--font-inter), system-ui, sans-serif",
         }}
       >
-        <CustomCursor />
-        <SmoothScroller>
-          <Nav />
-          <main id="main-content">{children}</main>
-          <Footer />
-        </SmoothScroller>
+        <ThemeProvider>
+          <CustomCursor />
+          <SmoothScroller>
+            <Nav />
+            <main id="main-content">{children}</main>
+            <Footer />
+          </SmoothScroller>
+        </ThemeProvider>
       </body>
     </html>
   );
