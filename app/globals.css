@@ -48,9 +48,16 @@ body {
   overflow-x: hidden;
 }
 
+.tbc-custom-cursor {
+  display: none;
+}
+
 @media (hover: hover) and (pointer: fine) {
   body, a, button {
     cursor: none !important;
+  }
+  .tbc-custom-cursor {
+    display: block;
   }
 }
 

@@ -10,6 +10,11 @@ export default function CustomCursor() {
 
   useGSAP(
     () => {
+      // Only enable custom cursor on devices with a mouse/fine pointer
+      if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+        return;
+      }
+
       // Create quick setters for maximum performance
       const xTo = gsap.quickTo(cursorRef.current, "x", { duration: 0.15, ease: "power3" });
       const yTo = gsap.quickTo(cursorRef.current, "y", { duration: 0.15, ease: "power3" });
@@ -58,6 +63,7 @@ export default function CustomCursor() {
     <>
       <div
         ref={cursorRef}
+        className="tbc-custom-cursor"
         style={{
           position: "fixed",
           top: 0,
@@ -74,6 +80,7 @@ export default function CustomCursor() {
       />
       <div
         ref={cursorDotRef}
+        className="tbc-custom-cursor"
         style={{
           position: "fixed",
           top: 0,
