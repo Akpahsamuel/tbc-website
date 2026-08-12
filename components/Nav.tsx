@@ -62,8 +62,10 @@ export default function Nav() {
                 </Link>
               );
             })}
-            <Link
+            <a
               href="https://chat.whatsapp.com/Jd9W4t16aYUH3UAONN0Ivm"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 background: "#24D155",
                 color: "#14211F",
@@ -75,7 +77,7 @@ export default function Nav() {
               }}
             >
               Join the Circle
-            </Link>
+            </a>
           </div>
 
         </div>
@@ -131,8 +133,10 @@ export default function Nav() {
             </Link>
           );
         })}
-        <Link
-          href="/getinvolved"
+        <a
+          href="https://chat.whatsapp.com/Jd9W4t16aYUH3UAONN0Ivm"
+          target="_blank"
+          rel="noopener noreferrer"
           onClick={() => setOpen(false)}
           style={{
             background: "#24D155",
@@ -146,7 +150,7 @@ export default function Nav() {
           }}
         >
           Join the Circle
-        </Link>
+        </a>
       </div>
     </div>
   );
