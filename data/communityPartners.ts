@@ -63,7 +63,7 @@ export const COMMUNITY_PARTNERS: CommunityPartner[] = [
     name: "The Digital College",
     logo: "/images/com-Logos/the-digital-college.png",
     logoBg: "#fff",
-    logoScale: 2.0,
+    logoScale: 1.5,
     description:
       "The Digital College equips African talents with practical, industry-relevant digital skills. We help learners build confidence, portfolios, and career opportunities through hands-on education.",
     links: [
@@ -93,7 +93,7 @@ export const COMMUNITY_PARTNERS: CommunityPartner[] = [
     name: "Decrypting Crypto",
     logo: "/images/com-Logos/decrypting-crypto.jpeg",
     logoBg: "#fff",
-    logoScale: 2.0,
+    logoScale: 1.5,
     description: "Crypto Education One Person At a Time",
     links: [
       { title: "WhatsApp Community", href: "https://chat.whatsapp.com/LGH0enDzGHv7diPzS4AZfp", Icon: WhatsAppIcon },
@@ -163,7 +163,7 @@ export const COMMUNITY_PARTNERS: CommunityPartner[] = [
     name: "Chosen Fintech Solutions",
     logo: "/images/com-Logos/chosen-fintech.jpg",
     logoBg: "#fff",
-    logoScale: 2.0,
+    logoScale: 1.5,
     description:
       "We are committed to educating, onboarding and empowering individuals and organisations to navigate digital technology for effective socio-economic systems.",
     links: [
@@ -177,7 +177,7 @@ export const COMMUNITY_PARTNERS: CommunityPartner[] = [
     name: "Web3Agenda",
     logo: "/images/com-Logos/web3-agenda.jpeg",
     logoBg: "#fff",
-    logoScale: 2.0,
+    logoScale: 1.5,
     description:
       "Amplifying Web3 innovation, events, and education to drive decentralized adoption across Africa.",
     links: [
