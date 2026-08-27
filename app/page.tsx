@@ -129,8 +129,10 @@ export default function HomePage() {
               community to grow blockchain and Web3 across Ghana and Africa.
             </p>
             <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
-              <Link
+              <a
                 href="https://chat.whatsapp.com/Jd9W4t16aYUH3UAONN0Ivm"
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   background: "#24D155",
                   color: "#14211f",
@@ -141,7 +143,7 @@ export default function HomePage() {
                 }}
               >
                 Join the Circle
-              </Link>
+              </a>
               <Link
                 href="/about"
                 style={{
@@ -365,8 +367,10 @@ export default function HomePage() {
                 ecosystem made for you.
               </p>
             </div>
-            <Link
+            <a
               href="https://chat.whatsapp.com/Jd9W4t16aYUH3UAONN0Ivm"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 background: "#24D155",
                 color: "#0C1614",
@@ -378,7 +382,7 @@ export default function HomePage() {
               }}
             >
               Join TBC Ghana
-            </Link>
+            </a>
           </div>
         </ScrollReveal>
       </section>
@@ -476,7 +480,7 @@ export default function HomePage() {
             </div>
             <div style={{ font: "700 24px/1.2 'Inter'", color: "#14211f" }}>Weekly X Space</div>
             <p style={{ font: "400 16px/1.55 'Inter'", color: "#54615e", flex: 1 }}>
-              Every Friday at 7:30 PM GMT  blockchain education, African Web3 stories, founder
+              Every Friday at 19:00 GMT  blockchain education, African Web3 stories, founder
               interviews and market insights.
             </p>
             <Link href="/events" style={{ font: "700 15px/1 'Inter'", color: "#1B4D4A", textDecoration: "none" }}>

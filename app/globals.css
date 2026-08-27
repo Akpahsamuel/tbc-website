@@ -22,17 +22,90 @@
 }
 
 html[data-theme="dark"] {
-  --tbc-bg: #0f1614;
-  --tbc-surface: #16211f;
-  --tbc-text: #edefec;
-  --tbc-text-secondary: rgba(237, 239, 236, 0.82);
-  --tbc-text-muted: rgba(237, 239, 236, 0.62);
-  --tbc-text-faint: rgba(237, 239, 236, 0.46);
-  --tbc-text-placeholder: rgba(237, 239, 236, 0.34);
-  --tbc-border-soft: rgba(255, 255, 255, 0.06);
-  --tbc-border: rgba(255, 255, 255, 0.1);
-  --tbc-border-strong: rgba(255, 255, 255, 0.16);
-  --tbc-input-bg: rgba(255, 255, 255, 0.04);
+  --tbc-bg: #0c1412;
+  --tbc-surface: #14211f;
+  --tbc-text: #ffffff;
+  --tbc-text-secondary: rgba(255, 255, 255, 0.85);
+  --tbc-text-muted: rgba(255, 255, 255, 0.68);
+  --tbc-text-faint: rgba(255, 255, 255, 0.48);
+  --tbc-text-placeholder: rgba(255, 255, 255, 0.36);
+  --tbc-border-soft: rgba(255, 255, 255, 0.08);
+  --tbc-border: rgba(255, 255, 255, 0.12);
+  --tbc-border-strong: rgba(255, 255, 255, 0.2);
+  --tbc-input-bg: rgba(255, 255, 255, 0.06);
+}
+
+/* Dark mode overrides for hardcoded inline light styles */
+html[data-theme="dark"] [style*="color: #14211f"],
+html[data-theme="dark"] [style*="color:#14211f"],
+html[data-theme="dark"] [style*="color: #14211F"],
+html[data-theme="dark"] [style*="color:#14211F"],
+html[data-theme="dark"] [style*="color: #1B4D4A"],
+html[data-theme="dark"] [style*="color:#1B4D4A"],
+html[data-theme="dark"] [style*="color: #1b4d4a"],
+html[data-theme="dark"] [style*="color:#1b4d4a"] {
+  color: var(--tbc-text) !important;
+}
+
+html[data-theme="dark"] [style*="color: #54615e"],
+html[data-theme="dark"] [style*="color:#54615e"],
+html[data-theme="dark"] [style*="color: #54615E"],
+html[data-theme="dark"] [style*="color:#54615E"],
+html[data-theme="dark"] [style*="color: #3a453f"],
+html[data-theme="dark"] [style*="color:#3a453f"] {
+  color: var(--tbc-text-muted) !important;
+}
+
+html[data-theme="dark"] section[style*="background: #ffffff"],
+html[data-theme="dark"] section[style*="background:#ffffff"],
+html[data-theme="dark"] section[style*="background: rgb(255, 255, 255)"],
+html[data-theme="dark"] div[style*="background: #ffffff"],
+html[data-theme="dark"] div[style*="background:#ffffff"],
+html[data-theme="dark"] div[style*="background: #FFFFFF"],
+html[data-theme="dark"] div[style*="background:#FFFFFF"] {
+  background: var(--tbc-bg) !important;
+  color: var(--tbc-text);
+}
+
+html[data-theme="dark"] [style*="border: 1px solid rgba(20, 33, 31"],
+html[data-theme="dark"] [style*="border-top: 1px solid rgba(20, 33, 31"],
+html[data-theme="dark"] [style*="border-bottom: 1px solid rgba(20, 33, 31"] {
+  border-color: var(--tbc-border) !important;
+}
+
+html[data-theme="dark"] .tbc-card {
+  background: var(--tbc-surface) !important;
+  border-color: var(--tbc-border) !important;
+  color: var(--tbc-text) !important;
+}
+
+html[data-theme="dark"] .tbc-card-clean {
+  background-color: var(--tbc-surface) !important;
+  border-color: var(--tbc-border) !important;
+  color: var(--tbc-text) !important;
+}
+
+html[data-theme="dark"] .tbc-card-clean:hover {
+  background-color: var(--tbc-surface) !important;
+  border-color: var(--tbc-border-strong) !important;
+}
+
+html[data-theme="dark"] .tbc-mobile-panel {
+  background: var(--tbc-surface) !important;
+}
+
+html[data-theme="dark"] .tbc-partner-badge {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: var(--tbc-text) !important;
+  border-color: var(--tbc-border) !important;
+}
+
+html[data-theme="dark"] input,
+html[data-theme="dark"] textarea,
+html[data-theme="dark"] select {
+  background: var(--tbc-input-bg) !important;
+  color: var(--tbc-text) !important;
+  border-color: var(--tbc-border) !important;
 }
 
 html {
@@ -48,9 +121,16 @@ body {
   overflow-x: hidden;
 }
 
+.tbc-custom-cursor {
+  display: none;
+}
+
 @media (hover: hover) and (pointer: fine) {
   body, a, button {
     cursor: none !important;
+  }
+  .tbc-custom-cursor {
+    display: block;
   }
 }
 
@@ -161,6 +241,19 @@ button:focus-visible {
 
 .tbc-card:hover *:not(svg):not(path):not(circle):not(rect):not(input):not(textarea):not(select):not(button) {
   color: #ffffff !important;
+}
+
+.tbc-card:hover svg {
+  stroke: #ffffff !important;
+}
+
+.tbc-card:hover svg path,
+.tbc-card:hover svg circle,
+.tbc-card:hover svg rect,
+.tbc-card:hover svg polyline,
+.tbc-card:hover svg line,
+.tbc-card:hover svg g {
+  stroke: #ffffff !important;
 }
 
 .tbc-card:hover .tbc-tag {

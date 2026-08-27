@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FOOTER_ORGANIZATION_LINKS, FOOTER_ENGAGE_LINKS } from "@/data/footerLinks";
+import { WhatsAppIcon } from "@/components/icons";
 
 const linkStyle: React.CSSProperties = {
   font: "500 14.5px/1 'Inter'",
@@ -35,6 +36,9 @@ export default function Footer() {
           <div style={{ display: "flex", gap: 10, marginTop: 22 }}>
             <a
               href="https://x.com/Builders_Circle"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="X (Twitter)"
               style={{
                 width: 38,
                 height: 38,
@@ -51,7 +55,27 @@ export default function Footer() {
               X
             </a>
             <a
+              href="https://chat.whatsapp.com/Jd9W4t16aYUH3UAONN0Ivm"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="WhatsApp Community"
+              style={{
+                width: 38,
+                height: 38,
+                borderRadius: 8,
+                border: "1px solid rgba(255,255,255,.16)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "#24D155",
+                textDecoration: "none",
+              }}
+            >
+              <WhatsAppIcon size={18} color="#24D155" />
+            </a>
+            <a
               href="#"
+              title="LinkedIn"
               style={{
                 width: 38,
                 height: 38,
@@ -106,11 +130,22 @@ export default function Footer() {
           >
             thebuilderscircleghana@gmail.com
           </a>
-          {/* <p style={{ font: "400 14.5px/1.6 'Inter'", color: "rgba(255,255,255,.5)" }}>
-            14 Nii Owoo Street
-            <br />
-            Dzorwulu, Accra, Ghana
-          </p> */}
+          <a
+            href="https://chat.whatsapp.com/Jd9W4t16aYUH3UAONN0Ivm"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              font: "500 14.5px/1.5 'Inter'",
+              color: "#24D155",
+              textDecoration: "none",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 8,
+            }}
+          >
+            <WhatsAppIcon size={16} color="#24D155" />
+            <span>Join WhatsApp Community</span>
+          </a>
         </div>
       </div>
 
