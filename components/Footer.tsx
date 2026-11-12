@@ -74,7 +74,7 @@ export default function Footer() {
               <WhatsAppIcon size={18} color="#24D155" />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/company/the-builders-circle-ghana/"
               title="LinkedIn"
               style={{
                 width: 38,
