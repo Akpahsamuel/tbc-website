@@ -46,7 +46,7 @@ export default function AboutPage() {
             <p className="lede">
               The Builders Circle Ghana changes that. Built on years of grassroots work  meetups,
               university tours, speaking engagements and online community-building  TBC Ghana is
-              now formalizing into a structured organization with one goal: to become the leading
+              now formalizing into a structured non-profit organization (NGO) with one goal: to become the leading
               Web3 ecosystem infrastructure in Ghana, and eventually across Africa.
             </p>
           </div>

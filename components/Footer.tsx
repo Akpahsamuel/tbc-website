@@ -89,7 +89,7 @@ export default function Footer() {
         </div>
 
         <div className="foot-bottom mono">
-          <span>© 2026 The Builders Circle Ghana. All rights reserved.</span>
+          <span>© 2026 The Builders Circle Ghana, a non-profit organization (NGO). All rights reserved.</span>
           <span>www.tbcghana.org</span>
           <span>Developed By KayabaLabs</span>
         </div>
