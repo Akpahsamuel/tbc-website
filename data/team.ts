@@ -42,7 +42,7 @@ export const TEAM_GROUPS: TeamGroup[] = [
     name: "Community",
     members: [
       { name: "Juliet Edeh", position: "Lead", image: "/images/team/uju.JPG", objectPosition: "center 25%" },
-      { name: "Esther", position: "Moderator", image: "/images/team/esther.jpeg", objectPosition: "center 20%" },
+      { name: "Esther Oko", position: "Moderator", image: "/images/team/esther.jpeg", objectPosition: "center 20%" },
       { name: "Ola", position: "Member", image: "/images/team/Bello.jpg", objectPosition: "center 15%" },
     ],
   },
