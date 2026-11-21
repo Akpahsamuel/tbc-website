@@ -14,7 +14,7 @@ export const UPCOMING_EVENTS: UpcomingEvent[] = [
     dateSubLabel: "Weekly",
     dateColor: "#D03433",
     title: "Weekly X Space",
-    subtitle: "Every Friday · 19:00 GMT · Online",
+    subtitle: "Mostly Fridays · 19:00 GMT · Online",
     tag: "Media",
     tagColor: "default",
   },

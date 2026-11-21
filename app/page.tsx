@@ -200,7 +200,7 @@ export default function HomePage() {
                 Weekly X Space
               </h3>
               <p className="body" style={{ maxWidth: 620 }}>
-                Every Friday at 19:00 GMT  blockchain education, African Web3 stories, founder
+                Mostly on Fridays at 19:00 GMT  blockchain education, African Web3 stories, founder
                 interviews and market insights.
               </p>
             </div>
