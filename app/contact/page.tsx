@@ -52,7 +52,7 @@ export default function ContactPage() {
               <a href="https://x.com/Builders_Circle" target="_blank" rel="noopener noreferrer" className="text-link">
                 X (Twitter) · @Builders_Circle
               </a>
-              <a href="#" className="text-link">
+              <a href="https://www.linkedin.com/company/the-builders-circle-ghana/" target="_blank" rel="noopener noreferrer" className="text-link">
                 LinkedIn · The Builders Circle Ghana
               </a>
             </div>
