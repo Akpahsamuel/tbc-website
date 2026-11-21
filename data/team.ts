@@ -1,6 +1,6 @@
 export type TeamMember = {
   name: string;
-  /** "Lead", "Member", or a specific title for the convener. */
+  /** "Lead", "Member", "Moderator", or a specific title for the convener. */
   position: string;
   image?: string;
   objectPosition?: string;
@@ -42,6 +42,7 @@ export const TEAM_GROUPS: TeamGroup[] = [
     name: "Community",
     members: [
       { name: "Juliet Edeh", position: "Lead", image: "/images/team/uju.JPG", objectPosition: "center 25%" },
+      { name: "Esther", position: "Moderator", image: "/images/team/esther.jpeg", objectPosition: "center 20%" },
       { name: "Ola", position: "Member", image: "/images/team/Bello.jpg", objectPosition: "center 15%" },
     ],
   },
