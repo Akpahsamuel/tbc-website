@@ -26,13 +26,6 @@ export const TEAM_GROUPS: TeamGroup[] = [
     ],
   },
   {
-    name: "Community",
-    members: [
-      { name: "Juliet Edeh", position: "Lead", image: "/images/team/uju.JPG", objectPosition: "center 25%" },
-      { name: "Ola", position: "Member", image: "/images/team/Bello.jpg", objectPosition: "center 15%" },
-    ],
-  },
-  {
     name: "Secretary & Operations",
     members: [
       { name: "Francisca Mailiana Zonky", position: "Lead", image: "/images/team/mailliana.PNG", objectPosition: "center 20%" },
@@ -43,6 +36,13 @@ export const TEAM_GROUPS: TeamGroup[] = [
     name: "Partnerships & Growth",
     members: [
       { name: "Wasiu Jimoh (Evergenius)", position: "Member", image: "/images/team/Evergenius.jpg", objectPosition: "center 20%" },
+    ],
+  },
+  {
+    name: "Community",
+    members: [
+      { name: "Juliet Edeh", position: "Lead", image: "/images/team/uju.JPG", objectPosition: "center 25%" },
+      { name: "Ola", position: "Member", image: "/images/team/Bello.jpg", objectPosition: "center 15%" },
     ],
   },
 ];
