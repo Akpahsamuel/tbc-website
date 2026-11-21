@@ -20,9 +20,9 @@ export const UPCOMING_EVENTS: UpcomingEvent[] = [
   },
   {
     dateLabel: "TBC",
-    dateSubLabel: "Monthly",
+    dateSubLabel: "Seasonal",
     dateColor: "#1B4D4A",
-    title: "Monthly Accra Meetup",
+    title: "Seasonal Accra Meetup",
     subtitle: "Next date to be confirmed · Accra",
     tag: "Community",
     tagColor: "default",

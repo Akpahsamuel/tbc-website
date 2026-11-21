@@ -22,7 +22,7 @@ export type Program = {
 
 export const PROGRAMS: Program[] = [
   {
-    title: "Monthly City Meetups",
+    title: "Seasonal City Meetups",
     description:
       "Recurring meetups in Accra, Kumasi, Cape Coast, Tamale and Takoradi focused on onboarding, networking and education.",
     Icon: LocationPinIcon,
