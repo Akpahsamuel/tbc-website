@@ -86,7 +86,7 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "NGO",
   name: "The Builders Circle Ghana",
   alternateName: ["TBC Ghana", "The Builders Circle"],
   url: "https://www.tbcafrica.org",
