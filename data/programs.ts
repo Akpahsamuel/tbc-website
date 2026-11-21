@@ -52,7 +52,7 @@ export const PROGRAMS: Program[] = [
       "A major yearly event positioning Ghana as a leading Web3 hub  keynotes, startup showcases, workshops, hackathons, networking and policy discussions.",
     Icon: CalendarStarIcon,
     color: "#24D155",
-    badge: "First edition · November 2026",
+    badge: "First edition · December 2026",
     dark: true,
   },
 ];

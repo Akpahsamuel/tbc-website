@@ -37,11 +37,11 @@ export const UPCOMING_EVENTS: UpcomingEvent[] = [
     tagColor: "default",
   },
   {
-    dateLabel: "NOV",
+    dateLabel: "DEC",
     dateSubLabel: "2026",
     dateColor: "#D03433",
     title: "Flagship Blockchain & Crypto Conference",
-    subtitle: "September / October / November 2026 · Accra",
+    subtitle: "11 December 2026 · Ghana Shippers House, Accra",
     tag: "Flagship",
     tagColor: "flagship",
   },
